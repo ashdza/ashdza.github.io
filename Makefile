@@ -9,11 +9,5 @@ HomePage.html: HomePage.elm Resume.elm ResumeTypes.elm ResumeView.elm
 	$(info <<< Check HomePage in Safari)
 
 all: Resume.html HomePage.html
-ifeq ($(COMMIT),)
-	$(info <<< Need COMMIT='some commit message')
-else
 	cp HomePage.html index.html
-	git add .
-	git commit -m "$(COMMIT)"
-	$(info <<< Check Resume & HomePage in Safari, save updated PDF, then git push)
-endif
+	$(info <<< Check Resume & HomePage in Safari, save updated PDF, then git commit & git push)
