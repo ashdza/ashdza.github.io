@@ -1,0 +1,257 @@
+.item {
+    page-break-inside: avoid;
+}
+
+body {
+    font-size: 11pt;
+}
+
+#header {
+    margin-bottom: 30px;
+}
+
+.myName {
+    font-size: 22pt;
+    margin-top: 5px;
+}
+
+.sectionHeader {
+    color: darkslategrey; /* was darkgreen */
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 16pt;
+}
+
+.itemName {
+    font-size: 14pt;
+    margin-top: 0px;
+}
+
+.sectionHeader {
+    border-bottom: 1px solid black;
+}
+
+.bulletSepList {
+    margin-left: 10px;
+}
+
+.bullet:before {
+    content: "\25A0";
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+body {
+	margin: 20px;
+}
+
+.itemDetails {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: -10px;
+}
+
+#photo {
+    height: 100px;
+    flex: none;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
+.affil {
+    margin-top: -15px;
+}
+
+.affil, .myContactInfo, .itemAttrs, .right {
+    font-size: 10pt;
+}
+
+.item {
+    margin-top: 3px;
+}
+
+.itemName {
+    color: darkcyan; /* was brown; */
+    margin-left: 10px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+.itemAttrs, .myContactInfo, .right {
+    text-align: right;
+}
+
+.itemRole {
+    font-style: italic;
+}
+
+#urls a {
+    padding-left: 5px;
+}
+
+#nameAffil {
+    margin-top: -10px;
+    margin-left: 0px;
+}
+
+.split-l-r>.left:before {
+    content: "\2022";
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.split-l-r {
+    margin-left: -32px;
+}
+
+.itemLeft {
+    flex-basis: 2;
+}
+
+.itemAttrs {
+    flex-basis: none;
+}
+
+#layout {
+    padding-left: 160px;
+    left: 0;
+}
+
+#menu {
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #191818;
+    color: lightgrey;
+    font-family: sans-serif;
+    /*margin-left: 10px;*/
+}
+
+.pure-menu-item {
+    font-size: 1.0em;
+    margin-top: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.pure-menu-selected {
+    background-color: darkcyan;
+    padding: 3px;
+    margin-right: -4px;
+}
+
+/* ***** flexbox ***** */
+
+/* *** MINIMIZE EDITS TO THIS SECTION !!! *** */
+
+/* ***** hand-written flexbox styles here **** */
+
+/*
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.split-l-r {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#namePhoto {
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+}
+
+*/
+
+/* ***** pleeease.io/play auto-generated cross-browser flexbox version here **** */
+
+.item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+.split-l-r {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+#header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+
+#namePhoto {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: initial;
+    -webkit-align-items: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+}
