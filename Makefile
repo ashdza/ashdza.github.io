@@ -15,5 +15,5 @@ else
 	cp HomePage.html index.html
 	git add .
 	git commit -m "$(COMMIT)"
-	git push
+	$(info <<< Check Resume & HomePage in Safari, save updated PDF, then git push)
 endif
