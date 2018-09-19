@@ -44,7 +44,7 @@ education =
       , dates = "Fall 2017 - present"
       , role = ""
       , details =
-            [ "Computer Science, Graduating May 2021, GPA: 3.21"
+            [ "Computer Science, graduating May 2021, GPA: 3.21"
             ]
       , more = Nothing
       , repo = Nothing
@@ -87,7 +87,7 @@ projects =
       , location = ""
       , dates = "Summer 2018 - present"
       , details =
-            [ "Conceive, design, and implement a web-based musician feedback service (ReasonML)"
+            [ "Conceive, design, and implement a web-based musician feedback service (ReasonML + React)"
             , "Musicians submit recordings of performances and receive pointed feedback from teachers"
             ]
       , more = Nothing
@@ -117,7 +117,7 @@ projects =
       , repo = Nothing
       , demo = Nothing
       }
-    , { name = "DNA sequence alignment"
+    , { name = "DNA Sequence Alignment"
       , role = ""
       , location = ""
       , dates = "Spring 2018"
@@ -140,13 +140,13 @@ projects =
       , repo = Nothing
       , demo = Nothing
       }
-    , { name = "Hidden Markov Models and Part-of-Speech tagging"
+    , { name = "Hidden Markov Models and Part-of-Speech Tagging"
       , role = ""
       , location = ""
       , dates = "Spring 2018"
       , details =
             [ "Implement statistical training of HMM model using training corpus of pre-tagged sentences (Python)"
-            , "Implement Viterbi algorithm to assign Part-Of-Speech tags to new sentences using trained HMM"
+            , "Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"
             ]
       , more = Nothing
       , repo = Nothing
@@ -168,13 +168,13 @@ projects =
 
 programming : List Item
 programming =
-    [ { name = "Programming Languages"
+    [ { name = "Programming Languages & Frameworks"
       , role = ""
       , location = ""
       , dates = "2013 - present"
       , details =
-            [ "Proficient: Python, Java, ReasonML / OCaml"
-            , "Basic: C, Racket, Pyret, Elm, Html"
+            [ "Proficient: Python, Java, ReasonML/OCaml, React"
+            , "Basic: C, Racket, Pyret, Elm, Html, Numpy"
             ]
       , more = Nothing
       , repo = Nothing
@@ -228,10 +228,10 @@ work =
 activities : List FlatItem
 activities =
     [ FlatItem "CSters: Women in Computer Science, Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "CS Club: Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "Society of Women Engineers (SWE): Rice University" "Fall 2017 - present" Nothing
+    , FlatItem "CS Club, Rice University" "Fall 2017 - present" Nothing
+    , FlatItem "Society of Women Engineers (SWE), Rice University" "Fall 2017 - present" Nothing
     , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "Club Tennis: Rice University" "Fall 2017 - present" Nothing
+    , FlatItem "Club Tennis, Rice University" "Fall 2017 - present" Nothing
     , FlatItem "Music: sing, record, perform, take lessons" "2007 - present" (Just "https://goo.gl/5j6YbS")
     , FlatItem "PyLadies: Austin community of women Python programmers, team programming and presentations" "2015 - 2017" Nothing
     ]
