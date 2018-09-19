@@ -92,7 +92,7 @@ projects =
             ]
       , more = Nothing
       , repo = Just "https://github.com/ashdza/lentil"
-      , demo = Nothing
+      , demo = Just "https://lentil.7insights.com/src/index.html"
       }
     , { name = "Physics Sunset"
       , role = "Independent Project"
@@ -103,7 +103,7 @@ projects =
             ]
       , more = Nothing
       , repo = Just "https://github.com/ashdza/physics-sunset"
-      , demo = Nothing
+      , demo = Just "https://physics.7insights.com/public/index.html"
       }
     , { name = "Disease Transmission Analysis"
       , role = ""
