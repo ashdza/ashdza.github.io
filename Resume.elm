@@ -66,7 +66,7 @@ education =
 
 awards : List Item
 awards =
-    [ { name = "PyoFuel: Using Python and Pathway Tools to engineer Synthetic Biofuel"
+    [ { name = "PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel"
       , role = "Sole Author"
       , location = "Colorado"
       , dates = "Dec 2016"
@@ -110,7 +110,7 @@ projects =
       , location = ""
       , dates = "Spring 2018"
       , details =
-            [ "Design and implement Rooted-Directed Minimal Spanning Tree algorithm (Python)"
+            [ "Design and implement rooted-directed minimal spanning tree algorithm (Python)"
             , "Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree"
             ]
       , more = Nothing
@@ -145,7 +145,7 @@ projects =
       , location = ""
       , dates = "Spring 2018"
       , details =
-            [ "Implement statistical training of HMM model using training corpus of pre-tagged sentences (Python)"
+            [ "Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)"
             , "Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"
             ]
       , more = Nothing
@@ -197,7 +197,7 @@ programming =
       , location = ""
       , dates = "2017 - present"
       , details =
-            [ "Elements of Test-Driven Development"
+            [ "Elements of test-driven development"
             , "Python testing using Pytest, Java testing using JUnit Jupiter"
             ]
       , more = Nothing
@@ -216,7 +216,7 @@ work =
       , details =
             [ "DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli"
             , "Worked with Dr. Al Mackrell in the Vertebrate Interactome Mapping Lab"
-            , "Conducted computational Flux-Balance Analysis on cyanobacteria engineered for biofuel"
+            , "Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel"
             ]
       , more = Nothing
       , repo = Nothing
