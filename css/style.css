@@ -81,7 +81,10 @@ body {
 }
 
 .itemRole {
+    font-size: 90%;
     font-style: italic;
+    font-weight: normal;
+    padding-left: 20pt;
 }
 
 #urls a {

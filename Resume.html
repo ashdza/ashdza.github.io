@@ -8482,21 +8482,36 @@ var _user$project$ResumeView$viewItem = function (item) {
 								ctor: '::',
 								_0: A2(
 									_elm_lang$html$Html$span,
-									{ctor: '[]'},
 									{
 										ctor: '::',
-										_0: srcLink,
-										_1: {
+										_0: _elm_lang$html$Html_Attributes$class('itemRole'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(role),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$span,
+										{ctor: '[]'},
+										{
 											ctor: '::',
-											_0: demoLink,
+											_0: srcLink,
 											_1: {
 												ctor: '::',
-												_0: moreLink,
-												_1: {ctor: '[]'}
+												_0: demoLink,
+												_1: {
+													ctor: '::',
+													_0: moreLink,
+													_1: {ctor: '[]'}
+												}
 											}
-										}
-									}),
-								_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
 							}
 						}),
 					_1: {
@@ -8555,41 +8570,15 @@ var _user$project$ResumeView$viewItem = function (item) {
 							ctor: '::',
 							_0: A2(
 								_elm_lang$html$Html$div,
-								{ctor: '[]'},
 								{
 									ctor: '::',
-									_0: A2(
-										_elm_lang$html$Html$span,
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html_Attributes$class('itemLocation'),
-											_1: {ctor: '[]'}
-										},
-										{
-											ctor: '::',
-											_0: _elm_lang$html$Html$text(
-												A2(
-													_elm_lang$core$Basics_ops['++'],
-													location,
-													(_elm_lang$core$Native_Utils.eq(location, '') || _elm_lang$core$Native_Utils.eq(role, '')) ? '' : '  ')),
-											_1: {ctor: '[]'}
-										}),
-									_1: {
-										ctor: '::',
-										_0: A2(
-											_elm_lang$html$Html$span,
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('itemRole'),
-												_1: {ctor: '[]'}
-											},
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html$text(role),
-												_1: {ctor: '[]'}
-											}),
-										_1: {ctor: '[]'}
-									}
+									_0: _elm_lang$html$Html_Attributes$class('itemLocation'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(location),
+									_1: {ctor: '[]'}
 								}),
 							_1: {ctor: '[]'}
 						}
@@ -8768,10 +8757,10 @@ var _user$project$Resume$activities = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Summer intern',
+		role: 'Summer Intern',
 		name: 'UT Austin Summer Research Academy - College of Natural Sciences',
 		location: 'Austin, TX',
-		dates: 'Summer 2015 & 2016',
+		dates: 'Summer 2015, 2016',
 		details: {
 			ctor: '::',
 			_0: 'DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli',
@@ -8859,7 +8848,7 @@ var _user$project$Resume$projects = {
 	ctor: '::',
 	_0: {
 		name: 'Lentil - A Musician\'s Feedback Service',
-		role: '',
+		role: 'Independent Project',
 		location: '',
 		dates: 'Summer 2018 - present',
 		details: {
@@ -8867,7 +8856,7 @@ var _user$project$Resume$projects = {
 			_0: 'Conceive, design, and implement a web-based musician feedback service (ReasonML)',
 			_1: {
 				ctor: '::',
-				_0: 'Students submit recordings of performances and receive pointed feedback from teachers',
+				_0: 'Musicians submit recordings of performances and receive pointed feedback from teachers',
 				_1: {ctor: '[]'}
 			}
 		},
@@ -8879,7 +8868,7 @@ var _user$project$Resume$projects = {
 		ctor: '::',
 		_0: {
 			name: 'Physics Sunset',
-			role: '',
+			role: 'Independent Project',
 			location: '',
 			dates: 'Summer 2017',
 			details: {
@@ -8970,8 +8959,8 @@ var _user$project$Resume$projects = {
 						_1: {
 							ctor: '::',
 							_0: {
-								role: '',
 								name: 'Chef Arduino',
+								role: 'Independent Project',
 								location: '',
 								dates: 'Fall 2010-2011',
 								details: {
@@ -8994,13 +8983,13 @@ var _user$project$Resume$projects = {
 var _user$project$Resume$awards = {
 	ctor: '::',
 	_0: {
-		name: 'Int\'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference',
-		role: '',
+		name: 'PyoFuel: Using Python and Pathway Tools to engineer Synthetic Biofuel',
+		role: 'Sole Author',
 		location: 'Colorado',
 		dates: 'Dec 2016',
 		details: {
 			ctor: '::',
-			_0: 'PyoFuel: Using Python and Pathway Tools to engineer Synthetic Biofuel (poster session presenter)',
+			_0: 'Int\'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference (poster session)',
 			_1: {ctor: '[]'}
 		},
 		more: _elm_lang$core$Maybe$Just('https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19'),
@@ -9071,7 +9060,7 @@ var _user$project$Resume$theResume = {
 		_0: A2(_user$project$ResumeTypes$NestedSection, 'Education', _user$project$Resume$education),
 		_1: {
 			ctor: '::',
-			_0: A2(_user$project$ResumeTypes$NestedSection, 'Presentations & Awards', _user$project$Resume$awards),
+			_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
 			_1: {
 				ctor: '::',
 				_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),

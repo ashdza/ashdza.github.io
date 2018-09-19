@@ -13,7 +13,7 @@ theResume =
     { header = header
     , body =
         [ NestedSection "Education" education
-        , NestedSection "Presentations & Awards" awards
+        , NestedSection "Conference Presentations" awards
         , NestedSection "Projects" projects
         , NestedSection "Software Development Skills" programming
         , NestedSection "Work Experience" work
@@ -66,12 +66,12 @@ education =
 
 awards : List Item
 awards =
-    [ { name = "Int'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference"
-      , role = ""
+    [ { name = "PyoFuel: Using Python and Pathway Tools to engineer Synthetic Biofuel"
+      , role = "Sole Author"
       , location = "Colorado"
       , dates = "Dec 2016"
       , details =
-            [ "PyoFuel: Using Python and Pathway Tools to engineer Synthetic Biofuel (poster session presenter)"
+            [ "Int'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference (poster session)"
             ]
       , more = Just "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19"
       , repo = Nothing
@@ -83,19 +83,19 @@ awards =
 projects : List Item
 projects =
     [ { name = "Lentil - A Musician's Feedback Service"
-      , role = ""
+      , role = "Independent Project"
       , location = ""
       , dates = "Summer 2018 - present"
       , details =
             [ "Conceive, design, and implement a web-based musician feedback service (ReasonML)"
-            , "Students submit recordings of performances and receive pointed feedback from teachers"
+            , "Musicians submit recordings of performances and receive pointed feedback from teachers"
             ]
       , more = Nothing
       , repo = Just "https://github.com/ashdza/lentil"
       , demo = Nothing
       }
     , { name = "Physics Sunset"
-      , role = ""
+      , role = "Independent Project"
       , location = ""
       , dates = "Summer 2017"
       , details =
@@ -152,8 +152,8 @@ projects =
       , repo = Nothing
       , demo = Nothing
       }
-    , { role = ""
-      , name = "Chef Arduino"
+    , { name = "Chef Arduino"
+      , role = "Independent Project"
       , location = ""
       , dates = "Fall 2010-2011"
       , details =
@@ -209,10 +209,10 @@ programming =
 
 work : List Item
 work =
-    [ { role = "Summer intern"
+    [ { role = "Summer Intern"
       , name = "UT Austin Summer Research Academy - College of Natural Sciences"
       , location = "Austin, TX"
-      , dates = "Summer 2015 & 2016"
+      , dates = "Summer 2015, 2016"
       , details =
             [ "DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli"
             , "Worked with Dr. Al Mackrell in the Vertebrate Interactome Mapping Lab"
