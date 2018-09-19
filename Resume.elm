@@ -30,8 +30,9 @@ header =
     , email = "akd6@rice.edu"
     , phone = "512-258-8189"
     , links =
-        [ { name = "Home page:", url = "https://ashdza.github.io" }
+        [ { name = "Home:", url = "https://ashdza.github.io" }
         , { name = "Github:", url = "https://github.com/ashdza" }
+        , { name = "LinkedIn:", url = "https://goo.gl/58fLVD" }
         ]
     }
 
