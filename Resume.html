@@ -8653,15 +8653,17 @@ var _user$project$ResumeView$viewFlatSection = F2(
 												_0: _elm_lang$html$Html_Attributes$class('left'),
 												_1: {ctor: '[]'}
 											},
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html$text(_p6.name),
-												_1: {
+											A2(
+												_elm_lang$core$Basics_ops['++'],
+												{
 													ctor: '::',
-													_0: A2(_user$project$ResumeView$linkFor, 'more', _p6.more),
+													_0: _elm_lang$html$Html$text(_p6.name),
 													_1: {ctor: '[]'}
-												}
-											}),
+												},
+												A2(
+													_elm_lang$core$List$map,
+													_user$project$ResumeView$linkFor('more'),
+													_p6.more))),
 										_1: {
 											ctor: '::',
 											_0: A2(
@@ -8723,29 +8725,61 @@ var _user$project$ResumeView$view = function (model) {
 };
 var _user$project$Resume$activities = {
 	ctor: '::',
-	_0: A3(_user$project$ResumeTypes$FlatItem, 'CSters: Women in Computer Science, Rice University', 'Fall 2017 - present', _elm_lang$core$Maybe$Nothing),
+	_0: A3(
+		_user$project$ResumeTypes$FlatItem,
+		'CSters: Women in Computer Science, Rice University',
+		'Fall 2017 - present',
+		{ctor: '[]'}),
 	_1: {
 		ctor: '::',
-		_0: A3(_user$project$ResumeTypes$FlatItem, 'CS Club, Rice University', 'Fall 2017 - present', _elm_lang$core$Maybe$Nothing),
+		_0: A3(
+			_user$project$ResumeTypes$FlatItem,
+			'CS Club, Rice University',
+			'Fall 2017 - present',
+			{ctor: '[]'}),
 		_1: {
 			ctor: '::',
-			_0: A3(_user$project$ResumeTypes$FlatItem, 'Society of Women Engineers (SWE), Rice University', 'Fall 2017 - present', _elm_lang$core$Maybe$Nothing),
+			_0: A3(
+				_user$project$ResumeTypes$FlatItem,
+				'Society of Women Engineers (SWE), Rice University',
+				'Fall 2017 - present',
+				{ctor: '[]'}),
 			_1: {
 				ctor: '::',
-				_0: A3(_user$project$ResumeTypes$FlatItem, 'SASE: Society of Asian Scientists and Engineers, Rice University', 'Fall 2017 - present', _elm_lang$core$Maybe$Nothing),
+				_0: A3(
+					_user$project$ResumeTypes$FlatItem,
+					'SASE: Society of Asian Scientists and Engineers, Rice University',
+					'Fall 2017 - present',
+					{ctor: '[]'}),
 				_1: {
 					ctor: '::',
-					_0: A3(_user$project$ResumeTypes$FlatItem, 'Club Tennis, Rice University', 'Fall 2017 - present', _elm_lang$core$Maybe$Nothing),
+					_0: A3(
+						_user$project$ResumeTypes$FlatItem,
+						'Club Tennis, Rice University',
+						'Fall 2017 - present',
+						{ctor: '[]'}),
 					_1: {
 						ctor: '::',
 						_0: A3(
 							_user$project$ResumeTypes$FlatItem,
 							'Music: sing, record, perform, take lessons',
 							'2007 - present',
-							_elm_lang$core$Maybe$Just('https://goo.gl/kba2Mk')),
+							{
+								ctor: '::',
+								_0: _elm_lang$core$Maybe$Just('https://goo.gl/kba2Mk'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$core$Maybe$Just('https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
+									_1: {ctor: '[]'}
+								}
+							}),
 						_1: {
 							ctor: '::',
-							_0: A3(_user$project$ResumeTypes$FlatItem, 'PyLadies: Austin community of women Python programmers, team programming, presentations', '2015 - 2017', _elm_lang$core$Maybe$Nothing),
+							_0: A3(
+								_user$project$ResumeTypes$FlatItem,
+								'PyLadies: Austin community of women Python programmers, team programming, presentations',
+								'2015 - 2017',
+								{ctor: '[]'}),
 							_1: {ctor: '[]'}
 						}
 					}

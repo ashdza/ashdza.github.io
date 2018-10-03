@@ -48,4 +48,4 @@ type alias Url =
 
 
 type alias FlatItem =
-    { name : String, attrs : String, more : Maybe Url }
+    { name : String, attrs : String, more : List (Maybe Url) }

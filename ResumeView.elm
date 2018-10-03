@@ -150,7 +150,7 @@ viewFlatSection name items =
             (List.map
                 (\{ name, attrs, more } ->
                     li [ class "split-l-r" ]
-                        [ span [ class "left" ] [ text name, linkFor "more" more ]
+                        [ span [ class "left" ] ([ text name ] ++ (List.map (linkFor "more") more))
                         , span [ class "right" ] [ text attrs ]
                         ]
                 )

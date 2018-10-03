@@ -227,13 +227,15 @@ work =
 
 activities : List FlatItem
 activities =
-    [ FlatItem "CSters: Women in Computer Science, Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "CS Club, Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "Society of Women Engineers (SWE), Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "Club Tennis, Rice University" "Fall 2017 - present" Nothing
-    , FlatItem "Music: sing, record, perform, take lessons" "2007 - present" (Just "https://goo.gl/kba2Mk")
-    , FlatItem "PyLadies: Austin community of women Python programmers, team programming, presentations" "2015 - 2017" Nothing
+    [ FlatItem "CSters: Women in Computer Science, Rice University" "Fall 2017 - present" []
+    , FlatItem "CS Club, Rice University" "Fall 2017 - present" []
+    , FlatItem "Society of Women Engineers (SWE), Rice University" "Fall 2017 - present" []
+    , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "Fall 2017 - present" []
+    , FlatItem "Club Tennis, Rice University" "Fall 2017 - present" []
+    , FlatItem "Music: sing, record, perform, take lessons"
+        "2007 - present"
+        [ Just "https://goo.gl/kba2Mk", Just "https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos" ]
+    , FlatItem "PyLadies: Austin community of women Python programmers, team programming, presentations" "2015 - 2017" []
     ]
 
 
