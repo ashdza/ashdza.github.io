@@ -28,7 +28,7 @@ whySpotify =
     [ FlatItem "As a longtime musician and singer, I actively record, perform, and take lessons"
         ""
         []
-    , FlatItem "As a singer and CS major, I am building a web-based musician's feedback service" "" []
+    , FlatItem "As a CS major and musician, I am building a web-based musician's feedback service" "" []
     , FlatItem "I love Spotify and have been an avid daily user for many years" "" []
     ]
 
@@ -64,7 +64,7 @@ education =
       , dates = "2013 - 2017"
       , role = ""
       , details =
-            [ "GPA: 4.0/4.0 (5.58/5.0 weighted), Graduated May 2017"
+            [ "GPA: 4.0/4.0 (5.58/5.0 weighted), National Merit Scholar, Graduated May 2017"
             ]
       , links = []
       }
