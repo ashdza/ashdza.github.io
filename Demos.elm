@@ -12,9 +12,7 @@ demos resume =
         demoable list =
             List.filter
                 (\item ->
-                    (item.demo /= Nothing)
-                        || (item.repo /= Nothing)
-                        || (item.more /= Nothing)
+                    (item.links /= [])
                 )
                 list
 

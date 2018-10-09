@@ -2,6 +2,7 @@ module ResumeTypes
     exposing
         ( Resume
         , Header
+        , Link(..)
         , Item
         , Section(..)
         , FlatItem
@@ -13,6 +14,13 @@ type alias Resume =
     { header : Header
     , body : List Section
     }
+
+
+type Link
+    = More Url
+    | Demo Url
+    | Repo Url
+    | Link String Url
 
 
 type alias Header =
@@ -37,9 +45,7 @@ type alias Item =
     , location : String
     , dates : String
     , details : List String
-    , more : Maybe Url
-    , repo : Maybe Url
-    , demo : Maybe Url
+    , links : List Link
     }
 
 
@@ -48,4 +54,4 @@ type alias Url =
 
 
 type alias FlatItem =
-    { name : String, attrs : String, more : List (Maybe Url) }
+    { name : String, attrs : String, links : List Link }

@@ -12,6 +12,7 @@ theResume : Resume
 theResume =
     { header = header
     , body =
+        -- [ FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
         , NestedSection "Conference Presentations" awards
         , NestedSection "Projects" projects
@@ -20,6 +21,16 @@ theResume =
         , FlatSection "Organizations and Activities" activities
         ]
     }
+
+
+whySpotify : List FlatItem
+whySpotify =
+    [ FlatItem "As a longtime musician and singer, I actively record, perform, and take lessons"
+        ""
+        []
+    , FlatItem "As a singer and CS major, I am building a web-based musician's feedback service" "" []
+    , FlatItem "I love Spotify and have been an avid daily user for many years" "" []
+    ]
 
 
 header : Header
@@ -41,25 +52,21 @@ education : List Item
 education =
     [ { name = "Rice University"
       , location = "Houston, TX"
-      , dates = "Fall 2017 - present"
+      , dates = "2017 - present"
       , role = ""
       , details =
             [ "Computer Science, graduating May 2021, GPA: 3.21"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "Westwood High School"
       , location = "Austin, TX"
-      , dates = "Fall 2013 - 2017"
+      , dates = "2013 - 2017"
       , role = ""
       , details =
             [ "GPA: 4.0/4.0 (5.58/5.0 weighted), Graduated May 2017"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     ]
 
@@ -73,9 +80,7 @@ awards =
       , details =
             [ "Int'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference (poster session)"
             ]
-      , more = Just "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19"
-      , repo = Nothing
-      , demo = Nothing
+      , links = [ More "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19" ]
       }
     ]
 
@@ -90,9 +95,7 @@ projects =
             [ "Conceive, design, and implement a web-based musician feedback service (ReasonML + React)"
             , "Musicians submit recordings of performances and receive pointed feedback from teachers"
             ]
-      , more = Nothing
-      , repo = Just "https://github.com/ashdza/lentil"
-      , demo = Just "https://lentil.7insights.com/src/index.html"
+      , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/src/index.html" ]
       }
     , { name = "Physics Sunset"
       , role = "Independent Project"
@@ -101,9 +104,7 @@ projects =
       , details =
             [ "Design and implement browser-based interactive graphical simulation of a physics problem (ReasonML)"
             ]
-      , more = Nothing
-      , repo = Just "https://github.com/ashdza/physics-sunset"
-      , demo = Just "https://physics.7insights.com/public/index.html"
+      , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/public/index.html" ]
       }
     , { name = "Disease Transmission Analysis"
       , role = ""
@@ -113,9 +114,7 @@ projects =
             [ "Design and implement rooted-directed minimal spanning tree algorithm (Python)"
             , "Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "DNA Sequence Alignment"
       , role = ""
@@ -125,9 +124,7 @@ projects =
             [ "Design and implement DP solutions to two DNA sequence alignment problems (Python)"
             , "Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "Phylogenetic (Evolutionary) Trees"
       , role = ""
@@ -136,9 +133,7 @@ projects =
       , details =
             [ "Infer the optimal evolutionary tree, given DNA sequences for the leaf taxa (Python)"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "Hidden Markov Models and Part-of-Speech Tagging"
       , role = ""
@@ -148,20 +143,16 @@ projects =
             [ "Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)"
             , "Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "Chef Arduino"
       , role = "Independent Project"
       , location = ""
-      , dates = "Fall 2010-2011"
+      , dates = "2010 - 2011"
       , details =
             [ "Conceive, design, build, and program an Arduino-based robot to test properties of food samples"
             ]
-      , more = Nothing
-      , repo = Just "https://github.com/ashdza/chef_arduino"
-      , demo = Nothing
+      , links = [ Repo "https://github.com/ashdza/chef_arduino" ]
       }
     ]
 
@@ -176,9 +167,7 @@ programming =
             [ "Proficient: Python, Java, ReasonML/OCaml, React"
             , "Basic: C, Racket, Pyret, Elm, Html, Numpy"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "Software Design"
       , role = ""
@@ -188,21 +177,17 @@ programming =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
             , "Functional programming with types"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     , { name = "Software Testing"
       , role = ""
       , location = ""
       , dates = "2017 - present"
       , details =
-            [ "Elements of test-driven development"
-            , "Python testing using Pytest, Java testing using JUnit Jupiter"
+            [ "Test-driven development, unit-tests, property-based tests"
+            , "Python testing using Pytest, Java testing using JUnit 5 & QuickTheories"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     ]
 
@@ -212,29 +197,27 @@ work =
     [ { role = "Summer Intern"
       , name = "UT Austin Summer Research Academy - College of Natural Sciences"
       , location = "Austin, TX"
-      , dates = "Summer 2015, 2016"
+      , dates = "2015, 2016"
       , details =
             [ "DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli"
             , "Worked with Dr. Al Mackrell in the Vertebrate Interactome Mapping Lab"
             , "Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel"
             ]
-      , more = Nothing
-      , repo = Nothing
-      , demo = Nothing
+      , links = []
       }
     ]
 
 
 activities : List FlatItem
 activities =
-    [ FlatItem "CSters: Women in Computer Science, Rice University" "Fall 2017 - present" []
-    , FlatItem "CS Club, Rice University" "Fall 2017 - present" []
-    , FlatItem "Society of Women Engineers (SWE), Rice University" "Fall 2017 - present" []
-    , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "Fall 2017 - present" []
-    , FlatItem "Club Tennis, Rice University" "Fall 2017 - present" []
+    [ FlatItem "CSters: Women in Computer Science, Rice University" "2017 - present" []
+    , FlatItem "CS Club, Rice University" "2017 - present" []
+    , FlatItem "Society of Women Engineers (SWE), Rice University" "2017 - present" []
+    , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "2017 - present" []
+    , FlatItem "Club Tennis, Rice University" "2017 - present" []
     , FlatItem "Music: sing, record, perform, take lessons"
         "2007 - present"
-        [ Just "https://goo.gl/kba2Mk", Just "https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos" ]
+        [ Link "soundcloud" "https://goo.gl/kba2Mk", Link "youtube" "https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos" ]
     , FlatItem "PyLadies: Austin community of women Python programmers, team programming, presentations" "2015 - 2017" []
     ]
 

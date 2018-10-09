@@ -8235,14 +8235,27 @@ var _user$project$ResumeTypes$Header = F6(
 	function (a, b, c, d, e, f) {
 		return {name: a, affils: b, home: c, email: d, phone: e, links: f};
 	});
-var _user$project$ResumeTypes$Item = F8(
-	function (a, b, c, d, e, f, g, h) {
-		return {role: a, name: b, location: c, dates: d, details: e, more: f, repo: g, demo: h};
+var _user$project$ResumeTypes$Item = F6(
+	function (a, b, c, d, e, f) {
+		return {role: a, name: b, location: c, dates: d, details: e, links: f};
 	});
 var _user$project$ResumeTypes$FlatItem = F3(
 	function (a, b, c) {
-		return {name: a, attrs: b, more: c};
+		return {name: a, attrs: b, links: c};
 	});
+var _user$project$ResumeTypes$Link = F2(
+	function (a, b) {
+		return {ctor: 'Link', _0: a, _1: b};
+	});
+var _user$project$ResumeTypes$Repo = function (a) {
+	return {ctor: 'Repo', _0: a};
+};
+var _user$project$ResumeTypes$Demo = function (a) {
+	return {ctor: 'Demo', _0: a};
+};
+var _user$project$ResumeTypes$More = function (a) {
+	return {ctor: 'More', _0: a};
+};
 var _user$project$ResumeTypes$InlineSection = F2(
 	function (a, b) {
 		return {ctor: 'InlineSection', _0: a, _1: b};
@@ -8518,52 +8531,51 @@ var _user$project$ResumeView$viewInlineSection = F2(
 				}
 			});
 	});
-var _user$project$ResumeView$nullHtml = A3(
-	_elm_lang$html$Html$node,
-	'noscript',
-	{ctor: '[]'},
-	{ctor: '[]'});
-var _user$project$ResumeView$linkFor = F2(
-	function (name, url) {
-		var _p3 = url;
-		if (_p3.ctor === 'Nothing') {
-			return _user$project$ResumeView$nullHtml;
-		} else {
-			return A2(
-				_elm_lang$html$Html$a,
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html_Attributes$class('link'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$href(_p3._0),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$target('_blank'),
-							_1: {ctor: '[]'}
-						}
-					}
-				},
-				{
-					ctor: '::',
-					_0: _elm_lang$html$Html$text(name),
-					_1: {ctor: '[]'}
-				});
+var _user$project$ResumeView$viewLink = function (link) {
+	var _p3 = function () {
+		var _p4 = link;
+		switch (_p4.ctor) {
+			case 'More':
+				return {ctor: '_Tuple2', _0: 'more', _1: _p4._0};
+			case 'Demo':
+				return {ctor: '_Tuple2', _0: 'demo', _1: _p4._0};
+			case 'Repo':
+				return {ctor: '_Tuple2', _0: 'repo', _1: _p4._0};
+			default:
+				return {ctor: '_Tuple2', _0: _p4._0, _1: _p4._1};
 		}
-	});
+	}();
+	var name = _p3._0;
+	var url = _p3._1;
+	return A2(
+		_elm_lang$html$Html$a,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('link'),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$href(url),
+				_1: {
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$target('_blank'),
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text(name),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$ResumeView$viewItem = function (item) {
-	var _p4 = item;
-	var name = _p4.name;
-	var role = _p4.role;
-	var location = _p4.location;
-	var dates = _p4.dates;
-	var details = _p4.details;
-	var more = _p4.more;
-	var repo = _p4.repo;
-	var demo = _p4.demo;
-	var srcLink = A2(_user$project$ResumeView$linkFor, 'repo', repo);
-	var demoLink = A2(_user$project$ResumeView$linkFor, 'demo', demo);
-	var moreLink = A2(_user$project$ResumeView$linkFor, 'more', more);
+	var _p5 = item;
+	var name = _p5.name;
+	var role = _p5.role;
+	var location = _p5.location;
+	var dates = _p5.dates;
+	var details = _p5.details;
+	var links = _p5.links;
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8611,19 +8623,7 @@ var _user$project$ResumeView$viewItem = function (item) {
 									_0: A2(
 										_elm_lang$html$Html$span,
 										{ctor: '[]'},
-										{
-											ctor: '::',
-											_0: srcLink,
-											_1: {
-												ctor: '::',
-												_0: demoLink,
-												_1: {
-													ctor: '::',
-													_0: moreLink,
-													_1: {ctor: '[]'}
-												}
-											}
-										}),
+										A2(_elm_lang$core$List$map, _user$project$ResumeView$viewLink, links)),
 									_1: {ctor: '[]'}
 								}
 							}
@@ -8749,8 +8749,8 @@ var _user$project$ResumeView$viewFlatSection = F2(
 						{ctor: '[]'},
 						A2(
 							_elm_lang$core$List$map,
-							function (_p5) {
-								var _p6 = _p5;
+							function (_p6) {
+								var _p7 = _p6;
 								return A2(
 									_elm_lang$html$Html$li,
 									{
@@ -8771,13 +8771,10 @@ var _user$project$ResumeView$viewFlatSection = F2(
 												_elm_lang$core$Basics_ops['++'],
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text(_p6.name),
+													_0: _elm_lang$html$Html$text(_p7.name),
 													_1: {ctor: '[]'}
 												},
-												A2(
-													_elm_lang$core$List$map,
-													_user$project$ResumeView$linkFor('more'),
-													_p6.more))),
+												A2(_elm_lang$core$List$map, _user$project$ResumeView$viewLink, _p7.links))),
 										_1: {
 											ctor: '::',
 											_0: A2(
@@ -8789,7 +8786,7 @@ var _user$project$ResumeView$viewFlatSection = F2(
 												},
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text(_p6.attrs),
+													_0: _elm_lang$html$Html$text(_p7.attrs),
 													_1: {ctor: '[]'}
 												}),
 											_1: {ctor: '[]'}
@@ -8802,14 +8799,14 @@ var _user$project$ResumeView$viewFlatSection = F2(
 			});
 	});
 var _user$project$ResumeView$viewSection = function (s) {
-	var _p7 = s;
-	switch (_p7.ctor) {
+	var _p8 = s;
+	switch (_p8.ctor) {
 		case 'NestedSection':
-			return A2(_user$project$ResumeView$viewNestedSection, _p7._0, _p7._1);
+			return A2(_user$project$ResumeView$viewNestedSection, _p8._0, _p8._1);
 		case 'FlatSection':
-			return A2(_user$project$ResumeView$viewFlatSection, _p7._0, _p7._1);
+			return A2(_user$project$ResumeView$viewFlatSection, _p8._0, _p8._1);
 		default:
-			return A2(_user$project$ResumeView$viewInlineSection, _p7._0, _p7._1);
+			return A2(_user$project$ResumeView$viewInlineSection, _p8._0, _p8._1);
 	}
 };
 var _user$project$ResumeView$view = function (model) {
@@ -8837,12 +8834,19 @@ var _user$project$ResumeView$view = function (model) {
 			},
 			A2(_elm_lang$core$List$map, _user$project$ResumeView$viewSection, model.body)));
 };
+var _user$project$ResumeView$nullHtml = A3(
+	_elm_lang$html$Html$node,
+	'noscript',
+	{ctor: '[]'},
+	{ctor: '[]'});
 var _user$project$Demos$demos = function (resume) {
 	var demoable = function (list) {
 		return A2(
 			_elm_lang$core$List$filter,
 			function (item) {
-				return (!_elm_lang$core$Native_Utils.eq(item.demo, _elm_lang$core$Maybe$Nothing)) || ((!_elm_lang$core$Native_Utils.eq(item.repo, _elm_lang$core$Maybe$Nothing)) || (!_elm_lang$core$Native_Utils.eq(item.more, _elm_lang$core$Maybe$Nothing)));
+				return !_elm_lang$core$Native_Utils.eq(
+					item.links,
+					{ctor: '[]'});
 			},
 			list);
 	};
@@ -8903,35 +8907,35 @@ var _user$project$Resume$activities = {
 	_0: A3(
 		_user$project$ResumeTypes$FlatItem,
 		'CSters: Women in Computer Science, Rice University',
-		'Fall 2017 - present',
+		'2017 - present',
 		{ctor: '[]'}),
 	_1: {
 		ctor: '::',
 		_0: A3(
 			_user$project$ResumeTypes$FlatItem,
 			'CS Club, Rice University',
-			'Fall 2017 - present',
+			'2017 - present',
 			{ctor: '[]'}),
 		_1: {
 			ctor: '::',
 			_0: A3(
 				_user$project$ResumeTypes$FlatItem,
 				'Society of Women Engineers (SWE), Rice University',
-				'Fall 2017 - present',
+				'2017 - present',
 				{ctor: '[]'}),
 			_1: {
 				ctor: '::',
 				_0: A3(
 					_user$project$ResumeTypes$FlatItem,
 					'SASE: Society of Asian Scientists and Engineers, Rice University',
-					'Fall 2017 - present',
+					'2017 - present',
 					{ctor: '[]'}),
 				_1: {
 					ctor: '::',
 					_0: A3(
 						_user$project$ResumeTypes$FlatItem,
 						'Club Tennis, Rice University',
-						'Fall 2017 - present',
+						'2017 - present',
 						{ctor: '[]'}),
 					_1: {
 						ctor: '::',
@@ -8941,10 +8945,10 @@ var _user$project$Resume$activities = {
 							'2007 - present',
 							{
 								ctor: '::',
-								_0: _elm_lang$core$Maybe$Just('https://goo.gl/kba2Mk'),
+								_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
 								_1: {
 									ctor: '::',
-									_0: _elm_lang$core$Maybe$Just('https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
+									_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
 									_1: {ctor: '[]'}
 								}
 							}),
@@ -8969,7 +8973,7 @@ var _user$project$Resume$work = {
 		role: 'Summer Intern',
 		name: 'UT Austin Summer Research Academy - College of Natural Sciences',
 		location: 'Austin, TX',
-		dates: 'Summer 2015, 2016',
+		dates: '2015, 2016',
 		details: {
 			ctor: '::',
 			_0: 'DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli',
@@ -8983,9 +8987,7 @@ var _user$project$Resume$work = {
 				}
 			}
 		},
-		more: _elm_lang$core$Maybe$Nothing,
-		repo: _elm_lang$core$Maybe$Nothing,
-		demo: _elm_lang$core$Maybe$Nothing
+		links: {ctor: '[]'}
 	},
 	_1: {ctor: '[]'}
 };
@@ -9005,9 +9007,7 @@ var _user$project$Resume$programming = {
 				_1: {ctor: '[]'}
 			}
 		},
-		more: _elm_lang$core$Maybe$Nothing,
-		repo: _elm_lang$core$Maybe$Nothing,
-		demo: _elm_lang$core$Maybe$Nothing
+		links: {ctor: '[]'}
 	},
 	_1: {
 		ctor: '::',
@@ -9025,9 +9025,7 @@ var _user$project$Resume$programming = {
 					_1: {ctor: '[]'}
 				}
 			},
-			more: _elm_lang$core$Maybe$Nothing,
-			repo: _elm_lang$core$Maybe$Nothing,
-			demo: _elm_lang$core$Maybe$Nothing
+			links: {ctor: '[]'}
 		},
 		_1: {
 			ctor: '::',
@@ -9038,16 +9036,14 @@ var _user$project$Resume$programming = {
 				dates: '2017 - present',
 				details: {
 					ctor: '::',
-					_0: 'Elements of test-driven development',
+					_0: 'Test-driven development, unit-tests, property-based tests',
 					_1: {
 						ctor: '::',
-						_0: 'Python testing using Pytest, Java testing using JUnit Jupiter',
+						_0: 'Python testing using Pytest, Java testing using JUnit 5 & QuickTheories',
 						_1: {ctor: '[]'}
 					}
 				},
-				more: _elm_lang$core$Maybe$Nothing,
-				repo: _elm_lang$core$Maybe$Nothing,
-				demo: _elm_lang$core$Maybe$Nothing
+				links: {ctor: '[]'}
 			},
 			_1: {ctor: '[]'}
 		}
@@ -9069,9 +9065,15 @@ var _user$project$Resume$projects = {
 				_1: {ctor: '[]'}
 			}
 		},
-		more: _elm_lang$core$Maybe$Nothing,
-		repo: _elm_lang$core$Maybe$Just('https://github.com/ashdza/lentil'),
-		demo: _elm_lang$core$Maybe$Just('https://lentil.7insights.com/src/index.html')
+		links: {
+			ctor: '::',
+			_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/lentil'),
+			_1: {
+				ctor: '::',
+				_0: _user$project$ResumeTypes$Demo('https://lentil.7insights.com/src/index.html'),
+				_1: {ctor: '[]'}
+			}
+		}
 	},
 	_1: {
 		ctor: '::',
@@ -9085,9 +9087,15 @@ var _user$project$Resume$projects = {
 				_0: 'Design and implement browser-based interactive graphical simulation of a physics problem (ReasonML)',
 				_1: {ctor: '[]'}
 			},
-			more: _elm_lang$core$Maybe$Nothing,
-			repo: _elm_lang$core$Maybe$Just('https://github.com/ashdza/physics-sunset'),
-			demo: _elm_lang$core$Maybe$Just('https://physics.7insights.com/public/index.html')
+			links: {
+				ctor: '::',
+				_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/physics-sunset'),
+				_1: {
+					ctor: '::',
+					_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/public/index.html'),
+					_1: {ctor: '[]'}
+				}
+			}
 		},
 		_1: {
 			ctor: '::',
@@ -9105,9 +9113,7 @@ var _user$project$Resume$projects = {
 						_1: {ctor: '[]'}
 					}
 				},
-				more: _elm_lang$core$Maybe$Nothing,
-				repo: _elm_lang$core$Maybe$Nothing,
-				demo: _elm_lang$core$Maybe$Nothing
+				links: {ctor: '[]'}
 			},
 			_1: {
 				ctor: '::',
@@ -9125,9 +9131,7 @@ var _user$project$Resume$projects = {
 							_1: {ctor: '[]'}
 						}
 					},
-					more: _elm_lang$core$Maybe$Nothing,
-					repo: _elm_lang$core$Maybe$Nothing,
-					demo: _elm_lang$core$Maybe$Nothing
+					links: {ctor: '[]'}
 				},
 				_1: {
 					ctor: '::',
@@ -9141,9 +9145,7 @@ var _user$project$Resume$projects = {
 							_0: 'Infer the optimal evolutionary tree, given DNA sequences for the leaf taxa (Python)',
 							_1: {ctor: '[]'}
 						},
-						more: _elm_lang$core$Maybe$Nothing,
-						repo: _elm_lang$core$Maybe$Nothing,
-						demo: _elm_lang$core$Maybe$Nothing
+						links: {ctor: '[]'}
 					},
 					_1: {
 						ctor: '::',
@@ -9161,9 +9163,7 @@ var _user$project$Resume$projects = {
 									_1: {ctor: '[]'}
 								}
 							},
-							more: _elm_lang$core$Maybe$Nothing,
-							repo: _elm_lang$core$Maybe$Nothing,
-							demo: _elm_lang$core$Maybe$Nothing
+							links: {ctor: '[]'}
 						},
 						_1: {
 							ctor: '::',
@@ -9171,15 +9171,17 @@ var _user$project$Resume$projects = {
 								name: 'Chef Arduino',
 								role: 'Independent Project',
 								location: '',
-								dates: 'Fall 2010-2011',
+								dates: '2010 - 2011',
 								details: {
 									ctor: '::',
 									_0: 'Conceive, design, build, and program an Arduino-based robot to test properties of food samples',
 									_1: {ctor: '[]'}
 								},
-								more: _elm_lang$core$Maybe$Nothing,
-								repo: _elm_lang$core$Maybe$Just('https://github.com/ashdza/chef_arduino'),
-								demo: _elm_lang$core$Maybe$Nothing
+								links: {
+									ctor: '::',
+									_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/chef_arduino'),
+									_1: {ctor: '[]'}
+								}
 							},
 							_1: {ctor: '[]'}
 						}
@@ -9201,9 +9203,11 @@ var _user$project$Resume$awards = {
 			_0: 'Int\'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference (poster session)',
 			_1: {ctor: '[]'}
 		},
-		more: _elm_lang$core$Maybe$Just('https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19'),
-		repo: _elm_lang$core$Maybe$Nothing,
-		demo: _elm_lang$core$Maybe$Nothing
+		links: {
+			ctor: '::',
+			_0: _user$project$ResumeTypes$More('https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19'),
+			_1: {ctor: '[]'}
+		}
 	},
 	_1: {ctor: '[]'}
 };
@@ -9212,32 +9216,28 @@ var _user$project$Resume$education = {
 	_0: {
 		name: 'Rice University',
 		location: 'Houston, TX',
-		dates: 'Fall 2017 - present',
+		dates: '2017 - present',
 		role: '',
 		details: {
 			ctor: '::',
 			_0: 'Computer Science, graduating May 2021, GPA: 3.21',
 			_1: {ctor: '[]'}
 		},
-		more: _elm_lang$core$Maybe$Nothing,
-		repo: _elm_lang$core$Maybe$Nothing,
-		demo: _elm_lang$core$Maybe$Nothing
+		links: {ctor: '[]'}
 	},
 	_1: {
 		ctor: '::',
 		_0: {
 			name: 'Westwood High School',
 			location: 'Austin, TX',
-			dates: 'Fall 2013 - 2017',
+			dates: '2013 - 2017',
 			role: '',
 			details: {
 				ctor: '::',
 				_0: 'GPA: 4.0/4.0 (5.58/5.0 weighted), Graduated May 2017',
 				_1: {ctor: '[]'}
 			},
-			more: _elm_lang$core$Maybe$Nothing,
-			repo: _elm_lang$core$Maybe$Nothing,
-			demo: _elm_lang$core$Maybe$Nothing
+			links: {ctor: '[]'}
 		},
 		_1: {ctor: '[]'}
 	}
@@ -9259,6 +9259,31 @@ var _user$project$Resume$header = {
 				_0: {name: 'LinkedIn:', url: 'https://goo.gl/58fLVD'},
 				_1: {ctor: '[]'}
 			}
+		}
+	}
+};
+var _user$project$Resume$whySpotify = {
+	ctor: '::',
+	_0: A3(
+		_user$project$ResumeTypes$FlatItem,
+		'As a longtime musician and singer, I actively record, perform, and take lessons',
+		'',
+		{ctor: '[]'}),
+	_1: {
+		ctor: '::',
+		_0: A3(
+			_user$project$ResumeTypes$FlatItem,
+			'As a singer and CS major, I am building a web-based musician\'s feedback service',
+			'',
+			{ctor: '[]'}),
+		_1: {
+			ctor: '::',
+			_0: A3(
+				_user$project$ResumeTypes$FlatItem,
+				'I love Spotify and have been an avid daily user for many years',
+				'',
+				{ctor: '[]'}),
+			_1: {ctor: '[]'}
 		}
 	}
 };

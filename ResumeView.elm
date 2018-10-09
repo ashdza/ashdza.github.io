@@ -26,37 +26,45 @@ nullHtml =
     node "noscript" [] []
 
 
-linkFor : String -> Maybe Url -> Html a
-linkFor name url =
-    case url of
-        Nothing ->
-            nullHtml
+viewLink : Link -> Html a
+viewLink link =
+    let
+        ( name, url ) =
+            case link of
+                More u ->
+                    ( "more", u )
 
-        Just s ->
-            a [ class "link", href s, target "_blank" ] [ text name ]
+                Demo u ->
+                    ( "demo", u )
+
+                Repo u ->
+                    ( "repo", u )
+
+                Link s u ->
+                    ( s, u )
+    in
+        a [ class "link", href url, target "_blank" ] [ text name ]
 
 
 viewItem : Item -> Html a
 viewItem item =
     let
-        { name, role, location, dates, details, more, repo, demo } =
+        { name, role, location, dates, details, links } =
             item
 
-        srcLink =
-            linkFor "repo" repo
-
-        demoLink =
-            linkFor "demo" demo
-
-        moreLink =
-            linkFor "more" more
+        -- srcLink =
+        --     linkFor "repo" repo
+        -- demoLink =
+        --     linkFor "demo" demo
+        -- moreLink =
+        --     linkFor "more" more
     in
         div [ class "item" ]
             [ div [ class "itemLeft" ]
                 [ h3 [ class "itemName" ]
                     [ text name
                     , span [ class "itemRole" ] [ text role ]
-                    , span [] [ srcLink, demoLink, moreLink ]
+                    , span [] (List.map viewLink links)
                     ]
                 , ul [ class "itemDetails" ]
                     (List.map (\x -> li [ class "detail" ] [ text x ]) details)
@@ -148,9 +156,9 @@ viewFlatSection name items =
         [ h2 [ class "sectionHeader" ] [ text name ]
         , ul []
             (List.map
-                (\{ name, attrs, more } ->
+                (\{ name, attrs, links } ->
                     li [ class "split-l-r" ]
-                        [ span [ class "left" ] ([ text name ] ++ (List.map (linkFor "more") more))
+                        [ span [ class "left" ] ([ text name ] ++ (List.map viewLink links))
                         , span [ class "right" ] [ text attrs ]
                         ]
                 )
