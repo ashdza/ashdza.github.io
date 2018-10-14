@@ -95,7 +95,7 @@ projects =
             [ "Conceive, design, and implement a web-based musician feedback service (ReasonML + React)"
             , "Musicians submit recordings of performances and receive pointed feedback from teachers"
             ]
-      , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/src/index.html" ]
+      , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/build/index.html" ]
       }
     , { name = "Physics Sunset"
       , role = "Independent Project"
