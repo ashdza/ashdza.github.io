@@ -10,4 +10,4 @@ HomePage.html: HomePage.elm Resume.elm ResumeTypes.elm ResumeView.elm
 
 all: Resume.html HomePage.html
 	cp HomePage.html index.html
-	$(info <<< Check Resume & HomePage in Safari, save updated PDF, then git commit & git push)
+	$(info <<< Check Resume & HomePage in Safari, save updated PDF, then git add, git commit & git push)

@@ -28,7 +28,7 @@ whySpotify =
     [ FlatItem "As a longtime musician and singer, I actively record, perform, and take lessons"
         ""
         []
-    , FlatItem "As a CS major and musician, I am building a web-based musician's feedback service" "" []
+    , FlatItem "As a CS major and musician, I am building a full-stack web-based musician's feedback service" "" []
     , FlatItem "I love Spotify and have been an avid daily user for many years" "" []
     ]
 
@@ -94,6 +94,7 @@ projects =
       , details =
             [ "Conceive, design, and implement a web-based musician feedback service (ReasonML + React)"
             , "Musicians submit recordings of performances and receive pointed feedback from teachers"
+            , "Front-end with ReasonML + React, back-end with Hasura's GraphQL + Postgres database"
             ]
       , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/" ]
       }
@@ -165,7 +166,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Proficient: Python, Java, ReasonML/OCaml, React"
-            , "Basic: C, Racket, Pyret, Elm, Html, Numpy"
+            , "Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura's Postgres + GraphQL"
             ]
       , links = []
       }
@@ -175,7 +176,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            , "Functional programming with types"
+            , "Basics of functional programming with types"
             ]
       , links = []
       }
