@@ -12,7 +12,7 @@ theResume : Resume
 theResume =
     { header = header
     , body =
-        -- [ FlatSection "Why Spotify?" whySpotify
+        -- FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
         , NestedSection "Conference Presentations" awards
         , NestedSection "Projects" projects
