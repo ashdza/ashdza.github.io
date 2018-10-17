@@ -78,7 +78,7 @@ awards =
       , location = "Colorado"
       , dates = "Dec 2016"
       , details =
-            [ "Int'l. Soc. for Computational Biology / Rocky Mountain Bioinformatics Conference (poster session)"
+            [ "Int'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)"
             ]
       , links = [ More "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19" ]
       }
@@ -92,9 +92,9 @@ projects =
       , location = ""
       , dates = "Summer 2018 - present"
       , details =
-            [ "Conceive, design, and implement a web-based musician feedback service (ReasonML + React)"
-            , "Musicians submit recordings of performances and receive pointed feedback from teachers"
-            , "Front-end with ReasonML + React, back-end with Hasura's GraphQL + Postgres database"
+            [ "Design and implement web-based musician feedback service (ReasonML, React, GraphQL, Postgres)"
+            , "Musicians submit recordings of performances and receive pointed feedback from others"
+              -- , "Front-end is ReasonML + React, back-end is Hasura's GraphQL server + Postgres database"
             ]
       , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/" ]
       }
@@ -132,7 +132,7 @@ projects =
       , location = ""
       , dates = "Spring 2018"
       , details =
-            [ "Infer the optimal evolutionary tree, given DNA sequences for the leaf taxa (Python)"
+            [ "Infer evolutionary tree, given DNA sequences for leaf taxa and plausible mutations (Python)"
             ]
       , links = []
       }
