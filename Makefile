@@ -1,24 +1,3 @@
-# Resume.html: Resume.elm ResumeTypes.elm ResumeView.elm
-# 	elm make Resume.elm --output=Resume.html
-# 	open -a Safari Resume.html
-# 	$(info <<< Check resume in Safari, save to PDF if needed)
-
-# HomePage.html: HomePage.elm Resume.elm ResumeTypes.elm ResumeView.elm
-# 	elm make $^ --output=$@
-# 	open -a Safari $@
-# 	$(info <<< Check HomePage in Safari)
-
-# all: Resume.html HomePage.html
-# 	cp HomePage.html index.html
-# 	$(info <<< Check Resume & HomePage in Safari, save updated PDF, then git add, git commit & git push)
-
-# all: Resume HomePage
-# 	cp build/HomePage.html ./index.html	
-
-# % : %.elm
-# 	elm make src/$< --output build/$@.js
-# 	cp src/index.html build/$@.html
-
 default:
 	$(info <<<<< either `make Resume` or `make HomePage`)
 
