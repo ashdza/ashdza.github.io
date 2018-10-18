@@ -12,8 +12,8 @@ theResume : Resume
 theResume =
     { header = header
     , body =
-        -- FlatSection "Why Spotify?" whySpotify
-        [ NestedSection "Education" education
+        [ FlatSection "Why Spotify?" whySpotify
+        , NestedSection "Education" education
         , NestedSection "Conference Presentations" awards
         , NestedSection "Projects" projects
         , NestedSection "Software Development Skills" programming
@@ -92,7 +92,7 @@ projects =
       , location = ""
       , dates = "Summer 2018 - present"
       , details =
-            [ "Design and implement web-based musician feedback service (ReasonML, React, GraphQL, Postgres)"
+            [ "Design and implement a web-based musician feedback service (ReasonML, React, GraphQL, Postgres)"
             , "Musicians submit recordings of performances and receive pointed feedback from others"
               -- , "Front-end is ReasonML + React, back-end is Hasura's GraphQL server + Postgres database"
             ]
@@ -103,7 +103,7 @@ projects =
       , location = ""
       , dates = "Summer 2017"
       , details =
-            [ "Design and implement browser-based interactive graphical simulation of a physics problem (ReasonML)"
+            [ "Design and implement a browser-based interactive graphical simulation of a physics problem (ReasonML)"
             ]
       , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/public/index.html" ]
       }
@@ -112,7 +112,7 @@ projects =
       , location = ""
       , dates = "Spring 2018"
       , details =
-            [ "Design and implement rooted-directed minimal spanning tree algorithm (Python)"
+            [ "Design and implement a rooted-directed minimal spanning tree algorithm (Python)"
             , "Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree"
             ]
       , links = []
@@ -176,7 +176,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            , "Basics of functional programming with types"
+            , "Functional programming with types (ReasonML, Java 8+, Python 3.5+)"
             ]
       , links = []
       }
