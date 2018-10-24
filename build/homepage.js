@@ -9053,7 +9053,7 @@ var _user$project$Resume$programming = {
 				_0: 'Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2',
 				_1: {
 					ctor: '::',
-					_0: 'Basics of functional programming with types',
+					_0: 'Functional programming with types (ReasonML, Java 8+, Python 3.5+)',
 					_1: {ctor: '[]'}
 				}
 			},
@@ -9090,7 +9090,7 @@ var _user$project$Resume$projects = {
 		dates: 'Summer 2018 - present',
 		details: {
 			ctor: '::',
-			_0: 'Design and implement web-based musician feedback service (ReasonML, React, GraphQL, Postgres)',
+			_0: 'Design and implement a web-based musician feedback service (ReasonML, React, GraphQL, Postgres)',
 			_1: {
 				ctor: '::',
 				_0: 'Musicians submit recordings of performances and receive pointed feedback from others',
@@ -9116,7 +9116,7 @@ var _user$project$Resume$projects = {
 			dates: 'Summer 2017',
 			details: {
 				ctor: '::',
-				_0: 'Design and implement browser-based interactive graphical simulation of a physics problem (ReasonML)',
+				_0: 'Design and implement a browser-based interactive graphical simulation of a physics problem (ReasonML)',
 				_1: {ctor: '[]'}
 			},
 			links: {
@@ -9124,7 +9124,7 @@ var _user$project$Resume$projects = {
 				_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/physics-sunset'),
 				_1: {
 					ctor: '::',
-					_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/public/index.html'),
+					_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/'),
 					_1: {ctor: '[]'}
 				}
 			}
@@ -9138,7 +9138,7 @@ var _user$project$Resume$projects = {
 				dates: 'Spring 2018',
 				details: {
 					ctor: '::',
-					_0: 'Design and implement rooted-directed minimal spanning tree algorithm (Python)',
+					_0: 'Design and implement a rooted-directed minimal spanning tree algorithm (Python)',
 					_1: {
 						ctor: '::',
 						_0: 'Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree',

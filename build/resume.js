@@ -8945,7 +8945,7 @@ var _user$project$Resume$projects = {
 				_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/physics-sunset'),
 				_1: {
 					ctor: '::',
-					_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/public/index.html'),
+					_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/'),
 					_1: {ctor: '[]'}
 				}
 			}
@@ -9144,27 +9144,23 @@ var _user$project$Resume$theResume = {
 	header: _user$project$Resume$header,
 	body: {
 		ctor: '::',
-		_0: A2(_user$project$ResumeTypes$FlatSection, 'Why Spotify?', _user$project$Resume$whySpotify),
+		_0: A2(_user$project$ResumeTypes$NestedSection, 'Education', _user$project$Resume$education),
 		_1: {
 			ctor: '::',
-			_0: A2(_user$project$ResumeTypes$NestedSection, 'Education', _user$project$Resume$education),
+			_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
 			_1: {
 				ctor: '::',
-				_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
+				_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
 				_1: {
 					ctor: '::',
-					_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
+					_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$programming),
 					_1: {
 						ctor: '::',
-						_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$programming),
+						_0: A2(_user$project$ResumeTypes$NestedSection, 'Work Experience', _user$project$Resume$work),
 						_1: {
 							ctor: '::',
-							_0: A2(_user$project$ResumeTypes$NestedSection, 'Work Experience', _user$project$Resume$work),
-							_1: {
-								ctor: '::',
-								_0: A2(_user$project$ResumeTypes$FlatSection, 'Organizations and Activities', _user$project$Resume$activities),
-								_1: {ctor: '[]'}
-							}
+							_0: A2(_user$project$ResumeTypes$FlatSection, 'Organizations and Activities', _user$project$Resume$activities),
+							_1: {ctor: '[]'}
 						}
 					}
 				}

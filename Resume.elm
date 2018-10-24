@@ -12,8 +12,8 @@ theResume : Resume
 theResume =
     { header = header
     , body =
-        [ FlatSection "Why Spotify?" whySpotify
-        , NestedSection "Education" education
+        -- FlatSection "Why Spotify?" whySpotify
+        [ NestedSection "Education" education
         , NestedSection "Conference Presentations" awards
         , NestedSection "Projects" projects
         , NestedSection "Software Development Skills" programming
@@ -105,7 +105,7 @@ projects =
       , details =
             [ "Design and implement a browser-based interactive graphical simulation of a physics problem (ReasonML)"
             ]
-      , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/public/index.html" ]
+      , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/" ]
       }
     , { name = "Disease Transmission Analysis"
       , role = ""
