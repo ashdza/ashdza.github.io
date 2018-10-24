@@ -1,13 +1,12 @@
 module Demos exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (..)
 import ResumeView
-import ResumeTypes
+import ResumeTypes exposing (..)
 
 
-demos : ResumeTypes.Resume -> List ResumeTypes.Item
-demos resume =
+demosNestedSections : Resume -> List Item
+demosNestedSections resume =
     let
         demoable list =
             List.filter
@@ -18,24 +17,38 @@ demos resume =
 
         demoItems section =
             case section of
-                ResumeTypes.NestedSection _ items ->
+                NestedSection _ items ->
                     demoable items
 
-                ResumeTypes.FlatSection _ _ ->
+                FlatSection name flatItems ->
                     []
 
-                ResumeTypes.InlineSection _ _ ->
+                InlineSection _ _ ->
                     []
     in
         List.concatMap demoItems resume.body
 
 
-view : ResumeTypes.Resume -> Html a
+demosFlatSections : Resume -> List FlatItem
+demosFlatSections resume =
+    let
+        demoFlatItems section =
+            case section of
+                FlatSection name flatItems ->
+                    List.filter (\item -> item.links /= []) flatItems
+
+                _ ->
+                    []
+    in
+        List.concatMap (\s -> demoFlatItems s) resume.body
+
+
+view : Resume -> Html a
 view model =
     div []
         [ ResumeView.viewHeader model.header
-        , section [ id "demos_repos" ]
-            (h2 [ class "sectionHeader" ] [ text "Demos, Repos, More" ]
-                :: List.map ResumeView.viewItem (demos model)
-            )
+        , ResumeView.viewSection
+            (NestedSection "Demos, Repos, More" (demosNestedSections model))
+        , ResumeView.viewSection
+            (FlatSection "Others" (demosFlatSections model))
         ]

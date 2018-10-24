@@ -8874,7 +8874,30 @@ var _user$project$ResumeView$nullHtml = A3(
 	{ctor: '[]'},
 	{ctor: '[]'});
 
-var _user$project$Demos$demos = function (resume) {
+var _user$project$Demos$demosFlatSections = function (resume) {
+	var demoFlatItems = function (section) {
+		var _p0 = section;
+		if (_p0.ctor === 'FlatSection') {
+			return A2(
+				_elm_lang$core$List$filter,
+				function (item) {
+					return !_elm_lang$core$Native_Utils.eq(
+						item.links,
+						{ctor: '[]'});
+				},
+				_p0._1);
+		} else {
+			return {ctor: '[]'};
+		}
+	};
+	return A2(
+		_elm_lang$core$List$concatMap,
+		function (s) {
+			return demoFlatItems(s);
+		},
+		resume.body);
+};
+var _user$project$Demos$demosNestedSections = function (resume) {
 	var demoable = function (list) {
 		return A2(
 			_elm_lang$core$List$filter,
@@ -8886,10 +8909,10 @@ var _user$project$Demos$demos = function (resume) {
 			list);
 	};
 	var demoItems = function (section) {
-		var _p0 = section;
-		switch (_p0.ctor) {
+		var _p1 = section;
+		switch (_p1.ctor) {
 			case 'NestedSection':
-				return demoable(_p0._1);
+				return demoable(_p1._1);
 			case 'FlatSection':
 				return {ctor: '[]'};
 			default:
@@ -8907,33 +8930,20 @@ var _user$project$Demos$view = function (model) {
 			_0: _user$project$ResumeView$viewHeader(model.header),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$section,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$id('demos_repos'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$h2,
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
-								_1: {ctor: '[]'}
-							},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text('Demos, Repos, More'),
-								_1: {ctor: '[]'}
-							}),
-						_1: A2(
-							_elm_lang$core$List$map,
-							_user$project$ResumeView$viewItem,
-							_user$project$Demos$demos(model))
-					}),
-				_1: {ctor: '[]'}
+				_0: _user$project$ResumeView$viewSection(
+					A2(
+						_user$project$ResumeTypes$NestedSection,
+						'Demos, Repos, More',
+						_user$project$Demos$demosNestedSections(model))),
+				_1: {
+					ctor: '::',
+					_0: _user$project$ResumeView$viewSection(
+						A2(
+							_user$project$ResumeTypes$FlatSection,
+							'Others',
+							_user$project$Demos$demosFlatSections(model))),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };
