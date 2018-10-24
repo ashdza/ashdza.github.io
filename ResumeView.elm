@@ -194,7 +194,7 @@ viewSection s =
 
 view : Model -> Html a
 view model =
-    div []
+    div [ id "resume" ]
         ([ purecss
          , localcss
          , printcss

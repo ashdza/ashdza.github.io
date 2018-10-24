@@ -8727,7 +8727,11 @@ var _user$project$ResumeView$viewSection = function (s) {
 var _user$project$ResumeView$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('resume'),
+			_1: {ctor: '[]'}
+		},
 		A2(
 			_elm_lang$core$Basics_ops['++'],
 			{
@@ -8908,7 +8912,7 @@ var _user$project$Resume$projects = {
 		name: 'Lentil - A Musician\'s Feedback Service',
 		role: 'Independent Project',
 		location: '',
-		dates: 'Summer 2018 - present',
+		dates: '2018 - present',
 		details: {
 			ctor: '::',
 			_0: 'Design and implement a web-based musician feedback service (ReasonML, React, GraphQL, Postgres)',
@@ -8934,7 +8938,7 @@ var _user$project$Resume$projects = {
 			name: 'Physics Sunset',
 			role: 'Independent Project',
 			location: '',
-			dates: 'Summer 2017',
+			dates: '2017',
 			details: {
 				ctor: '::',
 				_0: 'Design and implement a browser-based interactive graphical simulation of a physics problem (ReasonML)',
@@ -8956,7 +8960,7 @@ var _user$project$Resume$projects = {
 				name: 'Disease Transmission Analysis',
 				role: '',
 				location: '',
-				dates: 'Spring 2018',
+				dates: '2018',
 				details: {
 					ctor: '::',
 					_0: 'Design and implement a rooted-directed minimal spanning tree algorithm (Python)',
@@ -8974,7 +8978,7 @@ var _user$project$Resume$projects = {
 					name: 'DNA Sequence Alignment',
 					role: '',
 					location: '',
-					dates: 'Spring 2018',
+					dates: '2018',
 					details: {
 						ctor: '::',
 						_0: 'Design and implement DP solutions to two DNA sequence alignment problems (Python)',
@@ -8992,7 +8996,7 @@ var _user$project$Resume$projects = {
 						name: 'Phylogenetic (Evolutionary) Trees',
 						role: '',
 						location: '',
-						dates: 'Spring 2018',
+						dates: '2018',
 						details: {
 							ctor: '::',
 							_0: 'Infer evolutionary tree, given DNA sequences for leaf taxa and plausible mutations (Python)',
@@ -9006,7 +9010,7 @@ var _user$project$Resume$projects = {
 							name: 'Hidden Markov Models and Part-of-Speech Tagging',
 							role: '',
 							location: '',
-							dates: 'Spring 2018',
+							dates: '2018',
 							details: {
 								ctor: '::',
 								_0: 'Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)',

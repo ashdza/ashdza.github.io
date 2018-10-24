@@ -90,7 +90,7 @@ projects =
     [ { name = "Lentil - A Musician's Feedback Service"
       , role = "Independent Project"
       , location = ""
-      , dates = "Summer 2018 - present"
+      , dates = "2018 - present"
       , details =
             [ "Design and implement a web-based musician feedback service (ReasonML, React, GraphQL, Postgres)"
             , "Musicians submit recordings of performances and receive pointed feedback from others"
@@ -101,7 +101,7 @@ projects =
     , { name = "Physics Sunset"
       , role = "Independent Project"
       , location = ""
-      , dates = "Summer 2017"
+      , dates = "2017"
       , details =
             [ "Design and implement a browser-based interactive graphical simulation of a physics problem (ReasonML)"
             ]
@@ -110,7 +110,7 @@ projects =
     , { name = "Disease Transmission Analysis"
       , role = ""
       , location = ""
-      , dates = "Spring 2018"
+      , dates = "2018"
       , details =
             [ "Design and implement a rooted-directed minimal spanning tree algorithm (Python)"
             , "Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree"
@@ -120,7 +120,7 @@ projects =
     , { name = "DNA Sequence Alignment"
       , role = ""
       , location = ""
-      , dates = "Spring 2018"
+      , dates = "2018"
       , details =
             [ "Design and implement DP solutions to two DNA sequence alignment problems (Python)"
             , "Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene"
@@ -130,7 +130,7 @@ projects =
     , { name = "Phylogenetic (Evolutionary) Trees"
       , role = ""
       , location = ""
-      , dates = "Spring 2018"
+      , dates = "2018"
       , details =
             [ "Infer evolutionary tree, given DNA sequences for leaf taxa and plausible mutations (Python)"
             ]
@@ -139,7 +139,7 @@ projects =
     , { name = "Hidden Markov Models and Part-of-Speech Tagging"
       , role = ""
       , location = ""
-      , dates = "Spring 2018"
+      , dates = "2018"
       , details =
             [ "Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)"
             , "Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"

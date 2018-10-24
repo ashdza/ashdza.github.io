@@ -1,31 +1,34 @@
 body {
-	font-size: 10pt;
-	margin-bottom: 5px;
-	margin-top: 5px;
+    font-size: 10pt;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 #header {
-	margin-top: 10px;
-	margin-bottom: -10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
 }
 
 .itemName {
-	margin-top, margin-bottom: 2px;
-	font-size: 11pt;
+    margin-top,
+    margin-bottom: 2px;
+    font-size: 11pt;
 }
 
-.sectionHeader, .itemName {
-	/*color: black;*/
-	page-break-after: avoid;
+.sectionHeader,
+.itemName {
+    /*color: black;*/
+    page-break-after: avoid;
 }
 
 .sectionHeader {
-	margin-top, margin-bottom: 20px;
-	font-size: 11pt;
+    margin-top,
+    margin-bottom: 20px;
+    font-size: 11pt;
 }
 
 .item {
-	margin-top: -10px;
+    margin-top: -10px;
 }
 
 .itemDetails {
@@ -35,11 +38,14 @@ body {
 }
 
 .detail {
-	margin-top: 0px;
-	margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.affil, .myContactInfo, .itemAttrs, .right {
+.affil,
+.myContactInfo,
+.itemAttrs,
+.right {
     font-size: 9pt;
 }
 
@@ -48,6 +54,12 @@ body {
     font-size: 9pt;
     margin-left: 30px;
     background: bisque;
+}
+
+@media print {
+    #resume {
+        padding-top: 0px;
+    }
 }
 
 /*
