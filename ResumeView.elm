@@ -195,11 +195,11 @@ viewSection s =
 view : Model -> Html a
 view model =
     div [ id "resume" ]
-        ([ purecss
-         , localcss
-         , printcss
+        ([ --     purecss
+           --  , localcss
+           --  , printcss
            --  , printmediaCss
-         , viewHeader model.header
+           viewHeader model.header
          ]
             ++ List.map viewSection model.body
         )

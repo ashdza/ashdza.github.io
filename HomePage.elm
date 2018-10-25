@@ -62,11 +62,11 @@ view : String -> Model -> Html Msg
 view blogUrl model =
     div
         []
-        [ ResumeView.purecss
-        , ResumeView.localcss
-        , ResumeView.printcss
+        [ --     ResumeView.purecss
+          -- , ResumeView.localcss
+          -- , ResumeView.printcss
           -- , ResumeView.printmediaCss
-        , div
+          div
             [ id "layout" ]
             [ Html.map MenuAct (Menu.view menu model.mode)
             , case model.mode of
