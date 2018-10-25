@@ -9066,7 +9066,7 @@ var _user$project$Resume$programming = {
 				dates: '2017 - present',
 				details: {
 					ctor: '::',
-					_0: 'Test-driven development, unit-tests & property-based tests (Python/Pytest, Java/JUnit 5/QuickTheories',
+					_0: 'Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories',
 					_1: {ctor: '[]'}
 				},
 				links: {ctor: '[]'}

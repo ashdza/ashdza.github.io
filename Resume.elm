@@ -12,7 +12,7 @@ theResume : Resume
 theResume =
     { header = header
     , body =
-        -- FlatSection "Why Spotify?" whySpotify
+        -- [ FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
         , NestedSection "Conference Presentations" awards
         , NestedSection "Projects" projects
@@ -185,7 +185,7 @@ programming =
       , location = ""
       , dates = "2017 - present"
       , details =
-            [ "Test-driven development, unit-tests & property-based tests (Python/Pytest, Java/JUnit 5/QuickTheories"
+            [ "Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories"
             ]
       , links = []
       }
