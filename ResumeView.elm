@@ -145,7 +145,7 @@ printmediaCss =
 viewNestedSection : String -> List Item -> Html a
 viewNestedSection name items =
     section []
-        (h2 [ class "sectionHeader" ] [ text name ]
+        (h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
             :: List.map viewItem items
         )
 
@@ -153,7 +153,7 @@ viewNestedSection name items =
 viewFlatSection : String -> List FlatItem -> Html a
 viewFlatSection name items =
     section []
-        [ h2 [ class "sectionHeader" ] [ text name ]
+        [ h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
         , ul []
             (List.map
                 (\{ name, attrs, links } ->
@@ -170,7 +170,7 @@ viewFlatSection name items =
 viewInlineSection : String -> List String -> Html a
 viewInlineSection name items =
     section []
-        [ h2 [ class "sectionHeader" ] [ text name ]
+        [ h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
         , div [ class "bulletSepList" ]
             (List.map
                 (\item -> span [] [ bullet, text item ])

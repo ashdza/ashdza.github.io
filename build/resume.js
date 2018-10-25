@@ -8413,7 +8413,14 @@ var _user$project$ResumeView$viewInlineSection = F2(
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(name),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -8632,7 +8639,14 @@ var _user$project$ResumeView$viewNestedSection = F2(
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(name),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: A2(_elm_lang$core$List$map, _user$project$ResumeView$viewItem, items)
@@ -8654,7 +8668,14 @@ var _user$project$ResumeView$viewFlatSection = F2(
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(name),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: {

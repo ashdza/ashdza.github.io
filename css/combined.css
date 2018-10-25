@@ -1,6 +1,6 @@
 #resume {
     padding-top: 20px;
-    margin: 15px 10px 15px 15px
+    margin: 14px 10px 10px 15px
 }
 
 .myName {
@@ -162,14 +162,30 @@ body {
 }
 
 .sectionHeader {
-    color: darkslategrey;
-    margin-bottom: 5px;
-    margin-top: 10px;
-    border-bottom: 1px solid black;
-    margin-top,
-    margin-bottom: 20px;
-    font-size: 11pt
+    /* color: darkslategrey; */
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 13pt;
+    text-align: left;
 }
+
+/* <line separators> */
+
+.sectionHeader {
+    width: 100%;
+    border-bottom: 1px solid #9e9e9e;
+    line-height: 0.1em;
+    z-index: -1
+}
+
+.sectionHeader span {
+    color: rgb(75, 75, 75);
+    background: #fff;
+    padding-right: 15px;
+    z-index: 1
+}
+
+/* </line separators> */
 
 .item {
     page-break-inside: avoid;
