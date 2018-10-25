@@ -119,33 +119,15 @@ viewHeader header =
             ]
 
 
-purecss : Html a
-purecss =
-    node "link" [ rel "stylesheet", type_ "text/css", href "https://unpkg.com/purecss@0.6.0/build/pure-min.css" ] []
-
-
-localcss : Html a
-localcss =
-    node "link" [ rel "stylesheet", type_ "text/css", href "css/style.css" ] []
-
-
-printcss : Html a
-printcss =
-    node "style" [ type_ "text/css" ] [ text "@import 'css/print-style.css';" ]
-
-
-printmediaCss : Html a
-printmediaCss =
-    node "style"
-        [ type_ "text/css" ]
-        [ text "@media print {\n            .link { display: none; }\n          }"
-        ]
+sectionHeader : String -> Html a
+sectionHeader name =
+    h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
 
 
 viewNestedSection : String -> List Item -> Html a
 viewNestedSection name items =
     section []
-        (h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
+        (sectionHeader name
             :: List.map viewItem items
         )
 
@@ -153,7 +135,7 @@ viewNestedSection name items =
 viewFlatSection : String -> List FlatItem -> Html a
 viewFlatSection name items =
     section []
-        [ h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
+        [ sectionHeader name
         , ul []
             (List.map
                 (\{ name, attrs, links } ->
@@ -170,7 +152,7 @@ viewFlatSection name items =
 viewInlineSection : String -> List String -> Html a
 viewInlineSection name items =
     section []
-        [ h2 [ class "sectionHeader" ] [ span [] [ text name ] ]
+        [ sectionHeader name
         , div [ class "bulletSepList" ]
             (List.map
                 (\item -> span [] [ bullet, text item ])

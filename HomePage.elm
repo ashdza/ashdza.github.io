@@ -82,7 +82,7 @@ view model =
                         [ ResumeView.viewHeader model.resume.header
                         , section
                             [ id "blog_repos" ]
-                            [ h2 [ class "sectionHeader" ] [ span [] [ text "Blog" ] ]
+                            [ ResumeView.sectionHeader "Blog"
                             , h4 [ class "itemName" ]
                                 [ text "I finally started my blog."
                                 , a [ class "itemName", href blogUrl, target "_blank" ] [ text "Here it is." ]
@@ -98,15 +98,14 @@ view model =
                             [ ResumeView.viewHeader model.resume.header
                             , section
                                 [ id "about" ]
-                                [ h2 [ class "sectionHeader" ] [ span [] [ text "About" ] ]
-                                , h4
-                                    [ class "itemName" ]
-                                    [ text "This site is written entirely in "
-                                    , a [ href "http://www.elm-lang.org", target "_blank" ] [ text "Elm" ]
-                                    , text ". Here is the "
-                                    , a [ href "http://www.github.com/ashdza/ashdza.github.io.git", target "_blank" ] [ text "repo." ]
-                                    ]
-                                ]
+                                [ ResumeView.sectionHeader "About" ]
+                            ]
+                        , h4
+                            [ class "itemName" ]
+                            [ text "This site is written entirely in "
+                            , a [ href "http://www.elm-lang.org", target "_blank" ] [ text "Elm" ]
+                            , text ". Here is the "
+                            , a [ href "http://www.github.com/ashdza/ashdza.github.io.git", target "_blank" ] [ text "repo." ]
                             ]
                         ]
             ]

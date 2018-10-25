@@ -8183,66 +8183,27 @@ var _user$project$ResumeTypes$NestedSection = F2(
 		return {ctor: 'NestedSection', _0: a, _1: b};
 	});
 
-var _user$project$ResumeView$printmediaCss = A3(
-	_elm_lang$html$Html$node,
-	'style',
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$type_('text/css'),
-		_1: {ctor: '[]'}
-	},
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html$text('@media print {\n            .link { display: none; }\n          }'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$ResumeView$printcss = A3(
-	_elm_lang$html$Html$node,
-	'style',
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$type_('text/css'),
-		_1: {ctor: '[]'}
-	},
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html$text('@import \'css/print-style.css\';'),
-		_1: {ctor: '[]'}
-	});
-var _user$project$ResumeView$localcss = A3(
-	_elm_lang$html$Html$node,
-	'link',
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$rel('stylesheet'),
-		_1: {
+var _user$project$ResumeView$sectionHeader = function (name) {
+	return A2(
+		_elm_lang$html$Html$h2,
+		{
 			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$type_('text/css'),
-			_1: {
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$href('css/style.css'),
-				_1: {ctor: '[]'}
-			}
-		}
-	},
-	{ctor: '[]'});
-var _user$project$ResumeView$purecss = A3(
-	_elm_lang$html$Html$node,
-	'link',
-	{
-		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$rel('stylesheet'),
-		_1: {
+			_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
+			_1: {ctor: '[]'}
+		},
+		{
 			ctor: '::',
-			_0: _elm_lang$html$Html_Attributes$type_('text/css'),
-			_1: {
-				ctor: '::',
-				_0: _elm_lang$html$Html_Attributes$href('https://unpkg.com/purecss@0.6.0/build/pure-min.css'),
-				_1: {ctor: '[]'}
-			}
-		}
-	},
-	{ctor: '[]'});
+			_0: A2(
+				_elm_lang$html$Html$span,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(name),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$ResumeView$bullet = A2(
 	_elm_lang$html$Html$span,
 	{
@@ -8404,25 +8365,7 @@ var _user$project$ResumeView$viewInlineSection = F2(
 			{ctor: '[]'},
 			{
 				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$h2,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$span,
-							{ctor: '[]'},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text(name),
-								_1: {ctor: '[]'}
-							}),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$ResumeView$sectionHeader(name),
 				_1: {
 					ctor: '::',
 					_0: A2(
@@ -8630,25 +8573,7 @@ var _user$project$ResumeView$viewNestedSection = F2(
 			{ctor: '[]'},
 			{
 				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$h2,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$span,
-							{ctor: '[]'},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text(name),
-								_1: {ctor: '[]'}
-							}),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$ResumeView$sectionHeader(name),
 				_1: A2(_elm_lang$core$List$map, _user$project$ResumeView$viewItem, items)
 			});
 	});
@@ -8659,25 +8584,7 @@ var _user$project$ResumeView$viewFlatSection = F2(
 			{ctor: '[]'},
 			{
 				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$h2,
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$span,
-							{ctor: '[]'},
-							{
-								ctor: '::',
-								_0: _elm_lang$html$Html$text(name),
-								_1: {ctor: '[]'}
-							}),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$ResumeView$sectionHeader(name),
 				_1: {
 					ctor: '::',
 					_0: A2(
