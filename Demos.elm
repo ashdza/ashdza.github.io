@@ -1,6 +1,7 @@
 module Demos exposing (..)
 
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import ResumeView
 import ResumeTypes exposing (..)
 
@@ -45,7 +46,7 @@ demosFlatSections resume =
 
 view : Resume -> Html a
 view model =
-    div []
+    div [ id "resume" ]
         [ ResumeView.viewHeader model.header
         , ResumeView.viewSection
             (NestedSection "Demos, Repos, More" (demosNestedSections model))

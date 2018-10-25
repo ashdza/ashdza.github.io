@@ -58,8 +58,8 @@ update act model =
 -- ------ VIEW ----
 
 
-view : String -> Model -> Html Msg
-view blogUrl model =
+view : Model -> Html Msg
+view model =
     div
         []
         [ --     ResumeView.purecss
@@ -78,11 +78,11 @@ view blogUrl model =
 
                 Blog ->
                     div
-                        []
+                        [ id "resume" ]
                         [ ResumeView.viewHeader model.resume.header
                         , section
                             [ id "blog_repos" ]
-                            [ h2 [ class "sectionHeader" ] [ text "Blog" ]
+                            [ h2 [ class "sectionHeader" ] [ span [] [ text "Blog" ] ]
                             , h4 [ class "itemName" ]
                                 [ text "I finally started my blog."
                                 , a [ class "itemName", href blogUrl, target "_blank" ] [ text "Here it is." ]
@@ -92,13 +92,13 @@ view blogUrl model =
 
                 About ->
                     div
-                        []
+                        [ id "resume" ]
                         [ div
                             []
                             [ ResumeView.viewHeader model.resume.header
                             , section
                                 [ id "about" ]
-                                [ h2 [ class "sectionHeader" ] [ text "About" ]
+                                [ h2 [ class "sectionHeader" ] [ span [] [ text "About" ] ]
                                 , h4
                                     [ class "itemName" ]
                                     [ text "This site is written entirely in "
@@ -122,6 +122,6 @@ main =
     Html.program
         { init = init
         , update = update
-        , view = view blogUrl
+        , view = view
         , subscriptions = \_ -> Sub.none
         }

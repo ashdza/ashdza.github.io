@@ -8528,7 +8528,14 @@ var _user$project$ResumeView$viewInlineSection = F2(
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(name),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -8747,7 +8754,14 @@ var _user$project$ResumeView$viewNestedSection = F2(
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(name),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: A2(_elm_lang$core$List$map, _user$project$ResumeView$viewItem, items)
@@ -8769,7 +8783,14 @@ var _user$project$ResumeView$viewFlatSection = F2(
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(name),
+						_0: A2(
+							_elm_lang$html$Html$span,
+							{ctor: '[]'},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text(name),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -8912,7 +8933,11 @@ var _user$project$Demos$demosNestedSections = function (resume) {
 var _user$project$Demos$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
-		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$id('resume'),
+			_1: {ctor: '[]'}
+		},
 		{
 			ctor: '::',
 			_0: _user$project$ResumeView$viewHeader(model.header),
@@ -9480,198 +9505,108 @@ var _user$project$HomePage$NoOp = {ctor: 'NoOp'};
 var _user$project$HomePage$MenuAct = function (a) {
 	return {ctor: 'MenuAct', _0: a};
 };
-var _user$project$HomePage$view = F2(
-	function (blogUrl, model) {
-		return A2(
-			_elm_lang$html$Html$div,
-			{ctor: '[]'},
-			{
-				ctor: '::',
-				_0: A2(
-					_elm_lang$html$Html$div,
-					{
+var _user$project$HomePage$view = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$id('layout'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$map,
+						_user$project$HomePage$MenuAct,
+						A2(_user$project$Menu$view, _user$project$HomePage$menu, model.mode)),
+					_1: {
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$id('layout'),
-						_1: {ctor: '[]'}
-					},
-					{
-						ctor: '::',
-						_0: A2(
-							_elm_lang$html$Html$map,
-							_user$project$HomePage$MenuAct,
-							A2(_user$project$Menu$view, _user$project$HomePage$menu, model.mode)),
-						_1: {
-							ctor: '::',
-							_0: function () {
-								var _p1 = model.mode;
-								switch (_p1.ctor) {
-									case 'CV':
-										return _user$project$ResumeView$view(model.resume);
-									case 'Demos':
-										return _user$project$Demos$view(model.resume);
-									case 'Blog':
-										return A2(
-											_elm_lang$html$Html$div,
-											{ctor: '[]'},
-											{
-												ctor: '::',
-												_0: _user$project$ResumeView$viewHeader(model.resume.header),
-												_1: {
-													ctor: '::',
-													_0: A2(
-														_elm_lang$html$Html$section,
-														{
-															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$id('blog_repos'),
-															_1: {ctor: '[]'}
-														},
-														{
-															ctor: '::',
-															_0: A2(
-																_elm_lang$html$Html$h2,
-																{
-																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
-																	_1: {ctor: '[]'}
-																},
-																{
-																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('Blog'),
-																	_1: {ctor: '[]'}
-																}),
-															_1: {
-																ctor: '::',
-																_0: A2(
-																	_elm_lang$html$Html$h4,
-																	{
-																		ctor: '::',
-																		_0: _elm_lang$html$Html_Attributes$class('itemName'),
-																		_1: {ctor: '[]'}
-																	},
-																	{
-																		ctor: '::',
-																		_0: _elm_lang$html$Html$text('I finally started my blog.'),
-																		_1: {
-																			ctor: '::',
-																			_0: A2(
-																				_elm_lang$html$Html$a,
-																				{
-																					ctor: '::',
-																					_0: _elm_lang$html$Html_Attributes$class('itemName'),
-																					_1: {
-																						ctor: '::',
-																						_0: _elm_lang$html$Html_Attributes$href(blogUrl),
-																						_1: {
-																							ctor: '::',
-																							_0: _elm_lang$html$Html_Attributes$target('_blank'),
-																							_1: {ctor: '[]'}
-																						}
-																					}
-																				},
-																				{
-																					ctor: '::',
-																					_0: _elm_lang$html$Html$text('Here it is.'),
-																					_1: {ctor: '[]'}
-																				}),
-																			_1: {ctor: '[]'}
-																		}
-																	}),
-																_1: {ctor: '[]'}
-															}
-														}),
-													_1: {ctor: '[]'}
-												}
-											});
-									default:
-										return A2(
-											_elm_lang$html$Html$div,
-											{ctor: '[]'},
-											{
+						_0: function () {
+							var _p1 = model.mode;
+							switch (_p1.ctor) {
+								case 'CV':
+									return _user$project$ResumeView$view(model.resume);
+								case 'Demos':
+									return _user$project$Demos$view(model.resume);
+								case 'Blog':
+									return A2(
+										_elm_lang$html$Html$div,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$id('resume'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _user$project$ResumeView$viewHeader(model.resume.header),
+											_1: {
 												ctor: '::',
 												_0: A2(
-													_elm_lang$html$Html$div,
-													{ctor: '[]'},
+													_elm_lang$html$Html$section,
 													{
 														ctor: '::',
-														_0: _user$project$ResumeView$viewHeader(model.resume.header),
+														_0: _elm_lang$html$Html_Attributes$id('blog_repos'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$h2,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$span,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text('Blog'),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {ctor: '[]'}
+															}),
 														_1: {
 															ctor: '::',
 															_0: A2(
-																_elm_lang$html$Html$section,
+																_elm_lang$html$Html$h4,
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$id('about'),
+																	_0: _elm_lang$html$Html_Attributes$class('itemName'),
 																	_1: {ctor: '[]'}
 																},
 																{
 																	ctor: '::',
-																	_0: A2(
-																		_elm_lang$html$Html$h2,
-																		{
-																			ctor: '::',
-																			_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
-																			_1: {ctor: '[]'}
-																		},
-																		{
-																			ctor: '::',
-																			_0: _elm_lang$html$Html$text('About'),
-																			_1: {ctor: '[]'}
-																		}),
+																	_0: _elm_lang$html$Html$text('I finally started my blog.'),
 																	_1: {
 																		ctor: '::',
 																		_0: A2(
-																			_elm_lang$html$Html$h4,
+																			_elm_lang$html$Html$a,
 																			{
 																				ctor: '::',
 																				_0: _elm_lang$html$Html_Attributes$class('itemName'),
-																				_1: {ctor: '[]'}
+																				_1: {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$href(_user$project$HomePage$blogUrl),
+																					_1: {
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$target('_blank'),
+																						_1: {ctor: '[]'}
+																					}
+																				}
 																			},
 																			{
 																				ctor: '::',
-																				_0: _elm_lang$html$Html$text('This site is written entirely in '),
-																				_1: {
-																					ctor: '::',
-																					_0: A2(
-																						_elm_lang$html$Html$a,
-																						{
-																							ctor: '::',
-																							_0: _elm_lang$html$Html_Attributes$href('http://www.elm-lang.org'),
-																							_1: {
-																								ctor: '::',
-																								_0: _elm_lang$html$Html_Attributes$target('_blank'),
-																								_1: {ctor: '[]'}
-																							}
-																						},
-																						{
-																							ctor: '::',
-																							_0: _elm_lang$html$Html$text('Elm'),
-																							_1: {ctor: '[]'}
-																						}),
-																					_1: {
-																						ctor: '::',
-																						_0: _elm_lang$html$Html$text('. Here is the '),
-																						_1: {
-																							ctor: '::',
-																							_0: A2(
-																								_elm_lang$html$Html$a,
-																								{
-																									ctor: '::',
-																									_0: _elm_lang$html$Html_Attributes$href('http://www.github.com/ashdza/ashdza.github.io.git'),
-																									_1: {
-																										ctor: '::',
-																										_0: _elm_lang$html$Html_Attributes$target('_blank'),
-																										_1: {ctor: '[]'}
-																									}
-																								},
-																								{
-																									ctor: '::',
-																									_0: _elm_lang$html$Html$text('repo.'),
-																									_1: {ctor: '[]'}
-																								}),
-																							_1: {ctor: '[]'}
-																						}
-																					}
-																				}
+																				_0: _elm_lang$html$Html$text('Here it is.'),
+																				_1: {ctor: '[]'}
 																			}),
 																		_1: {ctor: '[]'}
 																	}
@@ -9680,20 +9615,131 @@ var _user$project$HomePage$view = F2(
 														}
 													}),
 												_1: {ctor: '[]'}
-											});
-								}
-							}(),
-							_1: {ctor: '[]'}
-						}
-					}),
-				_1: {ctor: '[]'}
-			});
-	});
+											}
+										});
+								default:
+									return A2(
+										_elm_lang$html$Html$div,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$id('resume'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$div,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: _user$project$ResumeView$viewHeader(model.resume.header),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$section,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$id('about'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$h2,
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$class('sectionHeader'),
+																		_1: {ctor: '[]'}
+																	},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$span,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('About'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$h4,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$class('itemName'),
+																			_1: {ctor: '[]'}
+																		},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text('This site is written entirely in '),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$a,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$href('http://www.elm-lang.org'),
+																						_1: {
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$target('_blank'),
+																							_1: {ctor: '[]'}
+																						}
+																					},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('Elm'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('. Here is the '),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$a,
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Attributes$href('http://www.github.com/ashdza/ashdza.github.io.git'),
+																								_1: {
+																									ctor: '::',
+																									_0: _elm_lang$html$Html_Attributes$target('_blank'),
+																									_1: {ctor: '[]'}
+																								}
+																							},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('repo.'),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}),
+																	_1: {ctor: '[]'}
+																}
+															}),
+														_1: {ctor: '[]'}
+													}
+												}),
+											_1: {ctor: '[]'}
+										});
+							}
+						}(),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$HomePage$main = _elm_lang$html$Html$program(
 	{
 		init: _user$project$HomePage$init,
 		update: _user$project$HomePage$update,
-		view: _user$project$HomePage$view(_user$project$HomePage$blogUrl),
+		view: _user$project$HomePage$view,
 		subscriptions: function (_p2) {
 			return _elm_lang$core$Platform_Sub$none;
 		}
