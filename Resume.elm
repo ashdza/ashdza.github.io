@@ -122,7 +122,7 @@ projects =
       , location = ""
       , dates = "2018"
       , details =
-            [ "Design and implement DP solutions to two DNA sequence alignment problems (Python)"
+            [ "Design and implement dynamic programming solutions to DNA sequence alignment problems (Python)"
             , "Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene"
             ]
       , links = []
@@ -185,8 +185,7 @@ programming =
       , location = ""
       , dates = "2017 - present"
       , details =
-            [ "Test-driven development, unit-tests, property-based tests"
-            , "Python testing using Pytest, Java testing using JUnit 5 & QuickTheories"
+            [ "Test-driven development, unit-tests & property-based tests (Python/Pytest, Java/JUnit 5/QuickTheories"
             ]
       , links = []
       }
@@ -195,13 +194,12 @@ programming =
 
 work : List Item
 work =
-    [ { role = "Summer Intern"
-      , name = "UT Austin Summer Research Academy - College of Natural Sciences"
+    [ { role = "Summer Research Intern"
+      , name = "UT Austin, College of Natural Sciences, Vertebrate Interactome Lab"
       , location = "Austin, TX"
-      , dates = "2015, 2016"
+      , dates = "2016"
       , details =
-            [ "DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli"
-            , "Worked with Dr. Al Mackrell in the Vertebrate Interactome Mapping Lab"
+            [ "DNA extraction, splicing, & recombineering of the DHX35 gene using E. coli"
             , "Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel"
             ]
       , links = []

@@ -120,7 +120,9 @@ body {
 }
 
 .split-l-r {
-    margin-left: -32px;
+    margin-left: -30px;
+    margin-top: 0px;
+    margin-bottom: 0px
 }
 
 .itemLeft {

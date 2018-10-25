@@ -8815,21 +8815,17 @@ var _user$project$Resume$activities = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Summer Intern',
-		name: 'UT Austin Summer Research Academy - College of Natural Sciences',
+		role: 'Summer Research Intern',
+		name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
 		location: 'Austin, TX',
-		dates: '2015, 2016',
+		dates: '2016',
 		details: {
 			ctor: '::',
-			_0: 'DNA extraction, splicing, and recombineering of the DHX35 gene using E. coli',
+			_0: 'DNA extraction, splicing, & recombineering of the DHX35 gene using E. coli',
 			_1: {
 				ctor: '::',
-				_0: 'Worked with Dr. Al Mackrell in the Vertebrate Interactome Mapping Lab',
-				_1: {
-					ctor: '::',
-					_0: 'Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel',
-					_1: {ctor: '[]'}
-				}
+				_0: 'Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel',
+				_1: {ctor: '[]'}
 			}
 		},
 		links: {ctor: '[]'}
@@ -8881,12 +8877,8 @@ var _user$project$Resume$programming = {
 				dates: '2017 - present',
 				details: {
 					ctor: '::',
-					_0: 'Test-driven development, unit-tests, property-based tests',
-					_1: {
-						ctor: '::',
-						_0: 'Python testing using Pytest, Java testing using JUnit 5 & QuickTheories',
-						_1: {ctor: '[]'}
-					}
+					_0: 'Test-driven development, unit-tests & property-based tests (Python/Pytest, Java/JUnit 5/QuickTheories',
+					_1: {ctor: '[]'}
 				},
 				links: {ctor: '[]'}
 			},
@@ -8969,7 +8961,7 @@ var _user$project$Resume$projects = {
 					dates: '2018',
 					details: {
 						ctor: '::',
-						_0: 'Design and implement DP solutions to two DNA sequence alignment problems (Python)',
+						_0: 'Design and implement dynamic programming solutions to DNA sequence alignment problems (Python)',
 						_1: {
 							ctor: '::',
 							_0: 'Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene',
