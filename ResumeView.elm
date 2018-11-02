@@ -109,8 +109,8 @@ viewHeader header =
                     (List.concatMap
                         (\{ name, url } ->
                             [ bullet
-                            , text name
-                            , a [ href url, target "_blank" ] [ text (short url) ]
+                              -- , text name
+                            , a [ href url, target "_blank" ] [ text name ]
                             ]
                         )
                         header.links

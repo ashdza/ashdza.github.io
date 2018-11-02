@@ -8434,34 +8434,28 @@ var _user$project$ResumeView$viewHeader = function (header) {
 									_elm_lang$core$List$concatMap,
 									function (_p0) {
 										var _p1 = _p0;
-										var _p2 = _p1.url;
 										return {
 											ctor: '::',
 											_0: _user$project$ResumeView$bullet,
 											_1: {
 												ctor: '::',
-												_0: _elm_lang$html$Html$text(_p1.name),
-												_1: {
-													ctor: '::',
-													_0: A2(
-														_elm_lang$html$Html$a,
-														{
+												_0: A2(
+													_elm_lang$html$Html$a,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$href(_p1.url),
+														_1: {
 															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$href(_p2),
-															_1: {
-																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$target('_blank'),
-																_1: {ctor: '[]'}
-															}
-														},
-														{
-															ctor: '::',
-															_0: _elm_lang$html$Html$text(
-																$short(_p2)),
+															_0: _elm_lang$html$Html_Attributes$target('_blank'),
 															_1: {ctor: '[]'}
-														}),
-													_1: {ctor: '[]'}
-												}
+														}
+													},
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html$text(_p1.name),
+														_1: {ctor: '[]'}
+													}),
+												_1: {ctor: '[]'}
 											}
 										};
 									},
@@ -8512,21 +8506,21 @@ var _user$project$ResumeView$viewInlineSection = F2(
 			});
 	});
 var _user$project$ResumeView$viewLink = function (link) {
-	var _p3 = function () {
-		var _p4 = link;
-		switch (_p4.ctor) {
+	var _p2 = function () {
+		var _p3 = link;
+		switch (_p3.ctor) {
 			case 'More':
-				return {ctor: '_Tuple2', _0: 'more', _1: _p4._0};
+				return {ctor: '_Tuple2', _0: 'more', _1: _p3._0};
 			case 'Demo':
-				return {ctor: '_Tuple2', _0: 'demo', _1: _p4._0};
+				return {ctor: '_Tuple2', _0: 'demo', _1: _p3._0};
 			case 'Repo':
-				return {ctor: '_Tuple2', _0: 'repo', _1: _p4._0};
+				return {ctor: '_Tuple2', _0: 'repo', _1: _p3._0};
 			default:
-				return {ctor: '_Tuple2', _0: _p4._0, _1: _p4._1};
+				return {ctor: '_Tuple2', _0: _p3._0, _1: _p3._1};
 		}
 	}();
-	var name = _p3._0;
-	var url = _p3._1;
+	var name = _p2._0;
+	var url = _p2._1;
 	return A2(
 		_elm_lang$html$Html$a,
 		{
@@ -8549,13 +8543,13 @@ var _user$project$ResumeView$viewLink = function (link) {
 		});
 };
 var _user$project$ResumeView$viewItem = function (item) {
-	var _p5 = item;
-	var name = _p5.name;
-	var role = _p5.role;
-	var location = _p5.location;
-	var dates = _p5.dates;
-	var details = _p5.details;
-	var links = _p5.links;
+	var _p4 = item;
+	var name = _p4.name;
+	var role = _p4.role;
+	var location = _p4.location;
+	var dates = _p4.dates;
+	var details = _p4.details;
+	var links = _p4.links;
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -8707,8 +8701,8 @@ var _user$project$ResumeView$viewFlatSection = F2(
 						{ctor: '[]'},
 						A2(
 							_elm_lang$core$List$map,
-							function (_p6) {
-								var _p7 = _p6;
+							function (_p5) {
+								var _p6 = _p5;
 								return A2(
 									_elm_lang$html$Html$li,
 									{
@@ -8729,10 +8723,10 @@ var _user$project$ResumeView$viewFlatSection = F2(
 												_elm_lang$core$Basics_ops['++'],
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text(_p7.name),
+													_0: _elm_lang$html$Html$text(_p6.name),
 													_1: {ctor: '[]'}
 												},
-												A2(_elm_lang$core$List$map, _user$project$ResumeView$viewLink, _p7.links))),
+												A2(_elm_lang$core$List$map, _user$project$ResumeView$viewLink, _p6.links))),
 										_1: {
 											ctor: '::',
 											_0: A2(
@@ -8744,7 +8738,7 @@ var _user$project$ResumeView$viewFlatSection = F2(
 												},
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text(_p7.attrs),
+													_0: _elm_lang$html$Html$text(_p6.attrs),
 													_1: {ctor: '[]'}
 												}),
 											_1: {ctor: '[]'}
@@ -8757,14 +8751,14 @@ var _user$project$ResumeView$viewFlatSection = F2(
 			});
 	});
 var _user$project$ResumeView$viewSection = function (s) {
-	var _p8 = s;
-	switch (_p8.ctor) {
+	var _p7 = s;
+	switch (_p7.ctor) {
 		case 'NestedSection':
-			return A2(_user$project$ResumeView$viewNestedSection, _p8._0, _p8._1);
+			return A2(_user$project$ResumeView$viewNestedSection, _p7._0, _p7._1);
 		case 'FlatSection':
-			return A2(_user$project$ResumeView$viewFlatSection, _p8._0, _p8._1);
+			return A2(_user$project$ResumeView$viewFlatSection, _p7._0, _p7._1);
 		default:
-			return A2(_user$project$ResumeView$viewInlineSection, _p8._0, _p8._1);
+			return A2(_user$project$ResumeView$viewInlineSection, _p7._0, _p7._1);
 	}
 };
 var _user$project$ResumeView$view = function (model) {
@@ -8962,7 +8956,7 @@ var _user$project$Resume$programming = {
 		dates: '2013 - present',
 		details: {
 			ctor: '::',
-			_0: 'Proficient: Python, Java, ReasonML/OCaml, React',
+			_0: 'Proficient: Python with types, Java, ReasonML/OCaml, React',
 			_1: {
 				ctor: '::',
 				_0: 'Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura\'s Postgres + GraphQL',
@@ -9205,17 +9199,21 @@ var _user$project$Resume$header = {
 	affils: {ctor: '[]'},
 	home: '9901 Spicewood Mesa, Austin, TX 78759',
 	email: 'akd6@rice.edu',
-	phone: '512-258-8189',
+	phone: '512-228-4140',
 	links: {
 		ctor: '::',
-		_0: {name: 'Home:', url: 'https://ashdza.github.io'},
+		_0: {name: 'Home', url: 'https://ashdza.github.io'},
 		_1: {
 			ctor: '::',
-			_0: {name: 'Github:', url: 'https://github.com/ashdza'},
+			_0: {name: 'Blog', url: 'https://ashdza.github.io/blog/'},
 			_1: {
 				ctor: '::',
-				_0: {name: 'LinkedIn:', url: 'https://goo.gl/58fLVD'},
-				_1: {ctor: '[]'}
+				_0: {name: 'Github', url: 'https://github.com/ashdza'},
+				_1: {
+					ctor: '::',
+					_0: {name: 'LinkedIn', url: 'https://goo.gl/58fLVD'},
+					_1: {ctor: '[]'}
+				}
 			}
 		}
 	}

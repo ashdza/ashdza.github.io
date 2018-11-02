@@ -39,11 +39,12 @@ header =
     , affils = []
     , home = "9901 Spicewood Mesa, Austin, TX 78759"
     , email = "akd6@rice.edu"
-    , phone = "512-258-8189"
+    , phone = "512-228-4140"
     , links =
-        [ { name = "Home:", url = "https://ashdza.github.io" }
-        , { name = "Github:", url = "https://github.com/ashdza" }
-        , { name = "LinkedIn:", url = "https://goo.gl/58fLVD" }
+        [ { name = "Home", url = "https://ashdza.github.io" }
+        , { name = "Blog", url = "https://ashdza.github.io/blog/" }
+        , { name = "Github", url = "https://github.com/ashdza" }
+        , { name = "LinkedIn", url = "https://goo.gl/58fLVD" }
         ]
     }
 
