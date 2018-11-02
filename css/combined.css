@@ -158,7 +158,8 @@ body {
     margin-top: 12px;
     margin-top,
     margin-bottom: 2px;
-    font-size: 11pt
+    font-size: 11pt;
+    page-break-after: avoid;
 }
 
 .sectionHeader {
@@ -227,9 +228,4 @@ body {
 @media print {
     #resume {
         padding-top: 0px
-    }
-        {
-        page-break-after: avoid;
-        text-align: right;
-        font-size: 10pt
     }
