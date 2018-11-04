@@ -137,7 +137,7 @@ projects =
             ]
       , links = []
       }
-    , { name = "Hidden Markov Models and Part-of-Speech Tagging"
+    , { name = "Hidden Markov Models and Part-of-Speech Tagging (NLP)"
       , role = ""
       , location = ""
       , dates = "2018"

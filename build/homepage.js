@@ -9102,7 +9102,7 @@ var _user$project$Resume$projects = {
 					_1: {
 						ctor: '::',
 						_0: {
-							name: 'Hidden Markov Models and Part-of-Speech Tagging',
+							name: 'Hidden Markov Models and Part-of-Speech Tagging (NLP)',
 							role: '',
 							location: '',
 							dates: '2018',
