@@ -56,7 +56,7 @@ education =
       , dates = "2017 - present"
       , role = ""
       , details =
-            [ "Computer Science, graduating May 2021, GPA: 3.21"
+            [ "Computer Science, graduating May 2021, GPA: 3.40"
             ]
       , links = []
       }
@@ -167,7 +167,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Proficient: Python with types, Java, ReasonML/OCaml, React"
-            , "Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura's Postgres + GraphQL"
+            , "Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura's Postgres + GraphQL, Git"
             ]
       , links = []
       }
@@ -177,7 +177,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            , "Functional programming with types (ReasonML, Java 8+, Python 3.5+)"
+            , "Typed functional programming (ReasonML/OCaml, Java 8, Python 3.5), object-oriented design"
             ]
       , links = []
       }

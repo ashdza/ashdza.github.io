@@ -8959,7 +8959,7 @@ var _user$project$Resume$programming = {
 			_0: 'Proficient: Python with types, Java, ReasonML/OCaml, React',
 			_1: {
 				ctor: '::',
-				_0: 'Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura\'s Postgres + GraphQL',
+				_0: 'Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura\'s Postgres + GraphQL, Git',
 				_1: {ctor: '[]'}
 			}
 		},
@@ -8977,7 +8977,7 @@ var _user$project$Resume$programming = {
 				_0: 'Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2',
 				_1: {
 					ctor: '::',
-					_0: 'Functional programming with types (ReasonML, Java 8+, Python 3.5+)',
+					_0: 'Typed functional programming (ReasonML/OCaml, Java 8, Python 3.5), object-oriented design',
 					_1: {ctor: '[]'}
 				}
 			},
@@ -9172,7 +9172,7 @@ var _user$project$Resume$education = {
 		role: '',
 		details: {
 			ctor: '::',
-			_0: 'Computer Science, graduating May 2021, GPA: 3.21',
+			_0: 'Computer Science, graduating May 2021, GPA: 3.40',
 			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}
