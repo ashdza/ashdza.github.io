@@ -8979,7 +8979,7 @@ var _user$project$Resume$education = {
 		role: '',
 		details: {
 			ctor: '::',
-			_0: 'Computer Science, graduating May 2021, GPA: 3.40',
+			_0: 'BS Computer Science & BA Cognitive Science, graduating May 2021, GPA: 3.40',
 			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}

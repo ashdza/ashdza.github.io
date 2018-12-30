@@ -56,7 +56,7 @@ education =
       , dates = "2017 - present"
       , role = ""
       , details =
-            [ "Computer Science, graduating May 2021, GPA: 3.40"
+            [ "BS Computer Science & BA Cognitive Science, graduating May 2021, GPA: 3.40"
             ]
       , links = []
       }
