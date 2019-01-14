@@ -147,10 +147,19 @@ projects =
             ]
       , links = []
       }
+    , { name = "Impact of Language on Perception"
+      , role = "Independent Project"
+      , location = ""
+      , dates = "2016"
+      , details =
+            [ "Analyzed the Sapir-Whorf Hypothesis and its implications in multiple perceptual categories"
+            ]
+      , links = [ Repo "https://github.com/ashdza/Impact-of-Language-on-Perception" ]
+      }
     , { name = "Chef Arduino"
       , role = "Independent Project"
       , location = ""
-      , dates = "2010 - 2011"
+      , dates = "2011"
       , details =
             [ "Conceive, design, build, and program an Arduino-based robot to test properties of food samples"
             ]
@@ -166,8 +175,7 @@ programming =
       , location = ""
       , dates = "2013 - present"
       , details =
-            [ "Proficient: Python with types, Java, ReasonML/OCaml, React"
-            , "Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura's Postgres + GraphQL, Git"
+            [ "Proficient: Python, Java, ReasonML/OCaml, React Basic: C, Racket, Pyret, Elm, Postgres"
             ]
       , links = []
       }
@@ -195,13 +203,21 @@ programming =
 
 work : List Item
 work =
-    [ { role = "Summer Research Intern"
+    [ { role = "Research Assistant"
+      , name = "Rice University, T.L.L. Temple Neuroplasticity Laboratory"
+      , location = "Houston, TX"
+      , dates = "2019-present"
+      , details =
+            [ "Computation neuroscience project studying speech vs. non-speech perception"
+            ]
+      , links = []
+      }
+    , { role = "Summer Research Intern"
       , name = "UT Austin, College of Natural Sciences, Vertebrate Interactome Lab"
       , location = "Austin, TX"
       , dates = "2016"
       , details =
-            [ "DNA extraction, splicing, & recombineering of the DHX35 gene using E. coli"
-            , "Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel"
+            [ "DNA recombineering of DHX35 gene in E. coli, and computational FBA on cyanobacteria"
             ]
       , links = []
       }
