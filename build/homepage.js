@@ -8930,22 +8930,33 @@ var _user$project$Resume$activities = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Summer Research Intern',
-		name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
-		location: 'Austin, TX',
-		dates: '2016',
+		role: 'Research Assistant',
+		name: 'Rice University, T.L.L. Temple Neuroplasticity Laboratory',
+		location: 'Houston, TX',
+		dates: '2019-present',
 		details: {
 			ctor: '::',
-			_0: 'DNA extraction, splicing, & recombineering of the DHX35 gene using E. coli',
-			_1: {
-				ctor: '::',
-				_0: 'Conducted computational Flux Balance Analysis on cyanobacteria engineered for biofuel',
-				_1: {ctor: '[]'}
-			}
+			_0: 'Computational neuroscience project studying speech vs. non-speech perception',
+			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}
 	},
-	_1: {ctor: '[]'}
+	_1: {
+		ctor: '::',
+		_0: {
+			role: 'Summer Research Intern',
+			name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
+			location: 'Austin, TX',
+			dates: '2016',
+			details: {
+				ctor: '::',
+				_0: 'DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria',
+				_1: {ctor: '[]'}
+			},
+			links: {ctor: '[]'}
+		},
+		_1: {ctor: '[]'}
+	}
 };
 var _user$project$Resume$programming = {
 	ctor: '::',
@@ -8956,10 +8967,10 @@ var _user$project$Resume$programming = {
 		dates: '2013 - present',
 		details: {
 			ctor: '::',
-			_0: 'Proficient: Python with types, Java, ReasonML/OCaml, React',
+			_0: 'Proficient: Python, Java, ReasonML/OCaml, React',
 			_1: {
 				ctor: '::',
-				_0: 'Basic: C, Racket, Pyret, Elm, Html, Numpy, Hasura\'s Postgres + GraphQL, Git',
+				_0: 'Basic: C, Racket, Pyret, Elm, Html, Hasura\'s Postgres + Graph',
 				_1: {ctor: '[]'}
 			}
 		},
@@ -9004,18 +9015,14 @@ var _user$project$Resume$programming = {
 var _user$project$Resume$projects = {
 	ctor: '::',
 	_0: {
-		name: 'Lentil - A Musician\'s Feedback Service',
+		name: 'Lentil - A Web-Based Musician\'s Feedback Service',
 		role: 'Independent Project',
 		location: '',
 		dates: '2018 - present',
 		details: {
 			ctor: '::',
-			_0: 'Design and implement a web-based musician feedback service (ReasonML, React, GraphQL, Postgres)',
-			_1: {
-				ctor: '::',
-				_0: 'Musicians submit recordings of performances and receive pointed feedback from others',
-				_1: {ctor: '[]'}
-			}
+			_0: 'Musicians submit performances and receive pointed feedback from others (ReasonML, React, Postgres)',
+			_1: {ctor: '[]'}
 		},
 		links: {
 			ctor: '::',
@@ -9052,18 +9059,14 @@ var _user$project$Resume$projects = {
 		_1: {
 			ctor: '::',
 			_0: {
-				name: 'Disease Transmission Analysis',
+				name: 'Disease Transmission Analysis from Outbreak Data',
 				role: '',
 				location: '',
 				dates: '2018',
 				details: {
 					ctor: '::',
-					_0: 'Design and implement a rooted-directed minimal spanning tree algorithm (Python)',
-					_1: {
-						ctor: '::',
-						_0: 'Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree',
-						_1: {ctor: '[]'}
-					}
+					_0: 'Infer disease transmission tree from disease outbreak genetic + epidemiological data using RDMST (Python)',
+					_1: {ctor: '[]'}
 				},
 				links: {ctor: '[]'}
 			},
@@ -9120,22 +9123,41 @@ var _user$project$Resume$projects = {
 						_1: {
 							ctor: '::',
 							_0: {
-								name: 'Chef Arduino',
+								name: 'Impact of Language on Perception',
 								role: 'Independent Project',
 								location: '',
-								dates: '2010 - 2011',
+								dates: '2016',
 								details: {
 									ctor: '::',
-									_0: 'Conceive, design, build, and program an Arduino-based robot to test properties of food samples',
+									_0: 'Analyzed the Sapir-Whorf Hypothesis and its implications in multiple perceptual categories',
 									_1: {ctor: '[]'}
 								},
 								links: {
 									ctor: '::',
-									_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/chef_arduino'),
+									_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/Impact-of-Language-on-Perception'),
 									_1: {ctor: '[]'}
 								}
 							},
-							_1: {ctor: '[]'}
+							_1: {
+								ctor: '::',
+								_0: {
+									name: 'Chef Arduino',
+									role: 'Independent Project',
+									location: '',
+									dates: '2011',
+									details: {
+										ctor: '::',
+										_0: 'Conceive, design, build, and program an Arduino-based robot to test properties of food samples',
+										_1: {ctor: '[]'}
+									},
+									links: {
+										ctor: '::',
+										_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/chef_arduino'),
+										_1: {ctor: '[]'}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
 						}
 					}
 				}
@@ -9250,16 +9272,16 @@ var _user$project$Resume$theResume = {
 		_0: A2(_user$project$ResumeTypes$NestedSection, 'Education', _user$project$Resume$education),
 		_1: {
 			ctor: '::',
-			_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
+			_0: A2(_user$project$ResumeTypes$NestedSection, 'Work Experience', _user$project$Resume$work),
 			_1: {
 				ctor: '::',
-				_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
+				_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
 				_1: {
 					ctor: '::',
 					_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$programming),
 					_1: {
 						ctor: '::',
-						_0: A2(_user$project$ResumeTypes$NestedSection, 'Work Experience', _user$project$Resume$work),
+						_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
 						_1: {
 							ctor: '::',
 							_0: A2(_user$project$ResumeTypes$FlatSection, 'Organizations and Activities', _user$project$Resume$activities),

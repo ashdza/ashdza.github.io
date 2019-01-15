@@ -14,10 +14,10 @@ theResume =
     , body =
         -- [ FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
-        , NestedSection "Conference Presentations" awards
-        , NestedSection "Projects" projects
-        , NestedSection "Software Development Skills" programming
         , NestedSection "Work Experience" work
+        , NestedSection "Conference Presentations" awards
+        , NestedSection "Software Development Skills" programming
+        , NestedSection "Projects" projects
         , FlatSection "Organizations and Activities" activities
         ]
     }
@@ -88,13 +88,12 @@ awards =
 
 projects : List Item
 projects =
-    [ { name = "Lentil - A Musician's Feedback Service"
+    [ { name = "Lentil - A Web-Based Musician's Feedback Service"
       , role = "Independent Project"
       , location = ""
       , dates = "2018 - present"
       , details =
-            [ "Design and implement a web-based musician feedback service (ReasonML, React, GraphQL, Postgres)"
-            , "Musicians submit recordings of performances and receive pointed feedback from others"
+            [ "Musicians submit performances and receive pointed feedback from others (ReasonML, React, Postgres)"
               -- , "Front-end is ReasonML + React, back-end is Hasura's GraphQL server + Postgres database"
             ]
       , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/" ]
@@ -108,13 +107,12 @@ projects =
             ]
       , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/" ]
       }
-    , { name = "Disease Transmission Analysis"
+    , { name = "Disease Transmission Analysis from Outbreak Data"
       , role = ""
       , location = ""
       , dates = "2018"
       , details =
-            [ "Design and implement a rooted-directed minimal spanning tree algorithm (Python)"
-            , "Analyze genetic + epidemiological data from 2011 disease outbreak to infer the disease transmission tree"
+            [ "Infer disease transmission tree from disease outbreak genetic + epidemiological data using RDMST (Python)"
             ]
       , links = []
       }
@@ -175,7 +173,8 @@ programming =
       , location = ""
       , dates = "2013 - present"
       , details =
-            [ "Proficient: Python, Java, ReasonML/OCaml, React Basic: C, Racket, Pyret, Elm, Postgres"
+            [ "Proficient: Python, Java, ReasonML/OCaml, React"
+            , "Basic: C, Racket, Pyret, Elm, Html, Hasura's Postgres + Graph"
             ]
       , links = []
       }
@@ -208,7 +207,7 @@ work =
       , location = "Houston, TX"
       , dates = "2019-present"
       , details =
-            [ "Computation neuroscience project studying speech vs. non-speech perception"
+            [ "Computational neuroscience project studying speech vs. non-speech perception"
             ]
       , links = []
       }
@@ -217,7 +216,7 @@ work =
       , location = "Austin, TX"
       , dates = "2016"
       , details =
-            [ "DNA recombineering of DHX35 gene in E. coli, and computational FBA on cyanobacteria"
+            [ "DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria"
             ]
       , links = []
       }

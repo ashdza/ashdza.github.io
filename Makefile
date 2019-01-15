@@ -8,5 +8,5 @@ Resume:
 
 HomePage:
 	elm make HomePage.elm --output build/homepage.js
-	open -a Firefox index.html
+	open -a Safari index.html
 	$(info <<<<< Check HomePage in Safari, git add / commit / push)
