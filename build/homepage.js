@@ -8988,7 +8988,7 @@ var _user$project$Resume$programming = {
 				_0: 'Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2',
 				_1: {
 					ctor: '::',
-					_0: 'Typed functional programming (ReasonML/OCaml, Java 8, Python 3.5), object-oriented design',
+					_0: 'Typed functional programming, Object-Oriented Design',
 					_1: {ctor: '[]'}
 				}
 			},
