@@ -184,7 +184,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            , "Typed functional programming, Object-Oriented Design"
+            , "Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
             ]
       , links = []
       }
