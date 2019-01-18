@@ -174,7 +174,7 @@ programming =
       , dates = "2013 - present"
       , details =
             [ "Proficient: Python, Java, ReasonML/OCaml, React"
-            , "Basic: C, Racket, Pyret, Elm, Html, Hasura's Postgres + Graph"
+            , "Basic: C, Racket, Pyret, Elm, Html, Hasura's Postgres + GraphQL"
             ]
       , links = []
       }

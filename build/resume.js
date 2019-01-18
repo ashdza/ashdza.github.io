@@ -8777,7 +8777,7 @@ var _user$project$Resume$programming = {
 			_0: 'Proficient: Python, Java, ReasonML/OCaml, React',
 			_1: {
 				ctor: '::',
-				_0: 'Basic: C, Racket, Pyret, Elm, Html, Hasura\'s Postgres + Graph',
+				_0: 'Basic: C, Racket, Pyret, Elm, Html, Hasura\'s Postgres + GraphQL',
 				_1: {ctor: '[]'}
 			}
 		},
