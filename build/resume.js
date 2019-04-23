@@ -8737,13 +8737,13 @@ var _user$project$Resume$activities = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Research Assistant',
-		name: 'Rice University, T.L.L. Temple Neuroplasticity Laboratory',
+		role: 'Software Engineering Intern',
+		name: 'OpenStax - Education Tech',
 		location: 'Houston, TX',
-		dates: '2019-present',
+		dates: 'Summer 2019',
 		details: {
 			ctor: '::',
-			_0: 'Computational neuroscience project studying speech vs. non-speech perception',
+			_0: 'OpenStax Biglearn backend development intern',
 			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}
@@ -8751,18 +8751,33 @@ var _user$project$Resume$work = {
 	_1: {
 		ctor: '::',
 		_0: {
-			role: 'Summer Research Intern',
-			name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
-			location: 'Austin, TX',
-			dates: '2016',
+			role: 'Teaching Assistant',
+			name: 'Rice University, Dept. of Computer Science',
+			location: 'Houston, TX',
+			dates: '2019-present',
 			details: {
 				ctor: '::',
-				_0: 'DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria',
+				_0: 'COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks',
 				_1: {ctor: '[]'}
 			},
 			links: {ctor: '[]'}
 		},
-		_1: {ctor: '[]'}
+		_1: {
+			ctor: '::',
+			_0: {
+				role: 'Summer Research Intern',
+				name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
+				location: 'Austin, TX',
+				dates: '2016',
+				details: {
+					ctor: '::',
+					_0: 'DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria',
+					_1: {ctor: '[]'}
+				},
+				links: {ctor: '[]'}
+			},
+			_1: {ctor: '[]'}
+		}
 	}
 };
 var _user$project$Resume$programming = {
@@ -8786,7 +8801,7 @@ var _user$project$Resume$programming = {
 	_1: {
 		ctor: '::',
 		_0: {
-			name: 'Software Design',
+			name: 'Software Design and Test',
 			role: '',
 			location: '',
 			dates: '2013 - present',
@@ -8796,27 +8811,16 @@ var _user$project$Resume$programming = {
 				_1: {
 					ctor: '::',
 					_0: 'Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design',
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: 'Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories',
+						_1: {ctor: '[]'}
+					}
 				}
 			},
 			links: {ctor: '[]'}
 		},
-		_1: {
-			ctor: '::',
-			_0: {
-				name: 'Software Testing',
-				role: '',
-				location: '',
-				dates: '2017 - present',
-				details: {
-					ctor: '::',
-					_0: 'Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories',
-					_1: {ctor: '[]'}
-				},
-				links: {ctor: '[]'}
-			},
-			_1: {ctor: '[]'}
-		}
+		_1: {ctor: '[]'}
 	}
 };
 var _user$project$Resume$projects = {
@@ -8945,26 +8949,7 @@ var _user$project$Resume$projects = {
 									_1: {ctor: '[]'}
 								}
 							},
-							_1: {
-								ctor: '::',
-								_0: {
-									name: 'Chef Arduino',
-									role: 'Independent Project',
-									location: '',
-									dates: '2011',
-									details: {
-										ctor: '::',
-										_0: 'Conceive, design, build, and program an Arduino-based robot to test properties of food samples',
-										_1: {ctor: '[]'}
-									},
-									links: {
-										ctor: '::',
-										_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/chef_arduino'),
-										_1: {ctor: '[]'}
-									}
-								},
-								_1: {ctor: '[]'}
-							}
+							_1: {ctor: '[]'}
 						}
 					}
 				}

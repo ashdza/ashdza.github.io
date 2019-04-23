@@ -154,15 +154,15 @@ projects =
             ]
       , links = [ Repo "https://github.com/ashdza/Impact-of-Language-on-Perception" ]
       }
-    , { name = "Chef Arduino"
-      , role = "Independent Project"
-      , location = ""
-      , dates = "2011"
-      , details =
-            [ "Conceive, design, build, and program an Arduino-based robot to test properties of food samples"
-            ]
-      , links = [ Repo "https://github.com/ashdza/chef_arduino" ]
-      }
+      -- , { name = "Chef Arduino"
+      --   , role = "Independent Project"
+      --   , location = ""
+      --   , dates = "2011"
+      --   , details =
+      --         [ "Conceive, design, build, and program an Arduino-based robot to test properties of food samples"
+      --         ]
+      --   , links = [ Repo "https://github.com/ashdza/chef_arduino" ]
+      --   }
     ]
 
 
@@ -178,22 +178,14 @@ programming =
             ]
       , links = []
       }
-    , { name = "Software Design"
+    , { name = "Software Design and Test"
       , role = ""
       , location = ""
       , dates = "2013 - present"
       , details =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
             , "Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
-            ]
-      , links = []
-      }
-    , { name = "Software Testing"
-      , role = ""
-      , location = ""
-      , dates = "2017 - present"
-      , details =
-            [ "Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories"
+            , "Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories"
             ]
       , links = []
       }
@@ -202,12 +194,21 @@ programming =
 
 work : List Item
 work =
-    [ { role = "Research Assistant"
-      , name = "Rice University, T.L.L. Temple Neuroplasticity Laboratory"
+    [ { role = "Software Engineering Intern"
+      , name = "OpenStax - Education Tech"
+      , location = "Houston, TX"
+      , dates = "Summer 2019"
+      , details =
+            [ "OpenStax Biglearn backend development intern"
+            ]
+      , links = []
+      }
+    , { role = "Teaching Assistant"
+      , name = "Rice University, Dept. of Computer Science"
       , location = "Houston, TX"
       , dates = "2019-present"
       , details =
-            [ "Computational neuroscience project studying speech vs. non-speech perception"
+            [ "COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks"
             ]
       , links = []
       }
