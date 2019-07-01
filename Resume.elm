@@ -16,7 +16,7 @@ theResume =
         [ NestedSection "Education" education
         , NestedSection "Work Experience" work
         , NestedSection "Conference Presentations" awards
-        , NestedSection "Software Development Skills" programming
+        , NestedSection "Software Development Skills" skills
         , NestedSection "Projects" projects
         , FlatSection "Organizations and Activities" activities
         ]
@@ -56,7 +56,7 @@ education =
       , dates = "2017 - present"
       , role = ""
       , details =
-            [ "BS Computer Science & BA Cognitive Science, graduating May 2021, GPA: 3.40"
+            [ "BS Computer Science, graduating May 2021, GPA: 3.41"
             ]
       , links = []
       }
@@ -66,6 +66,38 @@ education =
       , role = ""
       , details =
             [ "GPA: 4.0/4.0 (5.58/5.0 weighted), National Merit Scholar, Graduated May 2017"
+            ]
+      , links = []
+      }
+    ]
+
+
+work : List Item
+work =
+    [ { role = "Backend Engineering Intern"
+      , name = "OpenStax"
+      , location = "Houston, TX"
+      , dates = "Summer 2019"
+      , details =
+            [ "Convert Biglearn to highly scalable application by developing testing and deployment automation"
+            ]
+      , links = []
+      }
+    , { role = "Teaching Assistant"
+      , name = "Rice University, Dept. of Computer Science"
+      , location = "Houston, TX"
+      , dates = "2019-present"
+      , details =
+            [ "COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks"
+            ]
+      , links = []
+      }
+    , { role = "Summer Research Intern"
+      , name = "UT Austin, College of Natural Sciences, Vertebrate Interactome Lab"
+      , location = "Austin, TX"
+      , dates = "2016"
+      , details =
+            [ "DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria"
             ]
       , links = []
       }
@@ -166,14 +198,14 @@ projects =
     ]
 
 
-programming : List Item
-programming =
+skills : List Item
+skills =
     [ { name = "Programming Languages & Frameworks"
       , role = ""
       , location = ""
       , dates = "2013 - present"
       , details =
-            [ "Proficient: Python, Java, ReasonML/OCaml, React"
+            [ "Proficient: Python, Java, Ruby, RoR, AWS, ReasonML/OCaml, React"
             , "Basic: Git, Linux, Elm, C, Racket, Pyret, Html, Hasura's Postgres + GraphQL"
             ]
       , links = []
@@ -185,39 +217,7 @@ programming =
       , details =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
             , "Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
-            , "Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories"
-            ]
-      , links = []
-      }
-    ]
-
-
-work : List Item
-work =
-    [ { role = "Software Engineering Intern"
-      , name = "OpenStax - Education Tech"
-      , location = "Houston, TX"
-      , dates = "Summer 2019"
-      , details =
-            [ "OpenStax Biglearn backend development intern"
-            ]
-      , links = []
-      }
-    , { role = "Teaching Assistant"
-      , name = "Rice University, Dept. of Computer Science"
-      , location = "Houston, TX"
-      , dates = "2019-present"
-      , details =
-            [ "COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks"
-            ]
-      , links = []
-      }
-    , { role = "Summer Research Intern"
-      , name = "UT Austin, College of Natural Sciences, Vertebrate Interactome Lab"
-      , location = "Austin, TX"
-      , dates = "2016"
-      , details =
-            [ "DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria"
+            , "Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
             ]
       , links = []
       }

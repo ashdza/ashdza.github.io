@@ -8734,53 +8734,7 @@ var _user$project$Resume$activities = {
 		}
 	}
 };
-var _user$project$Resume$work = {
-	ctor: '::',
-	_0: {
-		role: 'Software Engineering Intern',
-		name: 'OpenStax - Education Tech',
-		location: 'Houston, TX',
-		dates: 'Summer 2019',
-		details: {
-			ctor: '::',
-			_0: 'OpenStax Biglearn backend development intern',
-			_1: {ctor: '[]'}
-		},
-		links: {ctor: '[]'}
-	},
-	_1: {
-		ctor: '::',
-		_0: {
-			role: 'Teaching Assistant',
-			name: 'Rice University, Dept. of Computer Science',
-			location: 'Houston, TX',
-			dates: '2019-present',
-			details: {
-				ctor: '::',
-				_0: 'COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks',
-				_1: {ctor: '[]'}
-			},
-			links: {ctor: '[]'}
-		},
-		_1: {
-			ctor: '::',
-			_0: {
-				role: 'Summer Research Intern',
-				name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
-				location: 'Austin, TX',
-				dates: '2016',
-				details: {
-					ctor: '::',
-					_0: 'DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria',
-					_1: {ctor: '[]'}
-				},
-				links: {ctor: '[]'}
-			},
-			_1: {ctor: '[]'}
-		}
-	}
-};
-var _user$project$Resume$programming = {
+var _user$project$Resume$skills = {
 	ctor: '::',
 	_0: {
 		name: 'Programming Languages & Frameworks',
@@ -8789,7 +8743,7 @@ var _user$project$Resume$programming = {
 		dates: '2013 - present',
 		details: {
 			ctor: '::',
-			_0: 'Proficient: Python, Java, ReasonML/OCaml, React',
+			_0: 'Proficient: Python, Java, Ruby, RoR, AWS, ReasonML/OCaml, React',
 			_1: {
 				ctor: '::',
 				_0: 'Basic: Git, Linux, Elm, C, Racket, Pyret, Html, Hasura\'s Postgres + GraphQL',
@@ -8813,7 +8767,7 @@ var _user$project$Resume$programming = {
 					_0: 'Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design',
 					_1: {
 						ctor: '::',
-						_0: 'Test-driven development, unit & property-based tests, Python: Pytest, Java: JUnit 5 & QuickTheories',
+						_0: 'Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8977,6 +8931,52 @@ var _user$project$Resume$awards = {
 	},
 	_1: {ctor: '[]'}
 };
+var _user$project$Resume$work = {
+	ctor: '::',
+	_0: {
+		role: 'Backend Engineering Intern',
+		name: 'OpenStax',
+		location: 'Houston, TX',
+		dates: 'Summer 2019',
+		details: {
+			ctor: '::',
+			_0: 'Convert Biglearn to highly scalable application by developing testing and deployment automation',
+			_1: {ctor: '[]'}
+		},
+		links: {ctor: '[]'}
+	},
+	_1: {
+		ctor: '::',
+		_0: {
+			role: 'Teaching Assistant',
+			name: 'Rice University, Dept. of Computer Science',
+			location: 'Houston, TX',
+			dates: '2019-present',
+			details: {
+				ctor: '::',
+				_0: 'COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks',
+				_1: {ctor: '[]'}
+			},
+			links: {ctor: '[]'}
+		},
+		_1: {
+			ctor: '::',
+			_0: {
+				role: 'Summer Research Intern',
+				name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
+				location: 'Austin, TX',
+				dates: '2016',
+				details: {
+					ctor: '::',
+					_0: 'DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria',
+					_1: {ctor: '[]'}
+				},
+				links: {ctor: '[]'}
+			},
+			_1: {ctor: '[]'}
+		}
+	}
+};
 var _user$project$Resume$education = {
 	ctor: '::',
 	_0: {
@@ -8986,7 +8986,7 @@ var _user$project$Resume$education = {
 		role: '',
 		details: {
 			ctor: '::',
-			_0: 'BS Computer Science & BA Cognitive Science, graduating May 2021, GPA: 3.40',
+			_0: 'BS Computer Science, graduating May 2021, GPA: 3.41',
 			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}
@@ -9070,7 +9070,7 @@ var _user$project$Resume$theResume = {
 				_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
 				_1: {
 					ctor: '::',
-					_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$programming),
+					_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$skills),
 					_1: {
 						ctor: '::',
 						_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
