@@ -1564,8 +1564,7 @@ function toString(v)
 	var type = typeof v;
 	if (type === 'function')
 	{
-		var name = v.func ? v.func.name : v.name;
-		return '<function' + (name === '' ? '' : ':') + name + '>';
+		return '<function>';
 	}
 
 	if (type === 'boolean')
@@ -2072,6 +2071,13 @@ var _elm_lang$core$List$sortWith = _elm_lang$core$Native_List.sortWith;
 var _elm_lang$core$List$sortBy = _elm_lang$core$Native_List.sortBy;
 var _elm_lang$core$List$sort = function (xs) {
 	return A2(_elm_lang$core$List$sortBy, _elm_lang$core$Basics$identity, xs);
+};
+var _elm_lang$core$List$singleton = function (value) {
+	return {
+		ctor: '::',
+		_0: value,
+		_1: {ctor: '[]'}
+	};
 };
 var _elm_lang$core$List$drop = F2(
 	function (n, list) {
@@ -3520,15 +3526,8 @@ function setupIncomingPort(name, callback)
 		sentBeforeInit.push(value);
 	}
 
-	function postInitSend(incomingValue)
+	function postInitSend(value)
 	{
-		var result = A2(_elm_lang$core$Json_Decode$decodeValue, converter, incomingValue);
-		if (result.ctor === 'Err')
-		{
-			throw new Error('Trying to send an unexpected type of value through port `' + name + '`:\n' + result._0);
-		}
-
-		var value = result._0;
 		var temp = subs;
 		while (temp.ctor !== '[]')
 		{
@@ -3539,7 +3538,13 @@ function setupIncomingPort(name, callback)
 
 	function send(incomingValue)
 	{
-		currentSend(incomingValue);
+		var result = A2(_elm_lang$core$Json_Decode$decodeValue, converter, incomingValue);
+		if (result.ctor === 'Err')
+		{
+			throw new Error('Trying to send an unexpected type of value through port `' + name + '`:\n' + result._0);
+		}
+
+		currentSend(result._0);
 	}
 
 	return { send: send };
@@ -3963,7 +3968,7 @@ function endsWith(sub, str)
 function indexes(sub, str)
 {
 	var subLen = sub.length;
-	
+
 	if (subLen < 1)
 	{
 		return _elm_lang$core$Native_List.Nil;
@@ -3976,74 +3981,78 @@ function indexes(sub, str)
 	{
 		is.push(i);
 		i = i + subLen;
-	}	
-	
+	}
+
 	return _elm_lang$core$Native_List.fromArray(is);
 }
+
 
 function toInt(s)
 {
 	var len = s.length;
+
+	// if empty
 	if (len === 0)
 	{
-		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
+		return intErr(s);
 	}
-	var start = 0;
-	if (s[0] === '-')
+
+	// if hex
+	var c = s[0];
+	if (c === '0' && s[1] === 'x')
 	{
-		if (len === 1)
+		for (var i = 2; i < len; ++i)
 		{
-			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
+			var c = s[i];
+			if (('0' <= c && c <= '9') || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'))
+			{
+				continue;
+			}
+			return intErr(s);
 		}
-		start = 1;
+		return _elm_lang$core$Result$Ok(parseInt(s, 16));
 	}
-	for (var i = start; i < len; ++i)
+
+	// is decimal
+	if (c > '9' || (c < '0' && c !== '-' && c !== '+'))
+	{
+		return intErr(s);
+	}
+	for (var i = 1; i < len; ++i)
 	{
 		var c = s[i];
 		if (c < '0' || '9' < c)
 		{
-			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
+			return intErr(s);
 		}
 	}
+
 	return _elm_lang$core$Result$Ok(parseInt(s, 10));
 }
 
+function intErr(s)
+{
+	return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int");
+}
+
+
 function toFloat(s)
 {
-	var len = s.length;
-	if (len === 0)
+	// check if it is a hex, octal, or binary number
+	if (s.length === 0 || /[\sxbo]/.test(s))
 	{
-		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
+		return floatErr(s);
 	}
-	var start = 0;
-	if (s[0] === '-')
-	{
-		if (len === 1)
-		{
-			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
-		}
-		start = 1;
-	}
-	var dotCount = 0;
-	for (var i = start; i < len; ++i)
-	{
-		var c = s[i];
-		if ('0' <= c && c <= '9')
-		{
-			continue;
-		}
-		if (c === '.')
-		{
-			dotCount += 1;
-			if (dotCount <= 1)
-			{
-				continue;
-			}
-		}
-		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
-	}
-	return _elm_lang$core$Result$Ok(parseFloat(s));
+	var n = +s;
+	// faster isNaN check
+	return n === n ? _elm_lang$core$Result$Ok(n) : floatErr(s);
 }
+
+function floatErr(s)
+{
+	return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float");
+}
+
 
 function toList(str)
 {
@@ -5283,11 +5292,6 @@ function badToString(problem)
 				problem = problem.rest;
 				break;
 
-			case 'index':
-				context += '[' + problem.index + ']';
-				problem = problem.rest;
-				break;
-
 			case 'oneOf':
 				var problems = problem.problems;
 				for (var i = 0; i < problems.length; i++)
@@ -6015,9 +6019,9 @@ function on(name, options, decoder)
 
 function equalEvents(a, b)
 {
-	if (!a.options === b.options)
+	if (a.options !== b.options)
 	{
-		if (a.stopPropagation !== b.stopPropagation || a.preventDefault !== b.preventDefault)
+		if (a.options.stopPropagation !== b.options.stopPropagation || a.options.preventDefault !== b.options.preventDefault)
 		{
 			return false;
 		}
@@ -7293,7 +7297,7 @@ function normalRenderer(parentNode, view)
 var rAF =
 	typeof requestAnimationFrame !== 'undefined'
 		? requestAnimationFrame
-		: function(callback) { callback(); };
+		: function(callback) { setTimeout(callback, 1000 / 60); };
 
 function makeStepper(domNode, view, initialVirtualNode, eventNode)
 {
@@ -8936,10 +8940,10 @@ var _user$project$Resume$skills = {
 		dates: '2013 - present',
 		details: {
 			ctor: '::',
-			_0: 'Proficient: Python, Java, Ruby, RoR, AWS, ReasonML/OCaml, React',
+			_0: 'Proficient: Python, Java, C, Ruby, RoR, Git, Linux, AWS, ReasonML/OCaml, React',
 			_1: {
 				ctor: '::',
-				_0: 'Basic: Git, Linux, Elm, C, Racket, Pyret, Html, Hasura\'s Postgres + GraphQL',
+				_0: 'Basic: Elm, Racket, Pyret, Html, Hasura\'s Postgres + GraphQL',
 				_1: {ctor: '[]'}
 			}
 		},
@@ -9078,26 +9082,7 @@ var _user$project$Resume$projects = {
 							},
 							links: {ctor: '[]'}
 						},
-						_1: {
-							ctor: '::',
-							_0: {
-								name: 'Impact of Language on Perception',
-								role: 'Independent Project',
-								location: '',
-								dates: '2016',
-								details: {
-									ctor: '::',
-									_0: 'Analyzed the Sapir-Whorf Hypothesis and its implications in multiple perceptual categories',
-									_1: {ctor: '[]'}
-								},
-								links: {
-									ctor: '::',
-									_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/Impact-of-Language-on-Perception'),
-									_1: {ctor: '[]'}
-								}
-							},
-							_1: {ctor: '[]'}
-						}
+						_1: {ctor: '[]'}
 					}
 				}
 			}
@@ -9107,22 +9092,41 @@ var _user$project$Resume$projects = {
 var _user$project$Resume$awards = {
 	ctor: '::',
 	_0: {
-		name: 'PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel',
-		role: 'Sole Author',
-		location: 'Colorado',
-		dates: 'Dec 2016',
+		name: 'Rewriting the Code Fellowship',
+		role: 'Fellow',
+		location: 'US/Canada',
+		dates: '2019 - present',
 		details: {
 			ctor: '::',
-			_0: 'Int\'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)',
+			_0: 'Coaching, educational programming, industry exploration, and networking for females in CS',
 			_1: {ctor: '[]'}
 		},
 		links: {
 			ctor: '::',
-			_0: _user$project$ResumeTypes$More('https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19'),
+			_0: _user$project$ResumeTypes$More('https://rewritingthecode.org/fellowship/'),
 			_1: {ctor: '[]'}
 		}
 	},
-	_1: {ctor: '[]'}
+	_1: {
+		ctor: '::',
+		_0: {
+			name: 'PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel',
+			role: 'Sole Author',
+			location: 'Colorado',
+			dates: 'Dec 2016',
+			details: {
+				ctor: '::',
+				_0: 'Int\'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)',
+				_1: {ctor: '[]'}
+			},
+			links: {
+				ctor: '::',
+				_0: _user$project$ResumeTypes$More('https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19'),
+				_1: {ctor: '[]'}
+			}
+		},
+		_1: {ctor: '[]'}
+	}
 };
 var _user$project$Resume$work = {
 	ctor: '::',
@@ -9134,7 +9138,11 @@ var _user$project$Resume$work = {
 		details: {
 			ctor: '::',
 			_0: 'Convert Biglearn to highly scalable application by developing testing and deployment automation',
-			_1: {ctor: '[]'}
+			_1: {
+				ctor: '::',
+				_0: 'Work in team of interns to plan, pitch and build note-taking application integrated with OpenStax',
+				_1: {ctor: '[]'}
+			}
 		},
 		links: {ctor: '[]'}
 	},
@@ -9144,7 +9152,7 @@ var _user$project$Resume$work = {
 			role: 'Teaching Assistant',
 			name: 'Rice University, Dept. of Computer Science',
 			location: 'Houston, TX',
-			dates: '2019-present',
+			dates: '2019 - present',
 			details: {
 				ctor: '::',
 				_0: 'COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks',
@@ -9260,7 +9268,7 @@ var _user$project$Resume$theResume = {
 			_0: A2(_user$project$ResumeTypes$NestedSection, 'Work Experience', _user$project$Resume$work),
 			_1: {
 				ctor: '::',
-				_0: A2(_user$project$ResumeTypes$NestedSection, 'Conference Presentations', _user$project$Resume$awards),
+				_0: A2(_user$project$ResumeTypes$NestedSection, 'Awards', _user$project$Resume$awards),
 				_1: {
 					ctor: '::',
 					_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$skills),

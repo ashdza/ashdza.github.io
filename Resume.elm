@@ -15,7 +15,7 @@ theResume =
         -- [ FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
         , NestedSection "Work Experience" work
-        , NestedSection "Conference Presentations" awards
+        , NestedSection "Awards" awards
         , NestedSection "Software Development Skills" skills
         , NestedSection "Projects" projects
         , FlatSection "Organizations and Activities" activities
@@ -80,13 +80,14 @@ work =
       , dates = "Summer 2019"
       , details =
             [ "Convert Biglearn to highly scalable application by developing testing and deployment automation"
+            , "Work in team of interns to plan, pitch and build note-taking application integrated with OpenStax"
             ]
       , links = []
       }
     , { role = "Teaching Assistant"
       , name = "Rice University, Dept. of Computer Science"
       , location = "Houston, TX"
-      , dates = "2019-present"
+      , dates = "2019 - present"
       , details =
             [ "COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks"
             ]
@@ -106,15 +107,24 @@ work =
 
 awards : List Item
 awards =
-    [ { name = "PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel"
-      , role = "Sole Author"
-      , location = "Colorado"
-      , dates = "Dec 2016"
-      , details =
-            [ "Int'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)"
-            ]
-      , links = [ More "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19" ]
-      }
+    [ { name = "Rewriting the Code Fellowship"
+      , role = "Fellow"
+      , location = "US/Canada"
+      , dates = "2019 - present"
+      , details = ["Coaching, educational programming, industry exploration, and networking for females in CS"
+        ]
+      , links = [More "https://rewritingthecode.org/fellowship/"]
+    },
+      
+    { name = "PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel"
+    , role = "Sole Author"
+    , location = "Colorado"
+    , dates = "Dec 2016"
+    , details =
+          [ "Int'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)"
+          ]
+    , links = [ More "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19" ]
+    }
     ]
 
 
@@ -177,15 +187,15 @@ projects =
             ]
       , links = []
       }
-    , { name = "Impact of Language on Perception"
-      , role = "Independent Project"
-      , location = ""
-      , dates = "2016"
-      , details =
-            [ "Analyzed the Sapir-Whorf Hypothesis and its implications in multiple perceptual categories"
-            ]
-      , links = [ Repo "https://github.com/ashdza/Impact-of-Language-on-Perception" ]
-      }
+    -- , { name = "Impact of Language on Perception"
+    --   , role = "Independent Project"
+    --   , location = ""
+    --   , dates = "2016"
+    --   , details =
+    --         [ "Analyzed the Sapir-Whorf Hypothesis and its implications in multiple perceptual categories"
+    --         ]
+    --   , links = [ Repo "https://github.com/ashdza/Impact-of-Language-on-Perception" ]
+    --   }
       -- , { name = "Chef Arduino"
       --   , role = "Independent Project"
       --   , location = ""
@@ -205,8 +215,8 @@ skills =
       , location = ""
       , dates = "2013 - present"
       , details =
-            [ "Proficient: Python, Java, Ruby, RoR, AWS, ReasonML/OCaml, React"
-            , "Basic: Git, Linux, Elm, C, Racket, Pyret, Html, Hasura's Postgres + GraphQL"
+            [ "Proficient: Python, Java, C, Ruby, RoR, Git, Linux, AWS, ReasonML/OCaml, React"
+            , "Basic: Elm, Racket, Pyret, Html, Hasura's Postgres + GraphQL"
             ]
       , links = []
       }
