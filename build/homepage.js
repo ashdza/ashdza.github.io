@@ -8952,7 +8952,7 @@ var _user$project$Resume$skills = {
 	_1: {
 		ctor: '::',
 		_0: {
-			name: 'Software Design and Test',
+			name: 'Software Design and Testing',
 			role: '',
 			location: '',
 			dates: '2013 - present',
@@ -8965,7 +8965,11 @@ var _user$project$Resume$skills = {
 					_1: {
 						ctor: '::',
 						_0: 'Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: 'Databases and distributed systems - \'Designing Data-Intensive Applications\', book by Martin Kleppmann',
+							_1: {ctor: '[]'}
+						}
 					}
 				}
 			},
@@ -9021,45 +9025,45 @@ var _user$project$Resume$projects = {
 		_1: {
 			ctor: '::',
 			_0: {
-				name: 'Disease Transmission Analysis from Outbreak Data',
+				name: 'Hidden Markov Models and Part-of-Speech Tagging (NLP)',
 				role: '',
 				location: '',
 				dates: '2018',
 				details: {
 					ctor: '::',
-					_0: 'Infer disease transmission tree from disease outbreak genetic + epidemiological data using RDMST (Python)',
-					_1: {ctor: '[]'}
+					_0: 'Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)',
+					_1: {
+						ctor: '::',
+						_0: 'Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM',
+						_1: {ctor: '[]'}
+					}
 				},
 				links: {ctor: '[]'}
 			},
 			_1: {
 				ctor: '::',
 				_0: {
-					name: 'DNA Sequence Alignment',
+					name: 'Disease Transmission Analysis from Outbreak Data',
 					role: '',
 					location: '',
 					dates: '2018',
 					details: {
 						ctor: '::',
-						_0: 'Design and implement dynamic programming solutions to DNA sequence alignment problems (Python)',
-						_1: {
-							ctor: '::',
-							_0: 'Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene',
-							_1: {ctor: '[]'}
-						}
+						_0: 'Infer disease transmission tree from disease outbreak genetic + epidemiological data using RDMST (Python)',
+						_1: {ctor: '[]'}
 					},
 					links: {ctor: '[]'}
 				},
 				_1: {
 					ctor: '::',
 					_0: {
-						name: 'Phylogenetic (Evolutionary) Trees',
+						name: 'DNA Sequence Alignment',
 						role: '',
 						location: '',
 						dates: '2018',
 						details: {
 							ctor: '::',
-							_0: 'Infer evolutionary tree, given DNA sequences for leaf taxa and plausible mutations (Python)',
+							_0: 'Design and implement DP solutions to DNA sequence alignment problems (Python)',
 							_1: {ctor: '[]'}
 						},
 						links: {ctor: '[]'}
@@ -9067,18 +9071,14 @@ var _user$project$Resume$projects = {
 					_1: {
 						ctor: '::',
 						_0: {
-							name: 'Hidden Markov Models and Part-of-Speech Tagging (NLP)',
+							name: 'Phylogenetic (Evolutionary) Trees',
 							role: '',
 							location: '',
 							dates: '2018',
 							details: {
 								ctor: '::',
-								_0: 'Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)',
-								_1: {
-									ctor: '::',
-									_0: 'Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM',
-									_1: {ctor: '[]'}
-								}
+								_0: 'Infer evolutionary tree, given DNA sequences for leaf taxa and plausible mutations (Python)',
+								_1: {ctor: '[]'}
 							},
 							links: {ctor: '[]'}
 						},
@@ -9155,7 +9155,7 @@ var _user$project$Resume$work = {
 			dates: '2019 - present',
 			details: {
 				ctor: '::',
-				_0: 'COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks',
+				_0: 'COMP 382 Reasoning about Algorithms: Office hours, lead discussion of labs, homeworks',
 				_1: {ctor: '[]'}
 			},
 			links: {ctor: '[]'}

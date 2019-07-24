@@ -89,7 +89,7 @@ work =
       , location = "Houston, TX"
       , dates = "2019 - present"
       , details =
-            [ "COMP 382 Reasoning about Algos: Office hours, lead discussion of lab problems, homeworks"
+            [ "COMP 382 Reasoning about Algorithms: Office hours, lead discussion of labs, homeworks"
             ]
       , links = []
       }
@@ -149,6 +149,16 @@ projects =
             ]
       , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/" ]
       }
+    , { name = "Hidden Markov Models and Part-of-Speech Tagging (NLP)"
+      , role = ""
+      , location = ""
+      , dates = "2018"
+      , details =
+            [ "Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)"
+            , "Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"
+            ]
+      , links = []
+      }
     , { name = "Disease Transmission Analysis from Outbreak Data"
       , role = ""
       , location = ""
@@ -163,8 +173,8 @@ projects =
       , location = ""
       , dates = "2018"
       , details =
-            [ "Design and implement dynamic programming solutions to DNA sequence alignment problems (Python)"
-            , "Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene"
+            [ "Design and implement DP solutions to DNA sequence alignment problems (Python)"
+            -- , "Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene"
             ]
       , links = []
       }
@@ -177,16 +187,7 @@ projects =
             ]
       , links = []
       }
-    , { name = "Hidden Markov Models and Part-of-Speech Tagging (NLP)"
-      , role = ""
-      , location = ""
-      , dates = "2018"
-      , details =
-            [ "Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)"
-            , "Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"
-            ]
-      , links = []
-      }
+    -- ,
     -- , { name = "Impact of Language on Perception"
     --   , role = "Independent Project"
     --   , location = ""
@@ -220,7 +221,7 @@ skills =
             ]
       , links = []
       }
-    , { name = "Software Design and Test"
+    , { name = "Software Design and Testing"
       , role = ""
       , location = ""
       , dates = "2013 - present"
@@ -228,6 +229,7 @@ skills =
             [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
             , "Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
             , "Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
+            , "Databases and distributed systems - 'Designing Data-Intensive Applications', book by Martin Kleppmann"
             ]
       , links = []
       }
