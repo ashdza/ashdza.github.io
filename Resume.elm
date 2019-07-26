@@ -43,7 +43,7 @@ header =
     , links =
         [ { name = "Home", url = "https://ashdza.github.io" }
         , { name = "Blog", url = "https://ashdza.github.io/blog/" }
-        , { name = "Github", url = "https://github.com/ashdza" }
+        , { name = "Github", url = "https://github.com/ashdza?tab=repositories" }
         , { name = "LinkedIn", url = "https://goo.gl/58fLVD" }
         ]
     }

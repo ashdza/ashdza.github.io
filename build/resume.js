@@ -9030,7 +9030,7 @@ var _user$project$Resume$header = {
 			_0: {name: 'Blog', url: 'https://ashdza.github.io/blog/'},
 			_1: {
 				ctor: '::',
-				_0: {name: 'Github', url: 'https://github.com/ashdza'},
+				_0: {name: 'Github', url: 'https://github.com/ashdza?tab=repositories'},
 				_1: {
 					ctor: '::',
 					_0: {name: 'LinkedIn', url: 'https://goo.gl/58fLVD'},
