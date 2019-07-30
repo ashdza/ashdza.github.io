@@ -8905,7 +8905,7 @@ var _user$project$Resume$awards = {
 		dates: '2019 - present',
 		details: {
 			ctor: '::',
-			_0: 'Coaching, educational programming, industry exploration, and networking for females in CS',
+			_0: 'US/Canada-wide competitive award for females in CS: coaching, networking educational programming',
 			_1: {ctor: '[]'}
 		},
 		links: {
@@ -8928,7 +8928,7 @@ var _user$project$Resume$awards = {
 			},
 			links: {
 				ctor: '::',
-				_0: _user$project$ResumeTypes$More('https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19'),
+				_0: _user$project$ResumeTypes$More('https://github.com/ashdza/pyofuel/blob/master/Rocky-2016-ICSB-Poster.pdf'),
 				_1: {ctor: '[]'}
 			}
 		},

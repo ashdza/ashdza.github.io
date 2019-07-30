@@ -111,7 +111,7 @@ awards =
       , role = "Fellow"
       , location = "US/Canada"
       , dates = "2019 - present"
-      , details = ["Coaching, educational programming, industry exploration, and networking for females in CS"
+      , details = ["US/Canada-wide competitive award for females in CS: coaching, networking educational programming"
         ]
       , links = [More "https://rewritingthecode.org/fellowship/"]
     },
@@ -123,7 +123,7 @@ awards =
     , details =
           [ "Int'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)"
           ]
-    , links = [ More "https://www.iscb.org/cms_addon/conferences/rocky2016/track/posters.php#P19" ]
+    , links = [ More "https://github.com/ashdza/pyofuel/blob/master/Rocky-2016-ICSB-Poster.pdf" ]
     }
     ]
 
