@@ -8698,41 +8698,25 @@ var _user$project$Resume$activities = {
 				ctor: '::',
 				_0: A3(
 					_user$project$ResumeTypes$FlatItem,
-					'SASE: Society of Asian Scientists and Engineers, Rice University',
+					'Club Tennis, Rice University',
 					'2017 - present',
 					{ctor: '[]'}),
 				_1: {
 					ctor: '::',
 					_0: A3(
 						_user$project$ResumeTypes$FlatItem,
-						'Club Tennis, Rice University',
-						'2017 - present',
-						{ctor: '[]'}),
-					_1: {
-						ctor: '::',
-						_0: A3(
-							_user$project$ResumeTypes$FlatItem,
-							'Music: sing, record, perform, take lessons',
-							'2007 - present',
-							{
-								ctor: '::',
-								_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
-								_1: {
-									ctor: '::',
-									_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
-									_1: {ctor: '[]'}
-								}
-							}),
-						_1: {
+						'Music: sing, record, perform, take lessons',
+						'2007 - present',
+						{
 							ctor: '::',
-							_0: A3(
-								_user$project$ResumeTypes$FlatItem,
-								'PyLadies: Austin community of women Python programmers, team programming, presentations',
-								'2015 - 2017',
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						}
-					}
+							_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
+							_1: {
+								ctor: '::',
+								_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
 				}
 			}
 		}
@@ -8765,19 +8749,11 @@ var _user$project$Resume$skills = {
 			dates: '2013 - present',
 			details: {
 				ctor: '::',
-				_0: 'Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2',
+				_0: 'Typed functional programming, object-oriented design, databases and distributed systems',
 				_1: {
 					ctor: '::',
-					_0: 'Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design',
-					_1: {
-						ctor: '::',
-						_0: 'Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
-						_1: {
-							ctor: '::',
-							_0: 'Databases and distributed systems - \'Designing Data-Intensive Applications\', book by Martin Kleppmann',
-							_1: {ctor: '[]'}
-						}
-					}
+					_0: 'Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
+					_1: {ctor: '[]'}
 				}
 			},
 			links: {ctor: '[]'}
@@ -8794,8 +8770,12 @@ var _user$project$Resume$projects = {
 		dates: '2018 - present',
 		details: {
 			ctor: '::',
-			_0: 'Musicians submit performances and receive pointed feedback from others (ReasonML, React, Postgres)',
-			_1: {ctor: '[]'}
+			_0: 'Develop full-stack application for use by musicians and teachers (ReasonML, React, Postgres)',
+			_1: {
+				ctor: '::',
+				_0: ' Musicians submit recordings and receive feedback on specific points in recording',
+				_1: {ctor: '[]'}
+			}
 		},
 		links: {
 			ctor: '::',
@@ -8816,7 +8796,7 @@ var _user$project$Resume$projects = {
 			dates: '2017',
 			details: {
 				ctor: '::',
-				_0: 'Design and implement a browser-based interactive graphical simulation of a physics problem (ReasonML)',
+				_0: 'Designed and implemented browser-based interactive graphical simulation of physics problem (ReasonML)',
 				_1: {ctor: '[]'}
 			},
 			links: {
@@ -8838,10 +8818,10 @@ var _user$project$Resume$projects = {
 				dates: '2018',
 				details: {
 					ctor: '::',
-					_0: 'Implement statistical learning of HMM using training corpus of pre-tagged sentences (Python)',
+					_0: 'Implemented statistical learning of HMM using training corpus of pre-tagged sentences (Python)',
 					_1: {
 						ctor: '::',
-						_0: 'Implement Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM',
+						_0: 'Used Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM',
 						_1: {ctor: '[]'}
 					}
 				},
@@ -8856,7 +8836,7 @@ var _user$project$Resume$projects = {
 					dates: '2018',
 					details: {
 						ctor: '::',
-						_0: 'Infer disease transmission tree from disease outbreak genetic + epidemiological data using RDMST (Python)',
+						_0: 'Inferred disease transmission tree from disease outbreak genetic/epidemiological data using RDMST (Python)',
 						_1: {ctor: '[]'}
 					},
 					links: {ctor: '[]'}
@@ -8864,33 +8844,18 @@ var _user$project$Resume$projects = {
 				_1: {
 					ctor: '::',
 					_0: {
-						name: 'DNA Sequence Alignment',
+						name: 'Phylogenetic (Evolutionary) Trees',
 						role: '',
 						location: '',
 						dates: '2018',
 						details: {
 							ctor: '::',
-							_0: 'Design and implement DP solutions to DNA sequence alignment problems (Python)',
+							_0: 'Inferred evolutionary tree given DNA sequences for leaf taxa and plausible mutations (Python)',
 							_1: {ctor: '[]'}
 						},
 						links: {ctor: '[]'}
 					},
-					_1: {
-						ctor: '::',
-						_0: {
-							name: 'Phylogenetic (Evolutionary) Trees',
-							role: '',
-							location: '',
-							dates: '2018',
-							details: {
-								ctor: '::',
-								_0: 'Infer evolutionary tree, given DNA sequences for leaf taxa and plausible mutations (Python)',
-								_1: {ctor: '[]'}
-							},
-							links: {ctor: '[]'}
-						},
-						_1: {ctor: '[]'}
-					}
+					_1: {ctor: '[]'}
 				}
 			}
 		}
@@ -8899,7 +8864,7 @@ var _user$project$Resume$projects = {
 var _user$project$Resume$awards = {
 	ctor: '::',
 	_0: {
-		name: 'Rewriting the Code Fellowship',
+		name: 'Rewriting the Code',
 		role: 'Fellow',
 		location: 'US/Canada',
 		dates: '2019 - present',
@@ -8938,17 +8903,21 @@ var _user$project$Resume$awards = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Backend Engineering Intern',
+		role: 'Backend Development Intern - Biglearn team',
 		name: 'OpenStax',
 		location: 'Houston, TX',
 		dates: 'Summer 2019',
 		details: {
 			ctor: '::',
-			_0: 'Convert Biglearn to highly scalable application by developing testing and deployment automation',
+			_0: 'Created scalable application with testing & deployment automation to handle/record request info (RoR)',
 			_1: {
 				ctor: '::',
-				_0: 'Work in team of interns to plan, pitch and build note-taking application integrated with OpenStax',
-				_1: {ctor: '[]'}
+				_0: 'Developed regular & serverless Postgresql database setups for use in Biglearn (AWS, AWS Aurora)',
+				_1: {
+					ctor: '::',
+					_0: 'Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)',
+					_1: {ctor: '[]'}
+				}
 			}
 		},
 		links: {ctor: '[]'}
@@ -8959,30 +8928,15 @@ var _user$project$Resume$work = {
 			role: 'Teaching Assistant',
 			name: 'Rice University, Dept. of Computer Science',
 			location: 'Houston, TX',
-			dates: '2019 - present',
+			dates: 'Fall 2019',
 			details: {
 				ctor: '::',
-				_0: 'COMP 382 Reasoning about Algorithms: Office hours, lead discussion of labs, homeworks',
+				_0: 'TA for Reasoning about Algorithms: lead office hours and discussion of labs, grade homeworks',
 				_1: {ctor: '[]'}
 			},
 			links: {ctor: '[]'}
 		},
-		_1: {
-			ctor: '::',
-			_0: {
-				role: 'Summer Research Intern',
-				name: 'UT Austin, College of Natural Sciences, Vertebrate Interactome Lab',
-				location: 'Austin, TX',
-				dates: '2016',
-				details: {
-					ctor: '::',
-					_0: 'DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria',
-					_1: {ctor: '[]'}
-				},
-				links: {ctor: '[]'}
-			},
-			_1: {ctor: '[]'}
-		}
+		_1: {ctor: '[]'}
 	}
 };
 var _user$project$Resume$education = {
@@ -8999,22 +8953,7 @@ var _user$project$Resume$education = {
 		},
 		links: {ctor: '[]'}
 	},
-	_1: {
-		ctor: '::',
-		_0: {
-			name: 'Westwood High School',
-			location: 'Austin, TX',
-			dates: '2013 - 2017',
-			role: '',
-			details: {
-				ctor: '::',
-				_0: 'GPA: 4.0/4.0 (5.58/5.0 weighted), National Merit Scholar, Graduated May 2017',
-				_1: {ctor: '[]'}
-			},
-			links: {ctor: '[]'}
-		},
-		_1: {ctor: '[]'}
-	}
+	_1: {ctor: '[]'}
 };
 var _user$project$Resume$header = {
 	name: 'Ashley D\'Souza',
