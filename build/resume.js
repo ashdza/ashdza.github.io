@@ -1564,8 +1564,7 @@ function toString(v)
 	var type = typeof v;
 	if (type === 'function')
 	{
-		var name = v.func ? v.func.name : v.name;
-		return '<function' + (name === '' ? '' : ':') + name + '>';
+		return '<function>';
 	}
 
 	if (type === 'boolean')
@@ -2072,6 +2071,13 @@ var _elm_lang$core$List$sortWith = _elm_lang$core$Native_List.sortWith;
 var _elm_lang$core$List$sortBy = _elm_lang$core$Native_List.sortBy;
 var _elm_lang$core$List$sort = function (xs) {
 	return A2(_elm_lang$core$List$sortBy, _elm_lang$core$Basics$identity, xs);
+};
+var _elm_lang$core$List$singleton = function (value) {
+	return {
+		ctor: '::',
+		_0: value,
+		_1: {ctor: '[]'}
+	};
 };
 var _elm_lang$core$List$drop = F2(
 	function (n, list) {
@@ -3520,15 +3526,8 @@ function setupIncomingPort(name, callback)
 		sentBeforeInit.push(value);
 	}
 
-	function postInitSend(incomingValue)
+	function postInitSend(value)
 	{
-		var result = A2(_elm_lang$core$Json_Decode$decodeValue, converter, incomingValue);
-		if (result.ctor === 'Err')
-		{
-			throw new Error('Trying to send an unexpected type of value through port `' + name + '`:\n' + result._0);
-		}
-
-		var value = result._0;
 		var temp = subs;
 		while (temp.ctor !== '[]')
 		{
@@ -3539,7 +3538,13 @@ function setupIncomingPort(name, callback)
 
 	function send(incomingValue)
 	{
-		currentSend(incomingValue);
+		var result = A2(_elm_lang$core$Json_Decode$decodeValue, converter, incomingValue);
+		if (result.ctor === 'Err')
+		{
+			throw new Error('Trying to send an unexpected type of value through port `' + name + '`:\n' + result._0);
+		}
+
+		currentSend(result._0);
 	}
 
 	return { send: send };
@@ -3963,7 +3968,7 @@ function endsWith(sub, str)
 function indexes(sub, str)
 {
 	var subLen = sub.length;
-	
+
 	if (subLen < 1)
 	{
 		return _elm_lang$core$Native_List.Nil;
@@ -3976,74 +3981,78 @@ function indexes(sub, str)
 	{
 		is.push(i);
 		i = i + subLen;
-	}	
-	
+	}
+
 	return _elm_lang$core$Native_List.fromArray(is);
 }
+
 
 function toInt(s)
 {
 	var len = s.length;
+
+	// if empty
 	if (len === 0)
 	{
-		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
+		return intErr(s);
 	}
-	var start = 0;
-	if (s[0] === '-')
+
+	// if hex
+	var c = s[0];
+	if (c === '0' && s[1] === 'x')
 	{
-		if (len === 1)
+		for (var i = 2; i < len; ++i)
 		{
-			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
+			var c = s[i];
+			if (('0' <= c && c <= '9') || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'))
+			{
+				continue;
+			}
+			return intErr(s);
 		}
-		start = 1;
+		return _elm_lang$core$Result$Ok(parseInt(s, 16));
 	}
-	for (var i = start; i < len; ++i)
+
+	// is decimal
+	if (c > '9' || (c < '0' && c !== '-' && c !== '+'))
+	{
+		return intErr(s);
+	}
+	for (var i = 1; i < len; ++i)
 	{
 		var c = s[i];
 		if (c < '0' || '9' < c)
 		{
-			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
+			return intErr(s);
 		}
 	}
+
 	return _elm_lang$core$Result$Ok(parseInt(s, 10));
 }
 
+function intErr(s)
+{
+	return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int");
+}
+
+
 function toFloat(s)
 {
-	var len = s.length;
-	if (len === 0)
+	// check if it is a hex, octal, or binary number
+	if (s.length === 0 || /[\sxbo]/.test(s))
 	{
-		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
+		return floatErr(s);
 	}
-	var start = 0;
-	if (s[0] === '-')
-	{
-		if (len === 1)
-		{
-			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
-		}
-		start = 1;
-	}
-	var dotCount = 0;
-	for (var i = start; i < len; ++i)
-	{
-		var c = s[i];
-		if ('0' <= c && c <= '9')
-		{
-			continue;
-		}
-		if (c === '.')
-		{
-			dotCount += 1;
-			if (dotCount <= 1)
-			{
-				continue;
-			}
-		}
-		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
-	}
-	return _elm_lang$core$Result$Ok(parseFloat(s));
+	var n = +s;
+	// faster isNaN check
+	return n === n ? _elm_lang$core$Result$Ok(n) : floatErr(s);
 }
+
+function floatErr(s)
+{
+	return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float");
+}
+
 
 function toList(str)
 {
@@ -5283,11 +5292,6 @@ function badToString(problem)
 				problem = problem.rest;
 				break;
 
-			case 'index':
-				context += '[' + problem.index + ']';
-				problem = problem.rest;
-				break;
-
 			case 'oneOf':
 				var problems = problem.problems;
 				for (var i = 0; i < problems.length; i++)
@@ -6015,9 +6019,9 @@ function on(name, options, decoder)
 
 function equalEvents(a, b)
 {
-	if (!a.options === b.options)
+	if (a.options !== b.options)
 	{
-		if (a.stopPropagation !== b.stopPropagation || a.preventDefault !== b.preventDefault)
+		if (a.options.stopPropagation !== b.options.stopPropagation || a.options.preventDefault !== b.options.preventDefault)
 		{
 			return false;
 		}
@@ -7293,7 +7297,7 @@ function normalRenderer(parentNode, view)
 var rAF =
 	typeof requestAnimationFrame !== 'undefined'
 		? requestAnimationFrame
-		: function(callback) { callback(); };
+		: function(callback) { setTimeout(callback, 1000 / 60); };
 
 function makeStepper(domNode, view, initialVirtualNode, eventNode)
 {
@@ -8724,13 +8728,13 @@ var _user$project$Resume$skills = {
 		name: 'Programming Languages & Frameworks',
 		role: '',
 		location: '',
-		dates: '2013 - present',
+		dates: '',
 		details: {
 			ctor: '::',
-			_0: 'Proficient: Python, Java, C, Ruby, RoR, Git, Linux, AWS, ReasonML/OCaml, React',
+			_0: 'Proficient: Python, Java, C, Ruby on Rails, Git, Linux, AWS',
 			_1: {
 				ctor: '::',
-				_0: 'Basic: Elm, Racket, Pyret, Html, Hasura\'s Postgres + GraphQL',
+				_0: 'Basic: Elm, HTML, React, ReasonML/OCaml, Hasura\'s Postgres + GraphQL',
 				_1: {ctor: '[]'}
 			}
 		},
@@ -8742,13 +8746,13 @@ var _user$project$Resume$skills = {
 			name: 'Software Design and Testing',
 			role: '',
 			location: '',
-			dates: '2013 - present',
+			dates: '',
 			details: {
 				ctor: '::',
-				_0: 'Typed functional programming, object-oriented design, databases and distributed systems',
+				_0: 'Databases and distributed systems, functional programming, object-oriented design',
 				_1: {
 					ctor: '::',
-					_0: 'Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
+					_0: 'Test-driven development, property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
 					_1: {ctor: '[]'}
 				}
 			},
@@ -8884,7 +8888,7 @@ var _user$project$Resume$awards = {
 			dates: 'Dec 2016',
 			details: {
 				ctor: '::',
-				_0: 'Int\'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)',
+				_0: 'Accepted for 2016 Rocky Mountain Bioinformatics Conference (poster session)',
 				_1: {ctor: '[]'}
 			},
 			links: {
@@ -8899,13 +8903,13 @@ var _user$project$Resume$awards = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Backend Development Intern - Biglearn team',
+		role: 'Backend Development Intern - Biglearn/Tutor team',
 		name: 'OpenStax',
 		location: 'Houston, TX',
 		dates: 'Summer 2019',
 		details: {
 			ctor: '::',
-			_0: 'Built Rails application with automated testing to handle two endpoints for Biglearn (RoR)',
+			_0: 'Built Rails application with automated testing to handle two endpoints for Biglearn (Ruby on Rails)',
 			_1: {
 				ctor: '::',
 				_0: 'Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)',
@@ -8927,7 +8931,7 @@ var _user$project$Resume$work = {
 			dates: 'Fall 2019',
 			details: {
 				ctor: '::',
-				_0: 'TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks',
+				_0: 'TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks, and exams',
 				_1: {ctor: '[]'}
 			},
 			links: {ctor: '[]'}
@@ -9010,13 +9014,13 @@ var _user$project$Resume$theResume = {
 			_0: A2(_user$project$ResumeTypes$NestedSection, 'Work Experience', _user$project$Resume$work),
 			_1: {
 				ctor: '::',
-				_0: A2(_user$project$ResumeTypes$NestedSection, 'Awards', _user$project$Resume$awards),
+				_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$skills),
 				_1: {
 					ctor: '::',
-					_0: A2(_user$project$ResumeTypes$NestedSection, 'Software Development Skills', _user$project$Resume$skills),
+					_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
 					_1: {
 						ctor: '::',
-						_0: A2(_user$project$ResumeTypes$NestedSection, 'Projects', _user$project$Resume$projects),
+						_0: A2(_user$project$ResumeTypes$NestedSection, 'Awards', _user$project$Resume$awards),
 						_1: {
 							ctor: '::',
 							_0: A2(_user$project$ResumeTypes$FlatSection, 'Organizations and Activities', _user$project$Resume$activities),

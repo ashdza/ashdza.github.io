@@ -15,9 +15,9 @@ theResume =
         -- [ FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
         , NestedSection "Work Experience" work
-        , NestedSection "Awards" awards
         , NestedSection "Software Development Skills" skills
         , NestedSection "Projects" projects
+        , NestedSection "Awards" awards
         , FlatSection "Organizations and Activities" activities
         ]
     }
@@ -74,13 +74,13 @@ education =
 
 work : List Item
 work =
-    [ { role = "Backend Development Intern - Biglearn team"
+    [ { role = "Backend Development Intern - Biglearn/Tutor team"
       , name = "OpenStax"
       , location = "Houston, TX"
       , dates = "Summer 2019"
       , details =
             -- [ "Convert Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
-            [ "Built Rails application with automated testing to handle two endpoints for Biglearn (RoR)"
+            [ "Built Rails application with automated testing to handle two endpoints for Biglearn (Ruby on Rails)"
             , "Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)"
             , "Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)"
             ]
@@ -91,7 +91,7 @@ work =
       , location = "Houston, TX"
       , dates = "Fall 2019"
       , details =
-            [ "TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks"
+            [ "TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks, and exams"
             ]
       , links = []
       }
@@ -124,7 +124,7 @@ awards =
       , location = "Colorado"
       , dates = "Dec 2016"
       , details =
-            [ "Int'l. Soc. for Computational Biology / 2016 Rocky Mountain Bioinformatics Conference (poster session)"
+            [ "Accepted for 2016 Rocky Mountain Bioinformatics Conference (poster session)"
             ]
       , links = [ More "https://github.com/ashdza/pyofuel/blob/master/Rocky-2016-ICSB-Poster.pdf" ]
       }
@@ -219,22 +219,23 @@ skills =
     [ { name = "Programming Languages & Frameworks"
       , role = ""
       , location = ""
-      , dates = "2013 - present"
+      , dates = ""
       , details =
-            [ "Proficient: Python, Java, C, Ruby, RoR, Git, Linux, AWS, ReasonML/OCaml, React"
-            , "Basic: Elm, Racket, Pyret, Html, Hasura's Postgres + GraphQL"
+            [ "Proficient: Python, Java, C, Ruby on Rails, Git, Linux, AWS"
+            , "Basic: Elm, HTML, React, ReasonML/OCaml, Hasura's Postgres + GraphQL"
+            -- , "Skills: "
             ]
       , links = []
       }
     , { name = "Software Design and Testing"
       , role = ""
       , location = ""
-      , dates = "2013 - present"
+      , dates = ""
       , details =
             -- [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            [ "Typed functional programming, object-oriented design, databases and distributed systems"
+            [ "Databases and distributed systems, functional programming, object-oriented design"
               -- ,"Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
-            , "Test-driven development, unit & property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
+            , "Test-driven development, property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
               -- , "Databases and distributed systems - 'Designing Data-Intensive Applications', by Martin Kleppmann"
             ]
       , links = []
