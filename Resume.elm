@@ -80,7 +80,7 @@ work =
       , dates = "Summer 2019"
       , details =
             -- [ "Convert Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
-            [ "Built Rails application with automated testing to handle two endpoints for Biglearn (Ruby on Rails)"
+            [ "Built Rails application with automated testing for two Biglearn endpoints (4,000 students/semester)"
             , "Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)"
             , "Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)"
             ]

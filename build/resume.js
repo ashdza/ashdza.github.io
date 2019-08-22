@@ -8909,7 +8909,7 @@ var _user$project$Resume$work = {
 		dates: 'Summer 2019',
 		details: {
 			ctor: '::',
-			_0: 'Built Rails application with automated testing to handle two endpoints for Biglearn (Ruby on Rails)',
+			_0: 'Built Rails application with automated testing for two Biglearn endpoints (4,000 students/semester)',
 			_1: {
 				ctor: '::',
 				_0: 'Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)',
