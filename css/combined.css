@@ -1,6 +1,11 @@
+/* print format settings */
+@page {
+    margin: 30px 20px 20px 30px;
+}
+
 #resume {
     padding-top: 20px;
-    margin: 14px 10px 10px 15px,
+    margin: 14px 10px 10px 15px;
     font-family: calibri, helvetica, arial, sans-serif;
 }
 
@@ -161,8 +166,6 @@ body {
     margin-left: 10px;
     margin-bottom: 8px;
     margin-top: 12px;
-    margin-top,
-    margin-bottom: 2px;
     font-size: 11pt;
     page-break-after: avoid;
 }

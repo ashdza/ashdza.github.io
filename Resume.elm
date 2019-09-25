@@ -108,6 +108,35 @@ work =
     ]
 
 
+skills : List Item
+skills =
+    [ { name = "Programming Languages & Frameworks"
+      , role = ""
+      , location = ""
+      , dates = ""
+      , details =
+            [ "Proficient: Python, Java, C, Ruby on Rails, Git, Linux, AWS"
+            , "Basic: Elm, JavaScript, HTML, React, ReasonML/OCaml, Hasura's Postgres + GraphQL"
+              -- , "Skills: "
+            ]
+      , links = []
+      }
+    , { name = "Software Design and Testing"
+      , role = ""
+      , location = ""
+      , dates = ""
+      , details =
+            -- [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
+            [ "Databases and distributed systems, functional programming, object-oriented design"
+              -- ,"Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
+            , "Test-driven development, property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
+              -- , "Databases and distributed systems - 'Designing Data-Intensive Applications', by Martin Kleppmann"
+            ]
+      , links = []
+      }
+    ]
+
+
 awards : List Item
 awards =
     [ { name = "Rewriting the Code"
@@ -211,35 +240,6 @@ projects =
       --         ]
       --   , links = [ Repo "https://github.com/ashdza/chef_arduino" ]
       --   }
-    ]
-
-
-skills : List Item
-skills =
-    [ { name = "Programming Languages & Frameworks"
-      , role = ""
-      , location = ""
-      , dates = ""
-      , details =
-            [ "Proficient: Python, Java, C, Ruby on Rails, Git, Linux, AWS"
-            , "Basic: Elm, HTML, React, ReasonML/OCaml, Hasura's Postgres + GraphQL"
-            -- , "Skills: "
-            ]
-      , links = []
-      }
-    , { name = "Software Design and Testing"
-      , role = ""
-      , location = ""
-      , dates = ""
-      , details =
-            -- [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            [ "Databases and distributed systems, functional programming, object-oriented design"
-              -- ,"Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
-            , "Test-driven development, property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
-              -- , "Databases and distributed systems - 'Designing Data-Intensive Applications', by Martin Kleppmann"
-            ]
-      , links = []
-      }
     ]
 
 
