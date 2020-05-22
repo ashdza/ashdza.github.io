@@ -8870,28 +8870,28 @@ var _user$project$Resume$activities = {
 	ctor: '::',
 	_0: A3(
 		_user$project$ResumeTypes$FlatItem,
-		'CSters: Women in Computer Science, Rice University',
+		'Public Relations Director and member of Club Tennis, Rice University',
 		'2017 - present',
 		{ctor: '[]'}),
 	_1: {
 		ctor: '::',
 		_0: A3(
 			_user$project$ResumeTypes$FlatItem,
-			'CS Club, Rice University',
+			'CSters: Women in Computer Science, Rice University',
 			'2017 - present',
 			{ctor: '[]'}),
 		_1: {
 			ctor: '::',
 			_0: A3(
 				_user$project$ResumeTypes$FlatItem,
-				'Society of Women Engineers (SWE), Rice University',
+				'CS Club, Rice University',
 				'2017 - present',
 				{ctor: '[]'}),
 			_1: {
 				ctor: '::',
 				_0: A3(
 					_user$project$ResumeTypes$FlatItem,
-					'Club Tennis, Rice University',
+					'Society of Women Engineers (SWE), Rice University',
 					'2017 - present',
 					{ctor: '[]'}),
 				_1: {
@@ -8995,22 +8995,7 @@ var _user$project$Resume$projects = {
 					},
 					links: {ctor: '[]'}
 				},
-				_1: {
-					ctor: '::',
-					_0: {
-						name: 'Phylogenetic (Evolutionary) Trees',
-						role: '',
-						location: '',
-						dates: '2018',
-						details: {
-							ctor: '::',
-							_0: 'Inferred evolutionary tree given DNA sequences for leaf taxa and plausible mutations (Python)',
-							_1: {ctor: '[]'}
-						},
-						links: {ctor: '[]'}
-					},
-					_1: {ctor: '[]'}
-				}
+				_1: {ctor: '[]'}
 			}
 		}
 	}
@@ -9096,40 +9081,55 @@ var _user$project$Resume$skills = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Backend Development Intern - Biglearn/Tutor team',
-		name: 'OpenStax',
-		location: 'Houston, TX',
-		dates: 'Summer 2019',
+		role: 'Software Engineering Intern',
+		name: 'HubSpot',
+		location: 'Remote',
+		dates: 'Summer 2020',
 		details: {
 			ctor: '::',
-			_0: 'Built Rails application with automated testing for two Biglearn endpoints (4,000 students/semester)',
-			_1: {
-				ctor: '::',
-				_0: 'Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)',
-				_1: {
-					ctor: '::',
-					_0: 'Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)',
-					_1: {ctor: '[]'}
-				}
-			}
+			_0: 'In progress',
+			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}
 	},
 	_1: {
 		ctor: '::',
 		_0: {
-			role: 'Teaching Assistant',
-			name: 'Rice University, Dept. of Computer Science',
+			role: 'Backend Development Intern - Biglearn/Tutor team',
+			name: 'OpenStax',
 			location: 'Houston, TX',
-			dates: 'Fall 2019',
+			dates: 'Summer 2019',
 			details: {
 				ctor: '::',
-				_0: 'TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks, and exams',
-				_1: {ctor: '[]'}
+				_0: 'Built Rails application with automated testing for two Biglearn endpoints (4,000 students/semester)',
+				_1: {
+					ctor: '::',
+					_0: 'Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)',
+					_1: {
+						ctor: '::',
+						_0: 'Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)',
+						_1: {ctor: '[]'}
+					}
+				}
 			},
 			links: {ctor: '[]'}
 		},
-		_1: {ctor: '[]'}
+		_1: {
+			ctor: '::',
+			_0: {
+				role: 'Teaching Assistant',
+				name: 'Rice University, Dept. of Computer Science',
+				location: 'Houston, TX',
+				dates: 'Fall 2019',
+				details: {
+					ctor: '::',
+					_0: 'TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks, and exams',
+					_1: {ctor: '[]'}
+				},
+				links: {ctor: '[]'}
+			},
+			_1: {ctor: '[]'}
+		}
 	}
 };
 var _user$project$Resume$education = {
@@ -9216,7 +9216,7 @@ var _user$project$Resume$theResume = {
 						_0: A2(_user$project$ResumeTypes$NestedSection, 'Awards', _user$project$Resume$awards),
 						_1: {
 							ctor: '::',
-							_0: A2(_user$project$ResumeTypes$FlatSection, 'Organizations and Activities', _user$project$Resume$activities),
+							_0: A2(_user$project$ResumeTypes$FlatSection, 'Leadership and Activities', _user$project$Resume$activities),
 							_1: {ctor: '[]'}
 						}
 					}

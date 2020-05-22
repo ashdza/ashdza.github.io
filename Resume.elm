@@ -18,7 +18,7 @@ theResume =
         , NestedSection "Software Development Skills" skills
         , NestedSection "Projects" projects
         , NestedSection "Awards" awards
-        , FlatSection "Organizations and Activities" activities
+        , FlatSection "Leadership and Activities" activities
         ]
     }
 
@@ -74,7 +74,16 @@ education =
 
 work : List Item
 work =
-    [ { role = "Backend Development Intern - Biglearn/Tutor team"
+    [ {
+       role = "Software Engineering Intern"
+       , name = "HubSpot"
+       , location = "Remote"
+       , dates = "Summer 2020"
+       , details = ["In progress"]
+       , links = []
+    }
+    ,
+      { role = "Backend Development Intern - Biglearn/Tutor team"
       , name = "OpenStax"
       , location = "Houston, TX"
       , dates = "Summer 2019"
@@ -212,15 +221,15 @@ projects =
       --         ]
       --   , links = []
       --   }
-    , { name = "Phylogenetic (Evolutionary) Trees"
-      , role = ""
-      , location = ""
-      , dates = "2018"
-      , details =
-            [ "Inferred evolutionary tree given DNA sequences for leaf taxa and plausible mutations (Python)"
-            ]
-      , links = []
-      }
+      --, { name = "Phylogenetic (Evolutionary) Trees"
+      --, role = ""
+      --, location = ""
+      --, dates = "2018"
+      --, details =
+      --      [ "Inferred evolutionary tree given DNA sequences for leaf taxa and plausible mutations (Python)"
+      --      ]
+      --, links = []
+      --}
       -- ,
       -- , { name = "Impact of Language on Perception"
       --   , role = "Independent Project"
@@ -245,11 +254,11 @@ projects =
 
 activities : List FlatItem
 activities =
-    [ FlatItem "CSters: Women in Computer Science, Rice University" "2017 - present" []
+    [ FlatItem "Public Relations Director and member of Club Tennis, Rice University" "2017 - present" []
+     , FlatItem "CSters: Women in Computer Science, Rice University" "2017 - present" []
     , FlatItem "CS Club, Rice University" "2017 - present" []
     , FlatItem "Society of Women Engineers (SWE), Rice University" "2017 - present" []
       -- , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "2017 - present" []
-    , FlatItem "Club Tennis, Rice University" "2017 - present" []
     , FlatItem "Music: sing, record, perform, take lessons"
         "2007 - present"
         [ Link "soundcloud" "https://goo.gl/kba2Mk", Link "youtube" "https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos" ]
