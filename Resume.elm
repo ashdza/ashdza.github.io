@@ -115,7 +115,7 @@ skills =
       , location = ""
       , dates = ""
       , details =
-            [ "Proficient: Python, Java, C, Ruby on Rails, Git, Linux, AWS"
+            [ "Proficient: Python, Java, C, SQL, Ruby on Rails, Git, Linux, AWS"
             , "Basic: Elm, JavaScript, HTML, React, ReasonML/OCaml, Hasura's Postgres + GraphQL"
               -- , "Skills: "
             ]

@@ -9063,7 +9063,7 @@ var _user$project$Resume$skills = {
 		dates: '',
 		details: {
 			ctor: '::',
-			_0: 'Proficient: Python, Java, C, Ruby on Rails, Git, Linux, AWS',
+			_0: 'Proficient: Python, Java, C, SQL, Ruby on Rails, Git, Linux, AWS',
 			_1: {
 				ctor: '::',
 				_0: 'Basic: Elm, JavaScript, HTML, React, ReasonML/OCaml, Hasura\'s Postgres + GraphQL',
