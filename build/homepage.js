@@ -9057,57 +9057,50 @@ var _user$project$Resume$skills = {
 		},
 		links: {ctor: '[]'}
 	},
-	_1: {
-		ctor: '::',
-		_0: {
-			name: 'Software Design and Testing',
-			role: '',
-			location: '',
-			dates: '',
-			details: {
-				ctor: '::',
-				_0: 'Databases and distributed systems, functional programming, object-oriented design',
-				_1: {
-					ctor: '::',
-					_0: 'Test-driven development, property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec',
-					_1: {ctor: '[]'}
-				}
-			},
-			links: {ctor: '[]'}
-		},
-		_1: {ctor: '[]'}
-	}
+	_1: {ctor: '[]'}
 };
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Software Engineering Intern',
+		role: 'Software Engineering Intern - Growth Monetization Backend',
 		name: 'HubSpot',
 		location: 'Remote',
 		dates: 'Summer 2020',
 		details: {
 			ctor: '::',
-			_0: 'In progress',
-			_1: {ctor: '[]'}
+			_0: 'Full ownership of revenue generation project for startup market involving multiple teams',
+			_1: {
+				ctor: '::',
+				_0: 'Develop Java application for cross-platform integration of business development managers & startups',
+				_1: {
+					ctor: '::',
+					_0: 'Design & deploy internal API\'s and clients with unit & acceptance testing for use by other teams',
+					_1: {
+						ctor: '::',
+						_0: 'Maintain databases by building data access objects & automated jobs using SQL and Java',
+						_1: {ctor: '[]'}
+					}
+				}
+			}
 		},
 		links: {ctor: '[]'}
 	},
 	_1: {
 		ctor: '::',
 		_0: {
-			role: 'Backend Development Intern - Biglearn/Tutor team',
+			role: 'Backend Development Intern - Biglearn/Tutor',
 			name: 'OpenStax',
 			location: 'Houston, TX',
 			dates: 'Summer 2019',
 			details: {
 				ctor: '::',
-				_0: 'Built Rails application with automated testing for two Biglearn endpoints (4,000 students/semester)',
+				_0: 'Built Rails application with automated testing for Biglearn endpoints, impacting 4,000 students/semester',
 				_1: {
 					ctor: '::',
-					_0: 'Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)',
+					_0: 'Transitioned Biglearn to AWS Aurora Serverless for scalability with load-testing & autoscaling',
 					_1: {
 						ctor: '::',
-						_0: 'Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)',
+						_0: 'Worked in intern team to build & pitch note-taking app to investors',
 						_1: {ctor: '[]'}
 					}
 				}
@@ -9123,7 +9116,7 @@ var _user$project$Resume$work = {
 				dates: 'Fall 2019',
 				details: {
 					ctor: '::',
-					_0: 'TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks, and exams',
+					_0: 'TA for Algorithms II: lead office hours and discussion of labs, homework, and exams',
 					_1: {ctor: '[]'}
 				},
 				links: {ctor: '[]'}
@@ -9137,11 +9130,11 @@ var _user$project$Resume$education = {
 	_0: {
 		name: 'Rice University',
 		location: 'Houston, TX',
-		dates: '2017 - present',
+		dates: 'Aug 2017 - May 2021',
 		role: '',
 		details: {
 			ctor: '::',
-			_0: 'BS Computer Science, graduating May 2021, GPA: 3.6/4.0',
+			_0: 'BS Computer Science, GPA: 3.6/4.0',
 			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}

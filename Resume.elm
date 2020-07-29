@@ -53,45 +53,40 @@ education : List Item
 education =
     [ { name = "Rice University"
       , location = "Houston, TX"
-      , dates = "2017 - present"
+      , dates = "Aug 2017 - May 2021"
       , role = ""
       , details =
-            [ "BS Computer Science, graduating May 2021, GPA: 3.6/4.0"
+            [ "BS Computer Science, GPA: 3.6/4.0"
             ]
       , links = []
       }
-      -- , { name = "Westwood High School"
-      --   , location = "Austin, TX"
-      --   , dates = "2013 - 2017"
-      --   , role = ""
-      --   , details =
-      --         [ "GPA: 4.0/4.0 (5.58/5.0 weighted), National Merit Scholar, Graduated May 2017"
-      --         ]
-      --   , links = []
-      --   }
     ]
 
 
 work : List Item
 work =
     [ {
-       role = "Software Engineering Intern"
+       role = "Software Engineering Intern - Growth Monetization Backend"
        , name = "HubSpot"
        , location = "Remote"
        , dates = "Summer 2020"
-       , details = ["In progress"]
+       , details = ["Full ownership of revenue generation project for startup market involving multiple teams", 
+       "Develop Java application for cross-platform integration of business development managers & startups",
+       "Design & deploy internal API's and clients with unit & acceptance testing for use by other teams", 
+       "Maintain databases by building data access objects & automated jobs using SQL and Java"
+       ]
        , links = []
     }
     ,
-      { role = "Backend Development Intern - Biglearn/Tutor team"
+      { role = "Backend Development Intern - Biglearn/Tutor"
       , name = "OpenStax"
       , location = "Houston, TX"
       , dates = "Summer 2019"
       , details =
-            -- [ "Convert Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
-            [ "Built Rails application with automated testing for two Biglearn endpoints (4,000 students/semester)"
-            , "Transitioned Biglearn to Aurora Serverless for scalability with load-testing & autoscaling (AWS, AWS Aurora)"
-            , "Worked in team of 8 interns to build & pitch note-taking app integrated with OpenStax (Google API,  Django)"
+            -- [ "Converted Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
+            [ "Built Rails application with automated testing for Biglearn endpoints, impacting 4,000 students/semester"
+            , "Transitioned Biglearn to AWS Aurora Serverless for scalability with load-testing & autoscaling"
+            , "Worked in intern team to build & pitch note-taking app to investors"
             ]
       , links = []
       }
@@ -100,20 +95,10 @@ work =
       , location = "Houston, TX"
       , dates = "Fall 2019"
       , details =
-            [ "TA for Reasoning about Algorithms: lead office hours and discussion of labs, homeworks, and exams"
+            [ "TA for Algorithms II: lead office hours and discussion of labs, homework, and exams"
             ]
       , links = []
       }
-      -- ,
-      -- { role = "Summer Research Intern"
-      --   , name = "UT Austin, College of Natural Sciences, Vertebrate Interactome Lab"
-      --   , location = "Austin, TX"
-      --   , dates = "2016"
-      --   , details =
-      --         [ "DNA recombineering of DHX35 gene in E. coli, and computational Flux Balance Analysis on cyanobacteria"
-      --         ]
-      --   , links = []
-      --   }
     ]
 
 
@@ -126,23 +111,22 @@ skills =
       , details =
             [ "Proficient: Python, Java, C, SQL, Ruby on Rails, Git, Linux, AWS"
             , "Basic: Elm, JavaScript, HTML, React, ReasonML/OCaml, Hasura's Postgres + GraphQL"
-              -- , "Skills: "
             ]
       , links = []
       }
-    , { name = "Software Design and Testing"
-      , role = ""
-      , location = ""
-      , dates = ""
-      , details =
-            -- [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-            [ "Databases and distributed systems, functional programming, object-oriented design"
-              -- ,"Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
-            , "Test-driven development, property-based tests, Pytest, JUnit 5 & QuickTheories, RSpec"
-              -- , "Databases and distributed systems - 'Designing Data-Intensive Applications', by Martin Kleppmann"
-            ]
-      , links = []
-      }
+    -- , { name = "Software Design and Testing"
+    --   , role = ""
+    --   , location = ""
+    --   , dates = ""
+    --   , details =
+    --         -- [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
+    --         [ "Databases and distributed systems, functional programming, object-oriented design"
+    --           -- ,"Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
+    --         , "Test-driven development, property-based tests, Pytest, JUnit & QuickTheories, RSpec"
+    --           -- , "Databases and distributed systems - 'Designing Data-Intensive Applications', by Martin Kleppmann"
+    --         ]
+    --   , links = []
+    --   }
     ]
 
 
