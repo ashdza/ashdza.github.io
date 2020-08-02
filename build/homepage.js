@@ -9074,7 +9074,7 @@ var _user$project$Resume$work = {
 				_0: 'Develop Java application for cross-platform integration of business development managers & startups',
 				_1: {
 					ctor: '::',
-					_0: 'Design & deploy internal API\'s and clients with unit & acceptance testing for use by other teams',
+					_0: 'Design & deploy internal API\'s and clients with unit, integration & acceptance testing for use by other teams',
 					_1: {
 						ctor: '::',
 						_0: 'Maintain databases by building data access objects & automated jobs using SQL and Java',

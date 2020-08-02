@@ -72,7 +72,7 @@ work =
        , dates = "Summer 2020"
        , details = ["Full ownership of revenue generation project for startup market involving multiple teams", 
        "Develop Java application for cross-platform integration of business development managers & startups",
-       "Design & deploy internal API's and clients with unit & acceptance testing for use by other teams", 
+       "Design & deploy internal API's and clients with unit, integration & acceptance testing for use by other teams", 
        "Maintain databases by building data access objects & automated jobs using SQL and Java"
        ]
        , links = []
