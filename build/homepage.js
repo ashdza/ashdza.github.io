@@ -9093,7 +9093,7 @@ var _user$project$Resume$work = {
 				dates: 'Fall 2019',
 				details: {
 					ctor: '::',
-					_0: 'TA for Algorithms II: lead office hours and discussion of labs, homework, and exams',
+					_0: 'TA for Algorithms II: led office hours and discussion of labs, homework, and exams',
 					_1: {ctor: '[]'}
 				},
 				links: {ctor: '[]'}

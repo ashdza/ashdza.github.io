@@ -95,7 +95,7 @@ work =
       , location = "Houston, TX"
       , dates = "Fall 2019"
       , details =
-            [ "TA for Algorithms II: lead office hours and discussion of labs, homework, and exams"
+            [ "TA for Algorithms II: led office hours and discussion of labs, homework, and exams"
             ]
       , links = []
       }
