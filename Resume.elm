@@ -171,7 +171,7 @@ projects =
       , dates = "2018"
       , details =
             [ "Implemented statistical learning of hidden Markov model using training corpus of pre-tagged sentences (Python)"
-            , "Built model that assigns parts-of-speech to words in input text"
+            , "Built model that assigns parts-of-speech tags to words in input text"
             ]
       , links = []
       }

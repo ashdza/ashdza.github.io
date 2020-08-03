@@ -8770,7 +8770,7 @@ var _user$project$Resume$projects = {
 					_0: 'Implemented statistical learning of hidden Markov model using training corpus of pre-tagged sentences (Python)',
 					_1: {
 						ctor: '::',
-						_0: 'Built model that assigns parts-of-speech to words in input text',
+						_0: 'Built model that assigns parts-of-speech tags to words in input text',
 						_1: {ctor: '[]'}
 					}
 				},
