@@ -8870,7 +8870,7 @@ var _user$project$Resume$activities = {
 	ctor: '::',
 	_0: A3(
 		_user$project$ResumeTypes$FlatItem,
-		'Public Relations Director and member of Club Tennis, Rice University',
+		'Public Relations Director & member of Club Tennis, Rice University',
 		'2017 - present',
 		{ctor: '[]'}),
 	_1: {

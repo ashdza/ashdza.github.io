@@ -189,7 +189,7 @@ projects =
 
 activities : List FlatItem
 activities =
-    [ FlatItem "Public Relations Director and member of Club Tennis, Rice University" "2017 - present" []
+    [ FlatItem "Public Relations Director & member of Club Tennis, Rice University" "2017 - present" []
      , FlatItem "CSters: Women in Computer Science, Rice University" "2017 - present" []
     , FlatItem "CS Club, Rice University" "2017 - present" []
     , FlatItem "Music: sing, record, perform, take lessons"
