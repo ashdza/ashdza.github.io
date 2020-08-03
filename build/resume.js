@@ -8698,26 +8698,18 @@ var _user$project$Resume$activities = {
 				ctor: '::',
 				_0: A3(
 					_user$project$ResumeTypes$FlatItem,
-					'Society of Women Engineers (SWE), Rice University',
-					'2017 - present',
-					{ctor: '[]'}),
-				_1: {
-					ctor: '::',
-					_0: A3(
-						_user$project$ResumeTypes$FlatItem,
-						'Music: sing, record, perform, take lessons',
-						'2007 - present',
-						{
+					'Music: sing, record, perform, take lessons',
+					'2007 - present',
+					{
+						ctor: '::',
+						_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
+						_1: {
 							ctor: '::',
-							_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
-							_1: {
-								ctor: '::',
-								_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
-								_1: {ctor: '[]'}
-							}
-						}),
-					_1: {ctor: '[]'}
-				}
+							_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
 			}
 		}
 	}
@@ -8757,7 +8749,7 @@ var _user$project$Resume$projects = {
 			dates: '2020',
 			details: {
 				ctor: '::',
-				_0: 'Designed study & wrote SQL program to determine which teams would benefit most by moving 3-point line',
+				_0: 'Designed study & wrote program to determine which teams would benefit most by moving 3-point line (SQL)',
 				_1: {
 					ctor: '::',
 					_0: 'Processed over 20,000 lines of historical player and game statistics from NBA database',

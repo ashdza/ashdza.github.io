@@ -114,19 +114,6 @@ skills =
             ]
       , links = []
       }
-    -- , { name = "Software Design and Testing"
-    --   , role = ""
-    --   , location = ""
-    --   , dates = ""
-    --   , details =
-    --         -- [ "Systematic Program Design - Designing Data & Functions, EdX course based on HtDP2"
-    --         [ "Databases and distributed systems, functional programming, object-oriented design"
-    --           -- ,"Typed functional programming (Java 8+, Python 3.5+, ReasonML/OCaml), Object-Oriented Design"
-    --         , "Test-driven development, property-based tests, Pytest, JUnit & QuickTheories, RSpec"
-    --           -- , "Databases and distributed systems - 'Designing Data-Intensive Applications', by Martin Kleppmann"
-    --         ]
-    --   , links = []
-    --   }
     ]
 
 
@@ -173,7 +160,7 @@ projects =
         , location = ""
         , dates = "2020"
         , details = 
-            [ "Designed study & wrote SQL program to determine which teams would benefit most by moving 3-point line"
+            [ "Designed study & wrote program to determine which teams would benefit most by moving 3-point line (SQL)"
               , "Processed over 20,000 lines of historical player and game statistics from NBA database"
             ]
         , links = []
@@ -205,8 +192,6 @@ activities =
     [ FlatItem "Public Relations Director and member of Club Tennis, Rice University" "2017 - present" []
      , FlatItem "CSters: Women in Computer Science, Rice University" "2017 - present" []
     , FlatItem "CS Club, Rice University" "2017 - present" []
-    , FlatItem "Society of Women Engineers (SWE), Rice University" "2017 - present" []
-      -- , FlatItem "SASE: Society of Asian Scientists and Engineers, Rice University" "2017 - present" []
     , FlatItem "Music: sing, record, perform, take lessons"
         "2007 - present"
         [ Link "soundcloud" "https://goo.gl/kba2Mk", Link "youtube" "https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos" ]
