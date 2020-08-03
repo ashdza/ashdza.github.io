@@ -8855,13 +8855,13 @@ var _user$project$Resume$work = {
 			_0: 'Full ownership of revenue generation project for startup market involving multiple teams',
 			_1: {
 				ctor: '::',
-				_0: 'Develop Java application for cross-platform integration of business development managers & startups',
+				_0: 'Develop cross-platform Java application to connect business development managers & startups',
 				_1: {
 					ctor: '::',
 					_0: 'Design & deploy internal API\'s and clients with unit, integration & acceptance testing for use by other teams',
 					_1: {
 						ctor: '::',
-						_0: 'Maintain databases by building data access objects & automated jobs using SQL and Java',
+						_0: 'Develop databases by building data access objects & automated jobs using SQL and Java',
 						_1: {ctor: '[]'}
 					}
 				}
