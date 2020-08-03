@@ -160,7 +160,7 @@ projects =
         , location = ""
         , dates = "2020"
         , details = 
-            [ "Designed study & wrote program to determine which teams would benefit most by moving 3-point line (SQL)"
+            [ "Designed & implemented program to determine which teams would benefit most by moving 3-point line (SQL)"
               , "Processed over 20,000 lines of historical player and game statistics from NBA database"
             ]
         , links = []

@@ -8942,7 +8942,7 @@ var _user$project$Resume$projects = {
 			dates: '2020',
 			details: {
 				ctor: '::',
-				_0: 'Designed study & wrote program to determine which teams would benefit most by moving 3-point line (SQL)',
+				_0: 'Designed & implemented program to determine which teams would benefit most by moving 3-point line (SQL)',
 				_1: {
 					ctor: '::',
 					_0: 'Processed over 20,000 lines of historical player and game statistics from NBA database',
