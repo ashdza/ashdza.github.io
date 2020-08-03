@@ -8751,24 +8751,20 @@ var _user$project$Resume$projects = {
 	_1: {
 		ctor: '::',
 		_0: {
-			name: 'Physics Sunset',
-			role: 'Independent Project',
+			name: 'NBA 3-Point Analysis',
+			role: '',
 			location: '',
-			dates: '2017',
+			dates: '2020',
 			details: {
 				ctor: '::',
-				_0: 'Designed and implemented browser-based interactive graphical simulation of physics problem (ReasonML)',
-				_1: {ctor: '[]'}
-			},
-			links: {
-				ctor: '::',
-				_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/physics-sunset'),
+				_0: 'Designed study & wrote SQL program to determine which teams would benefit most by moving 3-point line',
 				_1: {
 					ctor: '::',
-					_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/'),
+					_0: 'Processed over 20,000 lines of historical player and game statistics from NBA database',
 					_1: {ctor: '[]'}
 				}
-			}
+			},
+			links: {ctor: '[]'}
 		},
 		_1: {
 			ctor: '::',
@@ -8779,10 +8775,10 @@ var _user$project$Resume$projects = {
 				dates: '2018',
 				details: {
 					ctor: '::',
-					_0: 'Implemented statistical learning of HMM using training corpus of pre-tagged sentences (Python)',
+					_0: 'Implemented statistical learning of hidden Markov model using training corpus of pre-tagged sentences (Python)',
 					_1: {
 						ctor: '::',
-						_0: 'Used Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM',
+						_0: 'Built model that assigns parts-of-speech to words in input text',
 						_1: {ctor: '[]'}
 					}
 				},
@@ -8791,16 +8787,24 @@ var _user$project$Resume$projects = {
 			_1: {
 				ctor: '::',
 				_0: {
-					name: 'Disease Transmission Analysis from Outbreak Data',
-					role: '',
+					name: 'Physics Sunset',
+					role: 'Independent Project',
 					location: '',
-					dates: '2018',
+					dates: '2017',
 					details: {
 						ctor: '::',
-						_0: 'Inferred disease transmission tree from disease outbreak genetic/epidemiological data using RDMST (Python)',
+						_0: 'Designed and implemented browser-based interactive graphical simulation of physics problem (ReasonML)',
 						_1: {ctor: '[]'}
 					},
-					links: {ctor: '[]'}
+					links: {
+						ctor: '::',
+						_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/physics-sunset'),
+						_1: {
+							ctor: '::',
+							_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/'),
+							_1: {ctor: '[]'}
+						}
+					}
 				},
 				_1: {ctor: '[]'}
 			}
@@ -8825,26 +8829,7 @@ var _user$project$Resume$awards = {
 			_1: {ctor: '[]'}
 		}
 	},
-	_1: {
-		ctor: '::',
-		_0: {
-			name: 'PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel',
-			role: 'Sole Author',
-			location: 'Colorado',
-			dates: 'Dec 2016',
-			details: {
-				ctor: '::',
-				_0: 'Accepted for 2016 Rocky Mountain Bioinformatics Conference (poster session)',
-				_1: {ctor: '[]'}
-			},
-			links: {
-				ctor: '::',
-				_0: _user$project$ResumeTypes$More('https://github.com/ashdza/pyofuel/blob/master/Rocky-2016-ICSB-Poster.pdf'),
-				_1: {ctor: '[]'}
-			}
-		},
-		_1: {ctor: '[]'}
-	}
+	_1: {ctor: '[]'}
 };
 var _user$project$Resume$skills = {
 	ctor: '::',

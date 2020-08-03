@@ -141,15 +141,15 @@ awards =
             ]
       , links = [ More "https://rewritingthecode.org/fellowship/" ]
       }
-    , { name = "PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel"
-      , role = "Sole Author"
-      , location = "Colorado"
-      , dates = "Dec 2016"
-      , details =
-            [ "Accepted for 2016 Rocky Mountain Bioinformatics Conference (poster session)"
-            ]
-      , links = [ More "https://github.com/ashdza/pyofuel/blob/master/Rocky-2016-ICSB-Poster.pdf" ]
-      }
+    -- , { name = "PyoFuel: Using Python and Pathway Tools to engineer synthetic biofuel"
+    --   , role = "Sole Author"
+    --   , location = "Colorado"
+    --   , dates = "Dec 2016"
+    --   , details =
+    --         [ "Accepted for 2016 Rocky Mountain Bioinformatics Conference (poster session)"
+    --         ]
+    --   , links = [ More "https://github.com/ashdza/pyofuel/blob/master/Rocky-2016-ICSB-Poster.pdf" ]
+    --   }
     ]
 
 
@@ -167,7 +167,28 @@ projects =
             ]
       , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/" ]
       }
-    , { name = "Physics Sunset"
+    , {
+        name = "NBA 3-Point Analysis"
+        , role = ""
+        , location = ""
+        , dates = "2020"
+        , details = 
+            [ "Designed study & wrote SQL program to determine which teams would benefit most by moving 3-point line"
+              , "Processed over 20,000 lines of historical player and game statistics from NBA database"
+            ]
+        , links = []
+    }  
+    , { name = "Hidden Markov Models and Part-of-Speech Tagging (NLP)"
+      , role = ""
+      , location = ""
+      , dates = "2018"
+      , details =
+            [ "Implemented statistical learning of hidden Markov model using training corpus of pre-tagged sentences (Python)"
+            , "Built model that assigns parts-of-speech to words in input text"
+            ]
+      , links = []
+      }
+      , { name = "Physics Sunset"
       , role = "Independent Project"
       , location = ""
       , dates = "2017"
@@ -176,63 +197,6 @@ projects =
             ]
       , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/" ]
       }
-    , { name = "Hidden Markov Models and Part-of-Speech Tagging (NLP)"
-      , role = ""
-      , location = ""
-      , dates = "2018"
-      , details =
-            [ "Implemented statistical learning of HMM using training corpus of pre-tagged sentences (Python)"
-            , "Used Viterbi algorithm to assign part-of-speech tags to new sentences using trained HMM"
-            ]
-      , links = []
-      }
-    , { name = "Disease Transmission Analysis from Outbreak Data"
-      , role = ""
-      , location = ""
-      , dates = "2018"
-      , details =
-            [ "Inferred disease transmission tree from disease outbreak genetic/epidemiological data using RDMST (Python)"
-            ]
-      , links = []
-      }
-      -- , { name = "DNA Sequence Alignment"
-      --   , role = ""
-      --   , location = ""
-      --   , dates = "2018"
-      --   , details =
-      --         [ "Design and implement DP solutions to DNA sequence alignment problems (Python)"
-      --         -- , "Align human and fruit-fly protein sequences to identify the PAX domain within the \"eyeless\" gene"
-      --         ]
-      --   , links = []
-      --   }
-      --, { name = "Phylogenetic (Evolutionary) Trees"
-      --, role = ""
-      --, location = ""
-      --, dates = "2018"
-      --, details =
-      --      [ "Inferred evolutionary tree given DNA sequences for leaf taxa and plausible mutations (Python)"
-      --      ]
-      --, links = []
-      --}
-      -- ,
-      -- , { name = "Impact of Language on Perception"
-      --   , role = "Independent Project"
-      --   , location = ""
-      --   , dates = "2016"
-      --   , details =
-      --         [ "Analyzed the Sapir-Whorf Hypothesis and its implications in multiple perceptual categories"
-      --         ]
-      --   , links = [ Repo "https://github.com/ashdza/Impact-of-Language-on-Perception" ]
-      --   }
-      -- , { name = "Chef Arduino"
-      --   , role = "Independent Project"
-      --   , location = ""
-      --   , dates = "2011"
-      --   , details =
-      --         [ "Conceive, design, build, and program an Arduino-based robot to test properties of food samples"
-      --         ]
-      --   , links = [ Repo "https://github.com/ashdza/chef_arduino" ]
-      --   }
     ]
 
 
