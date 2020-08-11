@@ -60,20 +60,28 @@ education =
             ]
       , links = []
       }
+    , {
+        name = "Relevant Coursework"
+        , location = ""
+        , dates = ""
+        , role = ""
+        , details = ["Algorithms, Operating Systems, Databases, Parallel Programming, Functional Programming, Computer Engineering, (upcoming) Machine Learning"]
+        , links = []
+      }
     ]
 
 
 work : List Item
 work =
     [ {
-       role = "Software Engineering Intern - Growth Monetization Backend"
+       role = "Software Engineering Intern - Monetization Backend"
        , name = "HubSpot"
        , location = "Remote"
        , dates = "Summer 2020"
-       , details = ["Full ownership of revenue generation project for startup market involving multiple teams", 
-       "Develop cross-platform Java application to connect business development managers & startups",
-       "Design & deploy internal API's and clients with unit, integration & acceptance testing for use by other teams", 
-       "Develop databases by building data access objects & automated jobs using SQL and Java"
+       , details = ["Ownership of revenue generation project for startup market, driving discussions with multiple teams", 
+       "Develop backend Java application to connect business development team to startup customers",
+       "Design and deploy multiple APIs and clients with unit, integration & acceptance tests", 
+       "Develop databases by defining schema, data access objects & automated jobs using SQL and Java"
        ]
        , links = []
     }
@@ -84,9 +92,9 @@ work =
       , dates = "Summer 2019"
       , details =
             -- [ "Converted Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
-            [ "Built Rails application with automated testing for Biglearn endpoints, impacting 4,000 students/semester"
-            , "Transitioned Biglearn to AWS Aurora Serverless for scalability with load-testing & autoscaling"
-            , "Worked in intern team to build & pitch note-taking app to investors"
+            [ "Built Rails application with automated testing for endpoints, impacting 4,000 students/semester"
+            , "Transitioned database to AWS Aurora Serverless for scalability with load-testing & autoscaling"
+            , "Worked in intern team to build & pitch new note-taking app to investors, using Google API"
             ]
       , links = []
       }
@@ -155,13 +163,13 @@ projects =
       , links = [ Repo "https://github.com/ashdza/lentil", Demo "https://lentil.7insights.com/" ]
       }
     , {
-        name = "NBA 3-Point Analysis"
+        name = "NBA 3-Point Data Analysis"
         , role = ""
         , location = ""
         , dates = "2020"
         , details = 
             [ "Designed & implemented program to determine which teams would benefit most by moving 3-point line (SQL)"
-              , "Processed over 20,000 lines of historical player and game statistics from NBA database"
+              , "Processed over 20,000 rows of historical player and game statistics from NBA database"
             ]
         , links = []
     }  
@@ -170,8 +178,8 @@ projects =
       , location = ""
       , dates = "2018"
       , details =
-            [ "Implemented statistical learning of hidden Markov model using training corpus of pre-tagged sentences (Python)"
-            , "Built model that assigns parts-of-speech tags to words in input text"
+            [ "Built model that assigns parts-of-speech tags to words in input text (Python)"
+            , "Implemented statistical learning of hidden Markov model using training set of pre-tagged sentences"
             ]
       , links = []
       }
@@ -182,7 +190,7 @@ projects =
       , details =
             [ "Designed and implemented browser-based interactive graphical simulation of physics problem (ReasonML)"
             ]
-      , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/" ]
+      , links = [ Repo "https://github.com/ashdza/physics-sunset", Demo "https://physics.7insights.com/public" ]
       }
     ]
 
@@ -190,8 +198,8 @@ projects =
 activities : List FlatItem
 activities =
     [ FlatItem "Public Relations Director & member of Club Tennis, Rice University" "2017 - present" []
-     , FlatItem "CSters: Women in Computer Science, Rice University" "2017 - present" []
-    , FlatItem "CS Club, Rice University" "2017 - present" []
+     , FlatItem "CSters (Women in Computer Science) and CS Club, Rice University" "2017 - present" []
+    -- , FlatItem "CS Club, Rice University" "2017 - present" []
     , FlatItem "Music: sing, record, perform, take lessons"
         "2007 - present"
         [ Link "soundcloud" "https://goo.gl/kba2Mk", Link "youtube" "https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos" ]

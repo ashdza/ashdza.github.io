@@ -218,7 +218,8 @@ body {
 .itemDetails {
     margin-top: -6px;
     margin-bottom: 2px;
-    margin-left: -10px
+    margin-left: -10px;
+    margin-right: 40px
 }
 
 .detail {

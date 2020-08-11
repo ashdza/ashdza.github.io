@@ -9116,7 +9116,22 @@ var _user$project$Resume$education = {
 		},
 		links: {ctor: '[]'}
 	},
-	_1: {ctor: '[]'}
+	_1: {
+		ctor: '::',
+		_0: {
+			name: 'Relevant Coursework',
+			location: '',
+			dates: '',
+			role: '',
+			details: {
+				ctor: '::',
+				_0: 'Algorithms, Operating Systems, Databases, Parallel Programming, Computer Engineering',
+				_1: {ctor: '[]'}
+			},
+			links: {ctor: '[]'}
+		},
+		_1: {ctor: '[]'}
+	}
 };
 var _user$project$Resume$header = {
 	name: 'Ashley D\'Souza',

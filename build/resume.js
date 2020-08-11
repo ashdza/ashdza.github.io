@@ -8684,33 +8684,25 @@ var _user$project$Resume$activities = {
 		ctor: '::',
 		_0: A3(
 			_user$project$ResumeTypes$FlatItem,
-			'CSters: Women in Computer Science, Rice University',
+			'CSters (Women in Computer Science) and CS Club, Rice University',
 			'2017 - present',
 			{ctor: '[]'}),
 		_1: {
 			ctor: '::',
 			_0: A3(
 				_user$project$ResumeTypes$FlatItem,
-				'CS Club, Rice University',
-				'2017 - present',
-				{ctor: '[]'}),
-			_1: {
-				ctor: '::',
-				_0: A3(
-					_user$project$ResumeTypes$FlatItem,
-					'Music: sing, record, perform, take lessons',
-					'2007 - present',
-					{
+				'Music: sing, record, perform, take lessons',
+				'2007 - present',
+				{
+					ctor: '::',
+					_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
+					_1: {
 						ctor: '::',
-						_0: A2(_user$project$ResumeTypes$Link, 'soundcloud', 'https://goo.gl/kba2Mk'),
-						_1: {
-							ctor: '::',
-							_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
-							_1: {ctor: '[]'}
-						}
-					}),
-				_1: {ctor: '[]'}
-			}
+						_0: A2(_user$project$ResumeTypes$Link, 'youtube', 'https://www.youtube.com/channel/UCJpR2rFKMPgG8Ezc2c0u6pA/videos'),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
 		}
 	}
 };
@@ -8743,7 +8735,7 @@ var _user$project$Resume$projects = {
 	_1: {
 		ctor: '::',
 		_0: {
-			name: 'NBA 3-Point Analysis',
+			name: 'NBA 3-Point Data Analysis',
 			role: '',
 			location: '',
 			dates: '2020',
@@ -8752,7 +8744,7 @@ var _user$project$Resume$projects = {
 				_0: 'Designed & implemented program to determine which teams would benefit most by moving 3-point line (SQL)',
 				_1: {
 					ctor: '::',
-					_0: 'Processed over 20,000 lines of historical player and game statistics from NBA database',
+					_0: 'Processed over 20,000 rows of historical player and game statistics from NBA database',
 					_1: {ctor: '[]'}
 				}
 			},
@@ -8767,10 +8759,10 @@ var _user$project$Resume$projects = {
 				dates: '2018',
 				details: {
 					ctor: '::',
-					_0: 'Implemented statistical learning of hidden Markov model using training corpus of pre-tagged sentences (Python)',
+					_0: 'Built model that assigns parts-of-speech tags to words in input text (Python)',
 					_1: {
 						ctor: '::',
-						_0: 'Built model that assigns parts-of-speech tags to words in input text',
+						_0: 'Implemented statistical learning of hidden Markov model using training set of pre-tagged sentences',
 						_1: {ctor: '[]'}
 					}
 				},
@@ -8793,7 +8785,7 @@ var _user$project$Resume$projects = {
 						_0: _user$project$ResumeTypes$Repo('https://github.com/ashdza/physics-sunset'),
 						_1: {
 							ctor: '::',
-							_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/'),
+							_0: _user$project$ResumeTypes$Demo('https://physics.7insights.com/public'),
 							_1: {ctor: '[]'}
 						}
 					}
@@ -8846,22 +8838,22 @@ var _user$project$Resume$skills = {
 var _user$project$Resume$work = {
 	ctor: '::',
 	_0: {
-		role: 'Software Engineering Intern - Growth Monetization Backend',
+		role: 'Software Engineering Intern - Monetization Backend',
 		name: 'HubSpot',
 		location: 'Remote',
 		dates: 'Summer 2020',
 		details: {
 			ctor: '::',
-			_0: 'Full ownership of revenue generation project for startup market involving multiple teams',
+			_0: 'Ownership of revenue generation project for startup market, driving discussions with multiple teams',
 			_1: {
 				ctor: '::',
-				_0: 'Develop cross-platform Java application to connect business development managers & startups',
+				_0: 'Develop backend Java application to connect business development team to startup customers',
 				_1: {
 					ctor: '::',
-					_0: 'Design & deploy internal API\'s and clients with unit, integration & acceptance testing for use by other teams',
+					_0: 'Design and deploy multiple APIs and clients with unit, integration & acceptance tests',
 					_1: {
 						ctor: '::',
-						_0: 'Develop databases by building data access objects & automated jobs using SQL and Java',
+						_0: 'Develop databases by defining schema, data access objects & automated jobs using SQL and Java',
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8878,13 +8870,13 @@ var _user$project$Resume$work = {
 			dates: 'Summer 2019',
 			details: {
 				ctor: '::',
-				_0: 'Built Rails application with automated testing for Biglearn endpoints, impacting 4,000 students/semester',
+				_0: 'Built Rails application with automated testing for endpoints, impacting 4,000 students/semester',
 				_1: {
 					ctor: '::',
-					_0: 'Transitioned Biglearn to AWS Aurora Serverless for scalability with load-testing & autoscaling',
+					_0: 'Transitioned database to AWS Aurora Serverless for scalability with load-testing & autoscaling',
 					_1: {
 						ctor: '::',
-						_0: 'Worked in intern team to build & pitch note-taking app to investors',
+						_0: 'Worked in intern team to build & pitch new note-taking app to investors, using Google API',
 						_1: {ctor: '[]'}
 					}
 				}
@@ -8923,7 +8915,22 @@ var _user$project$Resume$education = {
 		},
 		links: {ctor: '[]'}
 	},
-	_1: {ctor: '[]'}
+	_1: {
+		ctor: '::',
+		_0: {
+			name: 'Relevant Coursework',
+			location: '',
+			dates: '',
+			role: '',
+			details: {
+				ctor: '::',
+				_0: 'Algorithms, Operating Systems, Databases, Parallel Programming, Functional Programming, Computer Engineering, (upcoming) Machine Learning',
+				_1: {ctor: '[]'}
+			},
+			links: {ctor: '[]'}
+		},
+		_1: {ctor: '[]'}
+	}
 };
 var _user$project$Resume$header = {
 	name: 'Ashley D\'Souza',
