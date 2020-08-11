@@ -94,7 +94,7 @@ work =
             -- [ "Converted Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
             [ "Built Rails application with automated testing for endpoints, impacting 4,000 students/semester"
             , "Transitioned database to AWS Aurora Serverless for scalability with load-testing & autoscaling"
-            , "Worked in intern team to build & pitch new note-taking app to investors, using Google API"
+            , "Worked in intern team to build & pitch new note-taking app to investors using Google API"
             ]
       , links = []
       }
@@ -178,7 +178,7 @@ projects =
       , location = ""
       , dates = "2018"
       , details =
-            [ "Built model that assigns parts-of-speech tags to words in input text (Python)"
+            [ "Built model that assigns part-of-speech tags to words in input text (Python)"
             , "Implemented statistical learning of hidden Markov model using training set of pre-tagged sentences"
             ]
       , links = []

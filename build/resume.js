@@ -8759,7 +8759,7 @@ var _user$project$Resume$projects = {
 				dates: '2018',
 				details: {
 					ctor: '::',
-					_0: 'Built model that assigns parts-of-speech tags to words in input text (Python)',
+					_0: 'Built model that assigns part-of-speech tags to words in input text (Python)',
 					_1: {
 						ctor: '::',
 						_0: 'Implemented statistical learning of hidden Markov model using training set of pre-tagged sentences',
@@ -8876,7 +8876,7 @@ var _user$project$Resume$work = {
 					_0: 'Transitioned database to AWS Aurora Serverless for scalability with load-testing & autoscaling',
 					_1: {
 						ctor: '::',
-						_0: 'Worked in intern team to build & pitch new note-taking app to investors, using Google API',
+						_0: 'Worked in intern team to build & pitch new note-taking app to investors using Google API',
 						_1: {ctor: '[]'}
 					}
 				}
