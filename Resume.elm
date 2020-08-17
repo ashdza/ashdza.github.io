@@ -79,9 +79,9 @@ work =
        , location = "Remote"
        , dates = "Summer 2020"
        , details = ["Ownership of revenue generation project for startup market, driving discussions with multiple teams", 
-       "Develop backend Java application to connect business development team to startup customers",
-       "Design and deploy multiple APIs and clients with unit, integration & acceptance tests", 
-       "Develop databases by defining schema, data access objects & automated jobs using SQL and Java"
+       "Developed backend Java application to connect business development team to startup customers",
+       "Designed & deployed multiple APIs and clients with unit, integration & acceptance tests", 
+       "Developed databases by defining schema, data access objects & automated jobs using SQL and Java"
        ]
        , links = []
     }
