@@ -12,7 +12,6 @@ theResume : Resume
 theResume =
     { header = header
     , body =
-        -- [ FlatSection "Why Spotify?" whySpotify
         [ NestedSection "Education" education
         , NestedSection "Work Experience" work
         , NestedSection "Software Development Skills" skills
@@ -21,17 +20,6 @@ theResume =
         , FlatSection "Leadership and Activities" activities
         ]
     }
-
-
-whySpotify : List FlatItem
-whySpotify =
-    [ FlatItem "As a longtime musician and singer, I actively record, perform, and take lessons"
-        ""
-        []
-    , FlatItem "As a CS major and musician, I am building a full-stack web-based musician's feedback service" "" []
-    , FlatItem "I love Spotify and have been an avid daily user for many years" "" []
-    ]
-
 
 header : Header
 header =
@@ -91,7 +79,6 @@ work =
       , location = "Houston, TX"
       , dates = "Summer 2019"
       , details =
-            -- [ "Converted Biglearn to highly scalable application by developing testing and deployment automation in Ruby on Rails"
             [ "Built Rails application with automated testing for endpoints, impacting 4,000 students/semester"
             , "Transitioned database to AWS Aurora Serverless for scalability with load-testing & autoscaling"
             , "Worked in intern team to build & pitch new note-taking app to investors using Google API"

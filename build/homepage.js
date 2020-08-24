@@ -9149,31 +9149,6 @@ var _user$project$Resume$header = {
 		}
 	}
 };
-var _user$project$Resume$whySpotify = {
-	ctor: '::',
-	_0: A3(
-		_user$project$ResumeTypes$FlatItem,
-		'As a longtime musician and singer, I actively record, perform, and take lessons',
-		'',
-		{ctor: '[]'}),
-	_1: {
-		ctor: '::',
-		_0: A3(
-			_user$project$ResumeTypes$FlatItem,
-			'As a CS major and musician, I am building a full-stack web-based musician\'s feedback service',
-			'',
-			{ctor: '[]'}),
-		_1: {
-			ctor: '::',
-			_0: A3(
-				_user$project$ResumeTypes$FlatItem,
-				'I love Spotify and have been an avid daily user for many years',
-				'',
-				{ctor: '[]'}),
-			_1: {ctor: '[]'}
-		}
-	}
-};
 var _user$project$Resume$theResume = {
 	header: _user$project$Resume$header,
 	body: {
