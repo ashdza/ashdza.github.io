@@ -9103,7 +9103,7 @@ var _user$project$Resume$education = {
 		role: '',
 		details: {
 			ctor: '::',
-			_0: 'BS Computer Science, GPA: 3.6/4.0',
+			_0: 'BA Computer Science, GPA: 3.6/4.0',
 			_1: {ctor: '[]'}
 		},
 		links: {ctor: '[]'}
